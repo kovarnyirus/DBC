@@ -1,0 +1,27 @@
+extends layout/main.pug
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/catalog/catalog
+
+
+block title
+  title Гланая
+
+block pagecontent
+  .breadcrumb
+    .container
+      +breadcrumb("Каталог", "Главная")
+  +b.page-name
+    .container
+      +e.H2 Каталог
+  +catalog()
+
+  //- +prod-head()
+  //- +kart-body()
+  //+s-catalog-4
+
+  //+s-download
+  //- +s-form()
+  //- +s-contact()
+  //+footer()
+
+

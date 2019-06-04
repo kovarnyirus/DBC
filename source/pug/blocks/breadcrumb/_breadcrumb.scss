@@ -1,0 +1,33 @@
+.breadcrumb{
+  padding-top: 26px;
+  @include media-breakpoint-up(md) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+.breadcrumb__item{
+  color: #5CBF1A;
+  padding-right: 14px;
+  position: relative;
+  &:before{
+    display: block;
+    content: '»';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    right: 2px;
+    transform: translate(-50%, -50%);
+    color: #4D4D4D ;
+    text-align: center;
+  }
+  &.active{
+    color: #4D4D4D ;
+  }
+  &:last-child{
+    &:before{
+      display: none;
+    }
+  }
+}
+

@@ -1,0 +1,15 @@
+@import "fonts";
+//@import "media";
+@import "bootstrap/bootstrap";
+@import "sprite";
+@import "base";
+@import "../libs/slick/slick";
+@import "../libs/slick/slick-theme";
+@import "../pug/blocks/top-nav/_top-nav";
+@import "../pug/blocks/catalog-nav/_catalog-nav";
+@import "../pug/blocks/breadcrumb/_breadcrumb";
+@import "../pug/blocks/catalog/_catalog";
+@import "../pug/blocks/sliders/sliders";
+@import "../pug/blocks/advertising/advertising";
+@import "../pug/blocks/footer/footer";
+

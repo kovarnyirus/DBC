@@ -1,0 +1,71 @@
+include ../../blocks/mixins/_mixins.pug
+mixin top-nav()
+  +b.top-nav
+    .container
+      .row.justify-content-between
+        .col-6
+          +e.UL.nav
+            +e.LI.item
+              +e.A.link(href="#") Бренды
+            +e.LI.item
+              +e.A.link(href="#") О нас
+            +e.LI.item
+              +e.A.link(href="#") Как купить
+            +e.LI.item
+              +e.A.link(href="#") Новинки
+            +e.LI.item
+              +e.A.link(href="#") Доставка и оплата
+            +e.LI.item
+              +e.A.link(href="#") Контакты
+            +e.LI.item--active
+              +e.A.link(href="#") Распродажа
+            +e.LI.item
+              +e.A.link(href="#") Опт
+        .col-3
+          .row.justify-content-end
+            .col-auto
+              +e.A.user
+                .row
+                  .col-auto
+                    +icon('icon-user')
+                  .col.d-none.d-md-block Ольга В.
+            .col-auto
+
+              +e.A.favourites
+                +icon('icon-heart')
+            .col-auto
+              +e.A.basket
+                +icon('icon-basket')
+                +e.basket-price.d-none.d-md-block 18 560 р.
+      .row.align-items-center
+        .col-auto
+          +e.A.logo(href='#')
+            img(src='img/header-logo.png' alt='logo' width='122')
+        .col-2.d-none.d-md-block
+          +e.text Более 70 000 товаров по закупочным ценам! Всем и каждому!
+        .col
+          +b.search-block
+            +e.FORM.form
+              +e.INPUT.input
+              +e.BUTTON.btn
+                +icon('icon-search')
+        .col-auto.d-none.d-md-block
+          +b.soc
+            +soc('icon-fb')
+            +soc('icon-instagram')
+            +soc('icon-vk')
+
+        .col-auto
+          +b.tel-block
+            +e.item
+              +e.tel 8 (800) 775-46-36
+              +e.description Звонок бесплатный
+            +e.item
+              +e.tel 8 (499) 645-53-65
+              +e.description Для Москвы и МО
+
+
+
+
+
+

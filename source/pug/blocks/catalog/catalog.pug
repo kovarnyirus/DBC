@@ -1,0 +1,163 @@
+include ../sliders/sliders
+include ../mixins/_mixins
+include ../../blocks/advertising/advertising
+mixin catalog()
+  +b.catalog
+    .container
+      .row
+        .col-12.col-md-3
+          aside.aside
+            .smartfilter
+              +b.aside-filter
+                +e.group
+                  +e.group-top
+                    +e.group-name Категории
+                    +e.group-checked 3
+                    +e.group-clear Сбросить
+                  +e.UL.list
+                  -var filterlist = ['Волосы', 'Все для бритья', 'Гигиена', 'Дезодоранты', 'Дети', 'Дом', 'Здоровье', 'Израильская косметика', 'Корейская бытовая химия', 'Корейская и японская косметика', 'Корейская косметика', 'Косметические наборы', 'Кремы']
+                  each filter, index in filterlist
+                    +e.LI.item
+                      +b.LABEL.custom-checkbox(for=index)
+                        +e.INPUT.input(type='checkbox' id=index)
+                        +e.SPAN.name= filter
+
+                +e.group
+                  +e.group-top
+                    +e.SPAN.group-name Бренды
+                    +e.SPAN.group-checked 2
+                    +e.SPAN.group-clear Сбросить
+                  +e.UL.list
+                  -var brands = ['A-Derma ',  'Aasha Herbals ',  'Academie ',  'Ahava ',  'Alerana ',  'Algotherm ',  'A-Derma ',  'Aasha ', 'Herbals ',  'Academie ',  'Ahava ',  'Alerana ', 'Algotherm ',  'Ahava' ]
+                  -var brandCity = [' Франция', ' Франция', ' Франция', 'Израиль', 'Россия', 'Франция', 'Франция', 'Франция', 'Франция', 'Израиль', 'Россия', 'Франция', 'Израиль', 'Израиль']
+                  each brand, index in brands
+                    +b.LABEL.custom-checkbox(for=index + 15)
+                      +e.INPUT.input(type='checkbox' id=index + 15)
+                      +e.SPAN.name= brand
+                      +e.SPAN.description=brandCity[index]
+
+                +e.group
+                  +e.group-top
+                    +e.SPAN.group-name метки
+                    +e.SPAN.group-checked 3
+                    +e.SPAN.group-clear Сбросить
+                  +e.UL.list
+                    -var filterlist = ['Волосы', 'Все для бритья', 'Гигиена', 'Дезодоранты', 'Дети', 'Дом', 'Здоровье', 'Израильская косметика', 'Корейская бытовая химия', 'Корейская и японская косметика', 'Корейская косметика', 'Косметические наборы', 'Кремы']
+                    each filter, index in filterlist
+                      +e.LI.item
+                        +b.LABEL.custom-checkbox(for=index + 30)
+                          +e.INPUT.input(type='checkbox' id=index + 30)
+                          +e.SPAN.name= filter
+                +e.group
+                  +e.group-top
+                    +e.SPAN.group-name цена
+                  +e.rang-wrap
+                    +e.range-input
+                      +e.LABEL
+                      +e.INPUT.min-cost(type='text')
+                    +e.range-input
+                      +e.LABEL
+                      +e.INPUT.max-cost(type='text')
+                  +e.range
+                    input(type="range")
+                .row
+                  .col-6
+                    +e.BUTTON.btn-reset.btn.btn-outline(type="submit") Сбросить все
+                  .col-6
+                    +e.BUTTON.btn-show.btn(type="submit") Показать товары
+
+        .col-12.col-md-9
+          +bigSlider()
+          +brendsSlider()
+          +e.head
+            .row
+              .col-12.col-md-6
+                .row.align-items-center
+                  .col-12.col-md-5
+                    +b.sort
+                      button.btn.sort__btn Сначала дешевые
+                      .dropdown-menu
+                        a.dropdown-item()
+                  .col-7.d-none.d-md-block
+                    .row.align-items-center
+                      .col-auto Отображать по:
+                      .col-auto
+                        a.quantity.active(href="#") 16
+                        a.quantity(href="#") 24
+                        a.quantity(href="#") 32
+              .col-6.d-none.d-md-block
+                .row.align-items-center.justify-content-end
+                  .col-auto Всего:
+                    strong 12 580 товаров
+                  .col-auto
+                    +b.UL.pagination
+                      +e.LI.item
+                        +e.A.link.active(href='#') 1
+                      +e.LI.item
+                        +e.A.link(href='#') 2
+                      +e.LI.item
+                        +e.A.link(href='#') 3
+                      +e.LI.item
+                        +e.A.link--dots(href='#') ...
+                      +e.LI.item
+                        +e.A.link(href='#') 156
+          .product-list
+            +product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
+            +product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
+            +product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
+            +product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
+          +banner()
+          .product-list
+            +product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
+            +product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
+            +product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
+            +product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
+          .row
+            .col-12.col-md-6
+              +banner()
+            .col-12.col-md-6
+              +banner()
+
+          .product-list
+            +product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
+            +product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
+            +product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
+            +product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
+            +product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
+            +product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
+            +product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
+            +product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
+          +e.footer
+            .row
+              .col-12.d-md-none
+                button.btn.load-more Загрузить еще
+              .col-6.d-none.d-md-block
+                .row
+                  .col-8
+                    .row.align-items-center
+                      .col-auto Отображать по:
+                      .col-auto
+                        a.quantity.active(href="#") 16
+                        a.quantity(href="#") 24
+                        a.quantity(href="#") 32
+              .col-6.d-none.d-md-block
+                .row.align-items-center.justify-content-end
+                  .col-auto Всего:
+                    strong 12 580 товаров
+                  .col-auto
+                    +b.UL.pagination
+                      +e.LI.item
+                        +e.A.link.active(href='#') 1
+                      +e.LI.item
+                        +e.A.link(href='#') 2
+                      +e.LI.item
+                        +e.A.link(href='#') 3
+                      +e.LI.item
+                        +e.A.link--dots(href='#') ...
+                      +e.LI.item
+                        +e.A.link(href='#') 156
+              .col-12.d-md-none
+
+  +advertising()
+
+

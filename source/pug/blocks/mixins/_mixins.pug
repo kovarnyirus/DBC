@@ -1,0 +1,82 @@
+mixin brand()
+  // .brand-block
+  +b.dropdown-brand
+    +e.A.link(href="#") A-Derma
+      span Франция
+    +e.A.link(href="#") Ahava
+      span Франция
+    +e.A.link(href="#") American
+      span Франция
+    +e.A.link(href="#") Aravia
+      span Франция
+    +e.A.link(href="#") Avene
+      span Франция
+
+  // /.brand-block
+
+mixin soc(name)
+  +e.A.item(href="" target="_blank")
+    svg(class="icon " + name)
+      use(xlink:href="img/svg/sprite.svg#" + name)
+
+
+mixin icon(name,mod)
+  - mod = mod || ''
+  svg(class="icon " + name + ' ' + mod)
+    use(xlink:href="img/svg/sprite.svg#" + name)
+
+
+
+mixin dropdown-catalog ()
+  +b.catalog-dropdown
+    .row
+      .col-2
+        +e.UL.list
+          +e.LI.item--title НОВИНКИ
+          +e.LI.item РАСПРОДАЖА
+          +e.LI.item ЛИЦО
+          +e.LI.item МАКИЯЖ
+          +e.LI.item ТЕЛО
+          +e.LI.item НОГТИ
+          +e.LI.item ДЕТИ
+          +e.LI.item ДОМ
+          +e.LI.item МУЖЧИНАМ
+          +e.LI.item ПАРФЮМЕРИЯ
+          +e.LI.item ГИГИЕНА
+          +e.LI.item ЗДОРОВЬЕ
+      .col-2
+
+mixin banner()
+  +b.banner
+    +e.A.link
+      +e.IMG.img(src='img/banner.jpg')
+
+mixin product-item(img, title, description, size)
+  +b.product-item
+    +e.img-wrap(href="#")
+      +e.IMG.img(src=`img/product/product${img}.jpg`, alt="img")
+    +e.A.description(href='#')= description
+    +e.A.title(href='#')= title
+    +e.TABLE.price
+      tr
+        +e.TD.price-name price
+        +e.TD.price-val 1251 p
+      tr
+        +e.TD.price-name mini sale
+        +e.TD.price-val 531 p
+      tr
+        +e.TD.price-name maxi sale
+        +e.TD.price-val 490 p
+      tr
+        +e.TD.price-name sale
+        +e.TD.price-val 490 p
+      tr
+        +e.TD.price-name VIP
+        +e.TD.price-val узнать цену
+    +e.icons
+      +e.A.favourites
+        +icon('icon-favourites')
+      +e.A.like
+        +icon('icon-like')
+      +e.A.basket(href='')
+        +icon('icon-basket')

@@ -1,0 +1,33 @@
+include ../../blocks/mixins/_mixins.pug
+
+mixin dropdown-menu()
+  +e.dropdown-menu()
+    .row
+
+
+
+mixin catalog-nav()
+  +b.catalog-nav
+    .container
+      .row
+        .col-12
+          +e.UL.category
+            +e.LI.category-item--dropdown
+              +e.A.category-item-link(href="#") КАТАЛОГ
+              //+dropdown-catalog()
+            -var categoryArr = ['ВОЛОСЫ', 'ЛИЦО', 'МАКИЯЖ', 'ТЕЛО', 'НОГТИ', 'ДЕТИ', 'ДОМ', 'МУЖЧИНАМ', 'ПАРФЮМЕРИЯ', 'ГИГИЕНА', 'ЗДОРОВЬЕ', 'ПРОЧЕЕ']
+            each cat in categoryArr
+              +e.LI.category-item
+                +e.A.category-item-link(href="#")=cat
+
+
+        .col-12
+          +e.UL.brand
+            +e.LI.brand-item--title
+              +e.A.brand-item-link(href="#") БРЕНДЫ
+            -var barndsNames = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Y', 'А', 'Б', 'Г', 'З', 'К', 'Л', 'М', 'О', 'С', 'Т', 'Х', 'Ш', '0-9']
+            each brand in barndsNames
+              +e.LI.brand-item
+                +e.A.brand-item-link(href="#")=brand
+                +brand()
+

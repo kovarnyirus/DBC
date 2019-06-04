@@ -1,0 +1,178 @@
+@import "vars";
+
+body {
+  font-family: Proxima Nova, sans-serif;
+  font-size: 14px;
+  color: $text-color;
+  @include media-breakpoint-down(sm){
+    font-size: 12px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  @include media-breakpoint-up(xl){
+    max-width: $content-size;
+    box-sizing: content-box;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+h3{
+  font-size: 12px;
+  color: #9FA3A7;
+  text-transform: uppercase;
+  font-weight: bold;
+  min-height: 43px;
+  @include media-breakpoint-up(md) {
+    font-size: 14px;
+    min-height: auto;
+    margin-bottom: 27px;
+  }
+
+}
+
+.icon {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  border: 1px solid #BE0B58;
+  padding-top: 1px;
+}
+
+button{
+  outline: none;
+  border: none;
+}
+button:focus{
+  outline: none;
+}
+
+a{
+  color: inherit;
+}
+
+
+.icon-user,
+.icon-basket {
+  border-color: #BE0B58;
+  fill: #BE0B58;
+}
+
+.icon-heart {
+  border-color: #5CBF1A;
+  fill: #6CB13E;
+  padding: 4px;
+}
+
+.icon-basket {
+  padding: 1px;
+}
+
+.icon-search {
+  fill: $white;
+  border: none;
+  box-sizing: border-box;
+}
+
+.soc {
+  display: flex;
+}
+
+.soc__item {
+  & .icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #9FA3A7;
+    border-radius: 50%;
+    margin-left: 8px;
+    fill: #000000;
+  }
+}
+
+.icon-fb {
+  padding: 7px 10px;
+}
+
+.icon-instagram {
+  padding: 4px;
+}
+
+.icon-vk {
+  padding: 3px;
+}
+
+.page-name {
+  & h2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: $text-color;
+    font-weight: 800;
+    padding-top: 6px;
+    padding-bottom: 22px;
+    @include media-breakpoint-up(md) {
+      padding-top: 11px;
+      padding-bottom: 31px;
+      font-size: 35px;
+    }
+  }
+}
+
+
+.btn {
+  display: block;
+  border-radius: 5px;
+  background-color: #5CBF1A;
+  outline: 0 !important;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  line-height: 1.1;
+  transition: .3s;
+
+  &:hover {
+    background: #82C456;
+    color: $white;
+    border-color: #82C456;;
+  }
+
+  &:active {
+    background: #459014;
+    color: $white;
+    border-color: #459014;
+  }
+}
+
+.btn-outline {
+  background-color: #ffffff;
+  color: #9FA3A7;
+  text-align: center;
+
+  border: 1px solid #9FA3A7;
+
+  &:hover {
+    background: #82C456;
+    color: $white;
+  }
+
+  &:active {
+    background: #459014;
+    border-color: #459014;
+    color: $white;
+  }
+}
+
+
