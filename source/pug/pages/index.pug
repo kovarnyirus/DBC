@@ -1,27 +1,41 @@
 extends layout/main.pug
-include ../blocks/breadcrumb/breadcrumb
-include ../blocks/catalog/catalog
+include ../blocks/sliders/sliders
+include ../blocks/advertising/advertising
+include ../blocks/comp-info/comp-info
+include ../blocks/instagram/instagram
 
 
 block title
   title Гланая
 
 block pagecontent
-  .breadcrumb
+  .main-page
     .container
-      +breadcrumb("Каталог", "Главная")
-  +b.page-name
+      +bigSlider()
+      +bannerHead()
+    +b.cooces
+      .container
+        +e.P.message Мы используем файлы cookie и сбор персональных данных, чтобы предоставить вам лучший пользовательский сервис и показывать вам индивидуальные предложения на нашем сайте. Продолжая просматривать наш веб-сайт, вы соглашаетесь c использованием cookie и обработкой персональных данных.
+          +e.A.link(href='#') Узнать больше
+        +e.BUTTON.btn.btn-cloce
     .container
-      +e.H2 Каталог
-  +catalog()
+      +banner4()
+    +saleSlider()
+    .container
+      +banner2()
+    +advertisingNoBg('Популярные товары')
+    .container
+      +banner3()
+      +bigSlider()
+    +advertisingNoBg('Товары со скидкой')
 
-  //- +prod-head()
-  //- +kart-body()
-  //+s-catalog-4
+    +brendsSliderTitle('Популярные бренды сегодня')
+    .container
+      +banner3()
+      .row
+        +advertisingNoBg('Новинки')
+        +comp-info()
+    +instagram-block()
 
-  //+s-download
-  //- +s-form()
-  //- +s-contact()
-  //+footer()
 
 

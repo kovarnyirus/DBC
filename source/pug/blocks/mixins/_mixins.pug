@@ -47,9 +47,71 @@ mixin dropdown-catalog ()
       .col-2
 
 mixin banner()
-  +b.banner
+  +b.banner-wrapper
     +e.A.link
       +e.IMG.img(src='img/banner.jpg')
+
+mixin bannerHead()
+    .row
+      .col-12.col-md-4.mb-2
+        a(href='#')
+          img(src='img/image9.jpg', alt='img')
+      .col-12.col-md-4.mb-2
+        a(href='#')
+          img(src='img/image10.jpg', alt='img')
+      .col-12.col-md-4.mb-2
+        a(href='#')
+          img(src='img/image11.jpg', alt='img')
+
+mixin banner4()
+  +b.banner-wrapper
+    .row.mb-5
+      .col-12.col-md-6
+        a(href="#")
+          img(src="img/image1.jpg")
+      .col-12.col-md-6
+        a(href="#")
+          img(src="img/image2.jpg")
+      .col-12.col-md-6
+        a(href="#")
+          img(src="img/image3.jpg")
+      .col-12.col-md-6
+        a(href="#")
+          img(src="img/image4.jpg")
+
+mixin banner2()
+  +b.banner-wrapper
+    .row.mb-5
+      .col-12.col-md-6
+        a(href="#")
+          img(src="img/image1.jpg")
+      .col-12.col-md-6
+        a(href="#")
+          img(src="img/image2.jpg")
+
+mixin banner3()
+  +b.banner-wrapper
+    .row.mb-5
+      .col-12.col-md-4
+        a(href="#")
+          img(src="img/image6.jpg")
+      .col-12.col-md-4
+        a(href="#")
+          img(src="img/image7.jpg")
+      .col-12.col-md-4
+        a(href="#")
+          img(src="img/image8.jpg")
+      .col-12.col-md-4
+        a(href="#")
+          img(src="img/image6.jpg")
+      .col-12.col-md-4
+        a(href="#")
+          img(src="img/image7.jpg")
+      .col-12.col-md-4
+        a(href="#")
+          img(src="img/image8.jpg")
+
+
 
 mixin product-item(img, title, description, size)
   +b.product-item

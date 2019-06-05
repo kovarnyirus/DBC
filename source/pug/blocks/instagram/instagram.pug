@@ -1,0 +1,27 @@
+mixin instagram-block()
+  +b.instagram-block
+    .container
+      .row.justify-content-center
+        +e.head
+          .col-12.col-md-auto
+            +e.H2.title.d-none.d-md-block Прямо сейчас в нашем
+            +e.A.btn.btn.d-md-none(href='#') Все новости
+          .col-auto
+            a(href='#')
+              img(src='img/instagram-block/instagram-logo.jpg')
+          .col-auto
+            +e.A.link(href='#') @bdcenter
+        .col-12
+          +e.slider
+            +e.A.slider-item
+              img.slider-img(src='img/instagram-block/img1.jpg')
+            +e.A.slider-item
+              img.slider-img(src='img/instagram-block/img2.jpg')
+            +e.A.slider-item
+              img.slider-img(src='img/instagram-block/img3.jpg')
+            +e.A.slider-item
+              img.slider-img(src='img/instagram-block/img4.jpg')
+            +e.A.slider-item
+              img.slider-img(src='img/instagram-block/img5.jpg')
+            +e.A.slider-item
+              img.slider-img(src='img/instagram-block/img1.jpg')

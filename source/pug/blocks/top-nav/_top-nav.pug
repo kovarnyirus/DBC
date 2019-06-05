@@ -3,7 +3,11 @@ mixin top-nav()
   +b.top-nav
     .container
       .row.justify-content-between
-        .col-6
+        .col-6.d-md-none.d-flex.justify-content-between
+          button.toggle-menu
+            span
+          +e.BUTTON.catalog-btn.btn каталог
+        .col-6.d-none.d-md-block
           +e.UL.nav
             +e.LI.item
               +e.A.link(href="#") Бренды
@@ -21,7 +25,7 @@ mixin top-nav()
               +e.A.link(href="#") Распродажа
             +e.LI.item
               +e.A.link(href="#") Опт
-        .col-3
+        .col-6.col-md-3
           .row.justify-content-end
             .col-auto
               +e.A.user
@@ -38,12 +42,12 @@ mixin top-nav()
                 +icon('icon-basket')
                 +e.basket-price.d-none.d-md-block 18 560 р.
       .row.align-items-center
-        .col-auto
+        .col-6.col-md-auto.order-2.order-md-0
           +e.A.logo(href='#')
             img(src='img/header-logo.png' alt='logo' width='122')
         .col-2.d-none.d-md-block
           +e.text Более 70 000 товаров по закупочным ценам! Всем и каждому!
-        .col
+        .col-12.col-md.order-1.order-md-0
           +b.search-block
             +e.FORM.form
               +e.INPUT.input
@@ -55,7 +59,7 @@ mixin top-nav()
             +soc('icon-instagram')
             +soc('icon-vk')
 
-        .col-auto
+        .col-6.col-md-auto.order-3.order-md-0
           +b.tel-block
             +e.item
               +e.tel 8 (800) 775-46-36

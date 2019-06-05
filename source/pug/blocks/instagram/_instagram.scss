@@ -1,0 +1,31 @@
+.instagram-block__title{
+
+}
+
+.instagram-block__link{
+  color: #5CBF1A;
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: bold;
+}
+
+.instagram-block__btn{
+  max-width: 93px;
+  padding: 0;
+  font-size: 14px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 34px;
+}
+
+.instagram-block__head{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 17px;
+  @include media-breakpoint-up(md){
+    justify-content: center;
+    margin-bottom: 66px;
+  }
+}
+
