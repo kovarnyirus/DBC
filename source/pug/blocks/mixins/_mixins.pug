@@ -46,10 +46,10 @@ mixin dropdown-catalog ()
           +e.LI.item ЗДОРОВЬЕ
       .col-2
 
-mixin banner()
+mixin banner(src)
   +b.banner-wrapper
     +e.A.link
-      +e.IMG.img(src='img/banner.jpg')
+      +e.IMG.img(src='img/' + src)
 
 mixin bannerHead()
     .row
