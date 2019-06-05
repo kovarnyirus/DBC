@@ -32,3 +32,69 @@ mixin catalog-nav()
                   +e.A.brand-item-link(href="#")=brand
                   +brand()
 
+
+mixin catalogHederNav()
+  +e.head
+    .row
+      .col-12.col-md-6
+        .row.align-items-center
+          .col-12.col-md-5
+            +b.sort
+              button.btn.sort__btn Сначала дешевые
+              .dropdown-menu
+                a.dropdown-item()
+          .col-7.d-none.d-md-block
+            .row.align-items-center
+              .col-auto Отображать по:
+              .col-auto
+                a.quantity.active(href="#") 16
+                a.quantity(href="#") 24
+                a.quantity(href="#") 32
+      .col-6.d-none.d-md-block
+        .row.align-items-center.justify-content-end
+          .col-auto Всего:
+            strong 12 580 товаров
+          .col-auto
+            +b.UL.pagination
+              +e.LI.item
+                +e.A.link.active(href='#') 1
+              +e.LI.item
+                +e.A.link(href='#') 2
+              +e.LI.item
+                +e.A.link(href='#') 3
+              +e.LI.item
+                +e.A.link--dots(href='#') ...
+              +e.LI.item
+                +e.A.link(href='#') 156
+
+mixin catalogFooterNav()
+  +e.footer
+    .row
+      .col-12.d-md-none
+        button.btn.load-more Загрузить еще
+      .col-6.d-none.d-md-block
+        .row
+          .col-8
+            .row.align-items-center
+              .col-auto Отображать по:
+              .col-auto
+                a.quantity.active(href="#") 16
+                a.quantity(href="#") 24
+                a.quantity(href="#") 32
+      .col-6.d-none.d-md-block
+        .row.align-items-center.justify-content-end
+          .col-auto Всего:
+            strong 12 580 товаров
+          .col-auto
+            +b.UL.pagination
+              +e.LI.item
+                +e.A.link.active(href='#') 1
+              +e.LI.item
+                +e.A.link(href='#') 2
+              +e.LI.item
+                +e.A.link(href='#') 3
+              +e.LI.item
+                +e.A.link--dots(href='#') ...
+              +e.LI.item
+                +e.A.link(href='#') 156
+      .col-12.d-md-none

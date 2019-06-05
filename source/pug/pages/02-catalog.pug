@@ -1,0 +1,33 @@
+extends layout/main.pug
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/sliders/sliders
+include ../blocks/mixins/_mixins
+include ../blocks/advertising/advertising
+include ../blocks/aside-filters/aside-filters
+
+
+block title
+  title Гланая
+
+block pagecontent
+  .breadcrumb
+    .container
+      +breadcrumb("Каталог", "Главная")
+  +b.page-name
+    .container
+      +e.H2 КАТАЛОГ КОСМЕТИКИ
+  +b.catalog
+    .container
+      .row
+        .col-12.col-md-3
+          aside.aside
+            .smartfilter
+              +aside-filters()
+        .col-12.col-md-9
+          +bigSlider()
+          +brendsSlider()
+          +catalogHederNav()
+          +catalogItems('4')
+          +catalogFooterNav()
+  +advertising('реклама')
+

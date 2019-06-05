@@ -19,7 +19,8 @@ $('.brand-slider__list').slick({
 $('.sale-slider__list').slick({
     infinite: true,
     speed: 300,
-    slidesToShow: 5,
+    slidesToShow: 6,
+    slidesToScroll: 4,
     centerMode: true,
     variableWidth: true,
     prevArrow: $('.sale-slider__btn-prev'),
@@ -28,7 +29,8 @@ $('.sale-slider__list').slick({
 
         breakpoint: 768,
         settings: {
-            slidesToShow: 4
+            slidesToShow: 1,
+            arrows: false
         }
 
 

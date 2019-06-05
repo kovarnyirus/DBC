@@ -142,3 +142,12 @@ mixin product-item(img, title, description, size)
         +icon('icon-like')
       +e.A.basket(href='')
         +icon('icon-basket')
+
+mixin catalogItems(rows)
+  .product-list
+    - for (var x = 0; x < rows; x++)
+      +product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
+      +product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
+      +product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
+      +product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
+

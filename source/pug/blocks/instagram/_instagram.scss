@@ -1,5 +1,12 @@
-.instagram-block__title{
+.instagram-block{
+  & .container{
+    overflow: hidden;
+  }
 
+}
+.instagram-block__title{
+  margin-bottom: 0;
+  margin-top: 2px;
 }
 
 .instagram-block__link{
@@ -23,9 +30,35 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 17px;
+  position: relative;
+  background-color: #ffffff;
+  padding-left: 44px;
+  padding-right: 44px;
   @include media-breakpoint-up(md){
     justify-content: center;
     margin-bottom: 66px;
+  }
+  &:before{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 99999px;
+    right: 0%;
+    top: 50%;
+    height: 1px;
+    background-color: #000000;
+    z-index: -1;
+  }
+  &:after{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 99999px;
+    left: 0%;
+    top: 50%;
+    height: 1px;
+    background-color: #000000;
+    z-index: -1;
   }
 }
 

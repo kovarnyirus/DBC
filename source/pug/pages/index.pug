@@ -3,6 +3,7 @@ include ../blocks/sliders/sliders
 include ../blocks/advertising/advertising
 include ../blocks/comp-info/comp-info
 include ../blocks/instagram/instagram
+include ../blocks/mixin-popup/mixin-popup
 
 
 block title
@@ -10,14 +11,10 @@ block title
 
 block pagecontent
   .main-page
+    +cookies()
     .container
       +bigSlider()
       +bannerHead()
-    +b.cooces
-      .container
-        +e.P.message Мы используем файлы cookie и сбор персональных данных, чтобы предоставить вам лучший пользовательский сервис и показывать вам индивидуальные предложения на нашем сайте. Продолжая просматривать наш веб-сайт, вы соглашаетесь c использованием cookie и обработкой персональных данных.
-          +e.A.link(href='#') Узнать больше
-        +e.BUTTON.btn.btn-cloce
     .container
       +banner4()
     +saleSlider()
