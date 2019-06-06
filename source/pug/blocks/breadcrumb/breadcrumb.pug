@@ -1,5 +1,7 @@
 mixin breadcrumb(act, ...items)
-  nav.breadcrumb__list
-    each item in items
-      a.breadcrumb__item(href='#')= item
-    span.breadcrumb__item.active= act
+  .breadcrumb
+    .container
+      nav.breadcrumb__list
+        each item in items
+          a.breadcrumb__item(href='#')= item
+        span.breadcrumb__item.active= act

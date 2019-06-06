@@ -1,0 +1,46 @@
+.line-brand{
+  margin-top: 32px;
+  margin-bottom: 33px;
+  @include media-breakpoint-up(md){
+    margin-bottom: 120px;
+  }
+
+}
+.line-brand__title{
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 26px;
+  @include media-breakpoint-up(md){
+    margin-top: 0;
+  }
+}
+.line-brand__description{
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  max-width: 600px;
+  margin-bottom: 25px;
+  @include media-breakpoint-up(md){
+    font-size: 35px;
+  }
+}
+.line-brand__brand-logo{
+  margin-bottom: 25px;
+  @include media-breakpoint-up(md){
+    margin-top: 20px;
+  }
+}
+.line-brand__text-wrapper{
+  @include media-breakpoint-up(md){
+    min-height: 167px;
+  }
+}
+
+.line-brand__banner-wrapper{
+  padding-left: 0;
+  padding-right: 0;
+  @include media-breakpoint-up(md){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

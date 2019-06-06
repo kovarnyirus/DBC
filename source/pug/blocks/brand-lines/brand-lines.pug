@@ -1,20 +1,47 @@
 mixin brandLinesItem(name, description, num)
-  .col-12.col-md-6.col-lg-3
-    +e.item
-      +e.H3.title= name
-      +e.p.description= description
-      +e.number= num
+  +e.item
+    +e.H3.title= name
+    +e.p.description= description
+    +e.number= num
 
 mixin brand-lines()
   +b.brand-lines
     h2 Линии бренда
     .row
-      +brandLinesItem('ABCDerm', 'Средства для детей и атопичной кожи', '123')
-      +brandLinesItem('Atoderm', 'Средства для детей и атопичной кожи', '10')
-      +brandLinesItem('Hydrabio', 'Средства для детей и атопичной кожи', '2')
-      +brandLinesItem('Photoderm', 'Средства для детей и атопичной кожи', '10')
-      +brandLinesItem('Cicabio', 'Линия косметических средств для поврежденной кожи', '15')
-      +brandLinesItem('Node', 'Линия косметических средств для поврежденной кожи', '1')
-      +brandLinesItem('Sebium', 'Линия косметических средств для поврежденной кожи', '6')
-      +brandLinesItem('Sensibio', 'Линия косметических средств для поврежденной кожи', '15')
+      .col-12.col-md-6.col-lg-3
+        +brandLinesItem('ABCDerm', 'Средства для детей и атопичной кожи', '123')
+      .col-12.col-md-6.col-lg-3
+        +brandLinesItem('Atoderm', 'Средства для детей и атопичной кожи', '10')
+      .col-12.col-md-6.col-lg-3
+        +brandLinesItem('Hydrabio', 'Средства для детей и атопичной кожи', '2')
+      .col-12.col-md-6.col-lg-3
+        +brandLinesItem('Photoderm', 'Средства для детей и атопичной кожи', '10')
+      .col-12.col-md-6.col-lg-3
+        +brandLinesItem('Cicabio', 'Линия косметических средств для поврежденной кожи', '15')
+      .col-12.col-md-6.col-lg-3
+        +brandLinesItem('Node', 'Линия косметических средств для поврежденной кожи', '1')
+      .col-12.col-md-6.col-lg-3
+        +brandLinesItem('Sebium', 'Линия косметических средств для поврежденной кожи', '6')
+      .col-12.col-md-6.col-lg-3
+        +brandLinesItem('Sensibio', 'Линия косметических средств для поврежденной кожи', '15')
 
+
+mixin brandLinesAside()
+  +b.brand-lines--aside
+    .row
+      .col-12
+        +brandLinesItem('ABCDerm', 'Средства для детей и атопичной кожи', '123')
+      .col-12
+        +brandLinesItem('Atoderm', 'Средства для детей и атопичной кожи', '10')
+      .col-12
+        +brandLinesItem('Hydrabio', 'Средства для детей и атопичной кожи', '2')
+      .col-12
+        +brandLinesItem('Photoderm', 'Средства для детей и атопичной кожи', '10')
+      .col-12
+        +brandLinesItem('Cicabio', 'Линия косметических средств для поврежденной кожи', '15')
+      .col-12
+        +brandLinesItem('Node', 'Линия косметических средств для поврежденной кожи', '1')
+      .col-12
+        +brandLinesItem('Sebium', 'Линия косметических средств для поврежденной кожи', '6')
+      .col-12
+        +brandLinesItem('Sensibio', 'Линия косметических средств для поврежденной кожи', '15')

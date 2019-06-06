@@ -10,9 +10,7 @@ block title
   title Гланая
 
 block pagecontent
-  .breadcrumb
-    .container
-      +breadcrumb("Каталог", "Главная")
+  +breadcrumb("Каталог", "Главная")
   +b.page-name
     .container
       +e.H2 Каталог Новинки
@@ -21,7 +19,7 @@ block pagecontent
       .row
         .col-12.col-md-3
           aside.aside
-            .smartfilter
+            form.smartfilter
               +aside-filters()
         .col-12.col-md-9
           +bigSlider()

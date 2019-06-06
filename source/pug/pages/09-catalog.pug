@@ -5,6 +5,7 @@ include ../blocks/mixins/_mixins
 include ../blocks/advertising/advertising
 include ../blocks/aside-filters/aside-filters
 include ../blocks/brand-lines/brand-lines
+include ../blocks/line-brand/line-brand
 
 
 block title
@@ -12,26 +13,15 @@ block title
 
 block pagecontent
   +breadcrumb(' Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл', 'Главная', 'Бренды', 'Laura Rosse', 'Laura Rosse - Уход за волосами')
-  +b.page-name
-    .container
-      +e.H2 Bioderma
-        sapn.text-secondary Франция
   +b.catalog
     .container
-      +banner('banner-bioderma.jpg')
-      +e.brand-info
-        .row
-          .col-3.d-none.d-md-block
-            +e.IMG.brand-logo(src='img/bioderma.jpg' alt='img')
-          .col-12.col-md-9
-            p Французская косметика Bioderma была создана в 1978 году на базе фармацевтической лаборатории, однако впоследствии компания сменила вектор своего развития, обратив свои научные разработки на решение более узкого спектра проблем. Сейчас Биодерма создает эффективные препараты для лечения и профилактики различных проблем связанных с кожей. В ассортименте марки вы найдете 8 основных линеек для различных типов кожи (в том числе атопичной и страдающей розацеа или дерматитом), а также линейку для волос и кожи головы.
-              a.reed-more(href='#') Читать далее
-      +brand-lines()
+      +line-brand()
       .row
         .col-12.col-md-3
           aside.aside
             form.smartfilter
               +aside-filters()
+              +brandLinesAside()
         .col-12.col-md-9
           +catalogHederNav()
           +catalogItems('4')
@@ -43,11 +33,5 @@ block pagecontent
     +brendsSliderTitle('Популярные бренды')
     +advertising('Рекомендуемые товары')
     +advertising('Вы смотрели')
-        //+banner()
-          //+catalogItems('1')
-          //+banner2()
-          //+catalogItems('2')
 
-
-  //+advertising('реклама')
 
