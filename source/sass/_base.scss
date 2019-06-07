@@ -277,3 +277,29 @@ a {
   background-color: #5CBF1A;
   border-radius: 50%;
 }
+
+.discount{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #BE0B58;
+  font-size: 12px;
+}
+
+.icon-question{
+  margin-left: 10px;
+  fill: $text-color;
+  padding: 5px;
+  width: 26px;
+  height: 26px;
+  &:hover{
+
+  }
+}

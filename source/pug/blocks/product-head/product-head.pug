@@ -31,7 +31,50 @@ mixin product-head()
                 .col-12
                   +category()
             .col-12.col-md-6
-              
+              +b.price-block
+                +e.row
+                  .col-auto.d-flex.flex-grow-1.align-items-center
+                    +e.name price
+                    +e.BUTTON.action(data-toggle="tooltip" data-placement="top" title="Причина уценки: Дефекты на внешней упаковке товара") уценка
+                  +e.cost--old-cost
+                      strike 251 Р
+                  .col-auto
+                    +e.cost--new-cost 650 Р
+                +e.row
+                  .col-auto.d-flex.flex-grow-1.align-items-center
+                    +e.name mini sale
+                    +discount(5)
+                    +icon('icon-question')
+                  .col-auto
+                    +e.cost 531 Р
+                +e.row
+                  .col-auto.d-flex.flex-grow-1.align-items-center
+                    +e.name maxi sale
+                    +discount(15)
+                    +icon('icon-question')
+                  .col-auto
+                    +e.cost 490 Р
+                +e.row
+                  .col-auto.d-flex.flex-grow-1
+                    +e.name VIP
+                    +icon('icon-question')
+                  .col-auto
+                    +e.A.btn.btn(href='') Узнать цену
+                .d-flex
+                  +b.block-add
+                    +e.btn--minus
+                    +e.INPUT.form-control(type="text" value="10")
+                    +e.btn--plus
+
+                    a.btn.btn-buy(href='#') В корзину
+                      +icon('icon-basket')
+
+
+
+
+
+
+
 
 
 
