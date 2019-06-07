@@ -181,3 +181,18 @@ mixin category()
 mixin discount(num)
   span.discount= num + '%'
 
+mixin advantages()
+  +b.advantages
+    .row
+      +e.item.col-12.col-sm-4
+        +icon('icon-best-price')
+        |
+        span Лучшая цена
+      +e.item.col-12.col-sm-4
+        +icon('icon-guarantee')
+        |
+        span Гарантия возврата
+      +e.item.col-12.col-sm-4
+        +icon('icon-original')
+        |
+        span Оригинальная косметика
