@@ -151,3 +151,32 @@ mixin catalogItems(rows)
       +product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
       +product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
 
+
+mixin stars(active, num )
+  +b.stars
+    +e.wrapper.row.align-items-center
+      .col-auto
+        - for (var x = 0; x < 5; x++)
+            if x < active
+              +e.item--active: +icon("icon-star")
+            else
+              +e.item: +icon("icon-star")
+      .col-auto.pl-0
+        span.num= num
+
+mixin category()
+  +b.product-category
+    +e.h2.title Категории этого товара:
+    +e.UL.list
+      each item in ['Корейская бытовая химия', 'Дом', 'Средства для стирки', 'Гели и жидкости для стирки', 'Еще категория']
+          +e.LI.item
+            +e.A.link(href='')= item
+    a.reed-more.reed-more--dots(href='#')
+      span.reed-more__dot
+      span.reed-more__dot
+      span.reed-more__dot
+
+
+
+
+

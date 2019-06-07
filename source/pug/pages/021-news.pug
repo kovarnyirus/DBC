@@ -1,0 +1,28 @@
+extends layout/main.pug
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/sliders/sliders
+include ../blocks/mixins/_mixins
+include ../blocks/news/news
+
+
+
+block title
+  title Гланая
+
+block pagecontent
+  +breadcrumb("BDC news", "Главная")
+  +b.page-name
+    .container
+      +e.H2 BDC news
+  +b.news
+    +newsList(6)
+    +b.news-pagination
+      .row.justify-content-center
+        .col-auto
+          a.quantity(href='') 1
+          a.quantity.active(href='') 2
+          a.quantity(href='') 3
+
+
+
+

@@ -1,0 +1,37 @@
+mixin product-head()
+  +b.product-head
+    .container
+      .row
+        .col-12.col-md-6
+          img(src='#' alt='img')
+        .col-12.col-md-6
+          +e.H1.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
+          +e.subtitle Набор: шампунь и кондиционер для сухиз волос
+          p Корейское жидкое средство для деликатной стирки и нижнего белья с серебром KMPC Nano Silver Step Detergent. Высококачественное суперконцентрированное жидкое средство подходит как для машинной,
+            |
+            a.reed-more.reed-more--dots(href="#")
+              span.reed-more__dot
+              span.reed-more__dot
+              span.reed-more__dot
+          .row.mb-5
+            .col-12.col-md-6
+              +e.article Артикул:
+                span URU09764
+              +e.code Штрих код:
+                span 1120421133410
+              .row
+                .col-auto
+                  +e.SPAN.rating
+                    +stars(4, 9)
+                .col-auto
+                  +e.bought
+                    span.marker.marker--green 25
+                    | купили
+              .row
+                .col-12
+                  +category()
+            .col-12.col-md-6
+              
+
+
+

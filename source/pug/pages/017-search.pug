@@ -1,0 +1,23 @@
+extends layout/main.pug
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/sliders/sliders
+include ../blocks/mixins/_mixins
+include ../blocks/advertising/advertising
+
+
+
+block title
+  title Гланая
+
+block pagecontent
+  +breadcrumb("Поиск", "Главная")
+  +b.page-name
+    .container
+      +e.H2 Результаты поиска
+  +b.search-page
+    .container
+      p.search-page__no-result К сожалению ваш запрос не дал результатов :(
+  +advertisingNoBg('Возможно Вам понравятся')
+  +brendsSlider()
+  +advertisingNoBg('реклама')
+
