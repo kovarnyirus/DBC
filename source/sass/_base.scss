@@ -263,6 +263,21 @@ a {
 
 }
 
+.stars__line{
+  width: 100%;
+  height: 7px;
+  display: inline-block;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color:  #C4C4C4;
+}
+
+.stars__line-active{
+  height: 100%;
+  background-color: #FFC80A;
+}
+
 .marker{
   width: 26px;
   height: 26px;
@@ -302,4 +317,17 @@ a {
   &:hover{
 
   }
+}
+input{
+  background: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-bottom: 6px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 7px;
+  padding-top: 18px;
+  font-size: 14px;
+  color: #828282;
 }

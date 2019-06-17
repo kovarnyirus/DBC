@@ -151,18 +151,47 @@ mixin catalogItems(rows)
       +product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
       +product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
 
-
-mixin stars(active, num )
+mixin stars(active, num)
   +b.stars
     +e.wrapper.row.align-items-center
       .col-auto
         - for (var x = 0; x < 5; x++)
-            if x < active
-              +e.item--active: +icon("icon-star")
-            else
-              +e.item: +icon("icon-star")
+        if x < active
+          +e.SPAN.item--active: +icon("icon-star")
+        else
+          +e.SPAN.item: +icon("icon-star")
       .col-auto.pl-0
         span.num= num
+
+
+mixin starsLine(active, num, line )
+  +b.stars
+    .d-flex.align-items-center
+      .col-4
+        +e.wrapper.row.align-items-center
+          - for (var x = 0; x < 5; x++)
+              if x < active
+                +e.SPAN.item--active: +icon("icon-star")
+              else
+                +e.SPAN.item: +icon("icon-star")
+          .col-auto.pl-2.pr-0
+            span.num= num
+      .col-8.pl-0.pr-0
+        .d-flex.align-items-center
+          +e.line
+            +e.line-active(style='width:' +line +'%')
+
+mixin star(namber)
+  +b.stars
+    +e.wrapper.row.align-items-center
+      .col-auto
+        - for (var x = 0; x < 5; x++)
+          if x < namber
+            +e.SPAN.item--active: +icon("icon-star")
+          else
+            +e.SPAN.item: +icon("icon-star")
+
+
 
 mixin category()
   +b.product-category

@@ -5,7 +5,36 @@ mixin product-head()
         .col-12.col-xl-6
           +e.H1.title.d-md-none Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
             +e.subtitle.d-md-none Набор: шампунь и кондиционер для сухиз волос
-          img(src='img/product/prod-item.jpg' alt='img')
+          +e.sliders
+            .row
+              .col-12.col-md-10
+                +e.slider-big
+                  +e.slide--big
+                    a(href='img/product/prod-item.jpg')
+                      img(src='img/product/prod-item.jpg' alt='img')
+                  +e.slide--big
+                    a(href='img/product/prod-item.jpg')
+                      img(src='img/product/prod-item.jpg' alt='img')
+                  +e.slide--big
+                    a(href='img/product/prod-item.jpg')
+                      img(src='img/product/prod-item.jpg' alt='img')
+                  +e.slide--big
+                    a(href='img/product/prod-item.jpg')
+                      img(src='img/product/prod-item.jpg' alt='img')
+              .col-12.col-md-2
+                +e.slider-small
+                  +e.slide
+                      img(src='img/product/prod-item.jpg')
+                  +e.slide
+                      img(src='img/product/prod-item.jpg')
+                  +e.slide
+                      img(src='img/product/prod-item.jpg')
+                  +e.slide
+                      img(src='img/product/prod-item.jpg')
+                  +e.slide
+                    +e.A.video-link(href='#')
+                      +icon('icon-play')
+            +e.P.footnote.text-secondary Фактический вид товара может отличаться от изображения на сайте
 
 
 
@@ -27,7 +56,7 @@ mixin product-head()
               .row
                 .col-auto
                   +e.SPAN.rating
-                    +stars(4, 9)
+                    +stars(4, 55)
                 .col-auto
                   +e.bought
                     span.marker.marker--green 25

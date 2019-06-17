@@ -3,7 +3,9 @@
   & p {
     color: #9FA3A7;
   }
+  @include media-breakpoint-up(md){
 
+  }
 }
 
 .product-head__title {
@@ -155,8 +157,9 @@
   width: 40px;
   position: relative;
   cursor: pointer;
+
   &:before,
-  &:after{
+  &:after {
     position: absolute;
     display: block;
     content: '';
@@ -168,22 +171,24 @@
     transform: translate(-50%, -50%);
     transition: .2s;
   }
-  &:hover{
+
+  &:hover {
     &:before,
-    &:after{
+    &:after {
       background-color: #82C456;
     }
   }
-  &:after{
+
+  &:after {
     &:before,
-    &:after{
+    &:after {
       background-color: #459014;
     }
   }
 }
 
-.block-add__btn--plus{
-  &:before{
+.block-add__btn--plus {
+  &:before {
     left: 50%;
     transform: rotate(90deg) translate(0, 10px);
   }
@@ -199,13 +204,13 @@
   text-align: center;
 }
 
-.btn-buy{
+.btn-buy {
   border-radius: 48px;
   background-color: #BE0B58;
   padding-top: 8px;
   padding-bottom: 8px;
 
-  .icon{
+  .icon {
     width: 30px;
     height: 30px;
     border-color: white;
@@ -215,11 +220,12 @@
   }
 }
 
-.advantages{
+.advantages {
   background-color: #F9F9F9;
   padding-top: 16px;
   padding-bottom: 20px;
-  & .icon{
+
+  & .icon {
     border: none;
     width: 35px;
     height: 35px;
@@ -227,7 +233,8 @@
     margin-right: 10px;
     fill: black;
   }
-  & span{
+
+  & span {
     width: 60px;
     display: inline-block;
     line-height: 1;
@@ -235,8 +242,48 @@
     font-size: 12px;
   }
 }
-.advantages__item{
+
+.advantages__item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.product-head__slider-small {
+  .product-head__slide {
+    max-height: 89px;
+    max-width: 89px;
+    border: 1px solid #F2F2F2;
+    padding: 10px;
+  }
+}
+
+.product-head__video-link {
+  display: flex;
+  width: 69px;
+  height: 69px;
+  align-items: center;
+  justify-content: center;
+
+  .icon {
+    width: 51px;
+    height: 51px;
+    border-color: #FFC80A;
+    fill: #FFC80A;
+    padding: 17px;
+  }
+}
+
+.product-head__slide--big {
+  padding-top: 50px;
+}
+
+.product-head__footnote {
+  margin-right: 80px;
+  text-align: center;
+}
+
+.product-head__slider-big {
+  margin-bottom: 54px;
+}
+

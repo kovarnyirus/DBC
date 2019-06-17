@@ -1,0 +1,46 @@
+.tabs__caption{
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 4px solid #F6F6F6;
+  padding-top: 55px;
+}
+
+.tabs__item{
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+
+.tabs__btn{
+  padding-bottom: 30px;
+  padding-left: 42px;
+  padding-right: 42px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  position: relative;
+  &.active{
+    &:before{
+      position: absolute;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 8px;
+      background: #5CBF1A;
+      border-radius: 10px;
+      bottom: -6px;
+      left: 0;
+    }
+  }
+  span{
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+  }
+}
+
+.tabs__btn-number{
+ color: #5CBF1A;
+  margin-left: 5px;
+}

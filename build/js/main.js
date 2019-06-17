@@ -72,3 +72,64 @@ $('.catalog-nav__brand').slick({
         }
     ]
 });
+
+
+$(".product-head__sliders").each(function () {
+    var th = $(this);
+
+
+    //  слайдер в  карточке товара
+    th.find('.product-head__slider-big').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        speed: 450,
+        asNavFor: th.find('.product-head__slider-small'),
+        infinite: false,
+        loop: false,
+        arrows: false,
+
+    });
+    th.find('.product-head__slider-small').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        dots: false,
+        speed: 450,
+        infinite: false,
+        loop: false,
+        arrows: false,
+        vertical: true,
+        verticalSwiping: true,
+        focusOnSelect: true,
+        asNavFor: th.find('.product-head__slider-big'),
+        responsive: [{
+            breakpoint: 1199,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 4,
+                    vertical: false,
+                    verticalSwiping: false,
+                }
+            },
+
+        ]
+    });
+});
+
+function tabscostume(tab) {
+    $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+        $(this)
+            .addClass('active').siblings().removeClass('active')
+            .closest('.' + tab).find('.' + tab + '__item').hide().removeClass('active')
+            .eq($(this).index()).fadeIn().addClass('active');
+
+    });
+};
+tabscostume('tabs');
+// tabscostume('tabs-contact');
+

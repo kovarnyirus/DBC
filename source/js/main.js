@@ -1,15 +1,11 @@
-var slidetArrowNext = '<button class="btn-next brand-slider__btn-next slick-arrow" style=""><svg class="icon icon-arrow-right"><use xlink:href="img/svg/sprite.svg#icon-arrow-right"></use></svg></button>';
-var slidetArrowPrev = '<button class="btn-prev brand-slider__btn-prev slick-arrow" style=""><svg class="icon icon-arrow-left "><use xlink:href="img/svg/sprite.svg#icon-arrow-left"></use></svg></button>';
-
-
 $('.brand-slider__list').slick({
     infinite: true,
     speed: 300,
     slidesToShow: 2,
     centerMode: true,
     variableWidth: true,
-    prevArrow: slidetArrowPrev,
-    nextArrow: slidetArrowNext,
+    prevArrow: $('.brand-slider__btn-prev'),
+    nextArrow: $('.brand-slider__btn-next'),
     responsive: [{
 
         breakpoint: 768,
@@ -23,16 +19,18 @@ $('.brand-slider__list').slick({
 $('.sale-slider__list').slick({
     infinite: true,
     speed: 300,
-    slidesToShow: 5,
+    slidesToShow: 6,
+    slidesToScroll: 4,
     centerMode: true,
     variableWidth: true,
-    prevArrow: slidetArrowPrev,
-    nextArrow: slidetArrowNext,
+    prevArrow: $('.sale-slider__btn-prev'),
+    nextArrow: $('.sale-slider__btn-next'),
     responsive: [{
 
         breakpoint: 768,
         settings: {
-            slidesToShow: 4
+            slidesToShow: 1,
+            arrows: false
         }
 
 
@@ -44,8 +42,8 @@ $('.advertising__slider').slick({
     slidesToShow: 2,
     variableWidth: true,
     dots: false,
-    prevArrow: slidetArrowPrev,
-    nextArrow: slidetArrowNext,
+    prevArrow: $('.advertising__btn-prev'),
+    nextArrow: $('.advertising__btn-next'),
     responsive: [{
 
         breakpoint: 768,
@@ -74,3 +72,64 @@ $('.catalog-nav__brand').slick({
         }
     ]
 });
+
+
+$(".product-head__sliders").each(function () {
+    var th = $(this);
+
+
+    //  слайдер в  карточке товара
+    th.find('.product-head__slider-big').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        speed: 450,
+        asNavFor: th.find('.product-head__slider-small'),
+        infinite: false,
+        loop: false,
+        arrows: false,
+
+    });
+    th.find('.product-head__slider-small').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        dots: false,
+        speed: 450,
+        infinite: false,
+        loop: false,
+        arrows: false,
+        vertical: true,
+        verticalSwiping: true,
+        focusOnSelect: true,
+        asNavFor: th.find('.product-head__slider-big'),
+        responsive: [{
+            breakpoint: 1199,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 4,
+                    vertical: false,
+                    verticalSwiping: false,
+                }
+            },
+
+        ]
+    });
+});
+
+function tabscostume(tab) {
+    $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+        $(this)
+            .addClass('active').siblings().removeClass('active')
+            .closest('.' + tab).find('.' + tab + '__item').hide().removeClass('active')
+            .eq($(this).index()).fadeIn().addClass('active');
+
+    });
+};
+tabscostume('tabs');
+// tabscostume('tabs-contact');
+
