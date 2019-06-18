@@ -76,7 +76,8 @@ img {
   font-size: 14px;
   padding-left: 3px;
   padding-right: 3px;
-  &--dots{
+
+  &--dots {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -86,7 +87,8 @@ img {
     padding-right: 5px;
     border-radius: 10px;
   }
-  &__dot{
+
+  &__dot {
     background-color: #5CBF1A;
     width: 5px;
     height: 5px;
@@ -239,46 +241,48 @@ a {
   }
 }
 
-.icon-star{
+.icon-star {
   border: none;
   fill: #E2E2E2;
   cursor: pointer;
   transition: .1s;
-  &:hover{
+
+  &:hover {
     fill: #FFF50A;
   }
-  &:active{
+
+  &:active {
     fill: #FFAC0A;
   }
 }
 
-.stars__item{
+.stars__item {
 
 }
 
-.stars__item--active{
-  & .icon-star{
+.stars__item--active {
+  & .icon-star {
     fill: #FFC80A;
   }
 
 }
 
-.stars__line{
+.stars__line {
   width: 100%;
   height: 7px;
   display: inline-block;
   position: relative;
   margin-top: auto;
   margin-bottom: auto;
-  background-color:  #C4C4C4;
+  background-color: #C4C4C4;
 }
 
-.stars__line-active{
+.stars__line-active {
   height: 100%;
   background-color: #FFC80A;
 }
 
-.marker{
+.marker {
   width: 26px;
   height: 26px;
   text-align: center;
@@ -288,12 +292,12 @@ a {
   margin-right: 5px;
 }
 
-.marker--green{
+.marker--green {
   background-color: #5CBF1A;
   border-radius: 50%;
 }
 
-.discount{
+.discount {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -308,17 +312,35 @@ a {
   font-size: 12px;
 }
 
-.icon-question{
+.discount__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.discount--big{
+  width: 35px;
+  height: 35px;
+}
+
+.discount__text {
+  margin-left: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.icon-question {
   margin-left: 10px;
   fill: $text-color;
   padding: 5px;
   width: 26px;
   height: 26px;
-  &:hover{
+
+  &:hover {
 
   }
 }
-input{
+
+input {
   background: #FFFFFF;
   border: 1px solid #E8E8E8;
   box-sizing: border-box;
@@ -330,4 +352,27 @@ input{
   padding-top: 18px;
   font-size: 14px;
   color: #828282;
+}
+
+.icon-share {
+  border: none;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 0;
+  margin-left: 20px;
+  fill: #9FA3A7;
+}
+
+.success-text-color {
+  color: #5CBF1A;
+}
+
+.product-feature {
+  color: #4D4D4D;
+  margin-bottom: 13px;
+
+  & span {
+    font-weight: bold;
+  }
 }

@@ -3,8 +3,67 @@
   & p {
     color: #9FA3A7;
   }
-  @include media-breakpoint-up(md){
 
+  @include media-breakpoint-up(md) {
+
+  }
+
+  .product-head__sale {
+    border: 3px solid #E0E0E0;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 26px;
+    padding-bottom: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    & .product-head__cost {
+      margin-left: 0;
+    }
+  }
+
+  .product-head__old-cost {
+    font-size: 20px;
+    color: #9FA3A7;
+    text-decoration-line: line-through;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .product-head__btn {
+    border: 1px solid #5CBF1A;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 3px;
+    display: block;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    color: #9FA3A7;
+    margin-bottom: 32px;
+    line-height: 1;
+  }
+
+  .product-head__sale-title {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #4D4D4D;
+  }
+
+  .product-head__sale-subtitle {
+    margin-bottom: 5px;
+  }
+
+  & .icon-heart {
+    border: none;
+    fill: #9FA3A7;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    cursor: pointer;
   }
 }
 
@@ -24,7 +83,7 @@
   margin-bottom: 31px;
   @include media-breakpoint-up(md) {
     font-size: 16px;
-    margin-bottom: 21px;
+    margin-bottom: 57px;
   }
 }
 
@@ -202,6 +261,15 @@
   font-size: 20px;
   background-color: #EDEDED;
   text-align: center;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.product-head__cost {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 114%;
+  margin-left: 30px;
 }
 
 .btn-buy {
@@ -209,6 +277,8 @@
   background-color: #BE0B58;
   padding-top: 8px;
   padding-bottom: 8px;
+  display: flex;
+  align-items: center;
 
   .icon {
     width: 30px;
@@ -217,6 +287,7 @@
     fill: white;
     padding: 4px;
     padding-bottom: 0;
+    margin-left: 5px;
   }
 }
 
@@ -285,5 +356,32 @@
 
 .product-head__slider-big {
   margin-bottom: 54px;
+  position: relative;
 }
+
+.product-head__slider-big-container {
+  position: relative;
+
+}
+.product-head__slider-big-like {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  flex-direction: column;
+  align-items: center;
+  color: #6CB13E;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  z-index: 5;
+  & .icon-heart{
+    width: 29px;
+    height: 29px;
+    fill: #6CB13E;
+    border-radius: 0;
+    margin-bottom: 5px;
+  }
+}
+
 

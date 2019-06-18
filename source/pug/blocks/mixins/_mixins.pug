@@ -156,10 +156,10 @@ mixin stars(active, num)
     +e.wrapper.row.align-items-center
       .col-auto
         - for (var x = 0; x < 5; x++)
-        if x < active
-          +e.SPAN.item--active: +icon("icon-star")
-        else
-          +e.SPAN.item: +icon("icon-star")
+          if x < active
+            +e.SPAN.item--active: +icon("icon-star")
+          else
+            +e.SPAN.item: +icon("icon-star")
       .col-auto.pl-0
         span.num= num
 
@@ -210,6 +210,11 @@ mixin category()
 mixin discount(num)
   span.discount= num + '%'
 
+mixin discountType(num, text)
+  .discount__wrapper
+    span.discount.discount--big= num + '%'
+    apsn.discount__text= text
+
 mixin advantages()
   +b.advantages
     .row
@@ -225,3 +230,11 @@ mixin advantages()
         +icon('icon-original')
         |
         span Оригинальная косметика
+
+mixin productHeadInfo(name, text)
+  .product-feature= name + ': '
+    span= text
+
+mixin productHeadInfoSelectedText(name, text)
+  .product-feature= name + ': '
+    span.success-text-color= text

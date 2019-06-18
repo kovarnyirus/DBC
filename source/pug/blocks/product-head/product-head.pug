@@ -8,19 +8,23 @@ mixin product-head()
           +e.sliders
             .row
               .col-12.col-md-10
-                +e.slider-big
-                  +e.slide--big
-                    a(href='img/product/prod-item.jpg')
-                      img(src='img/product/prod-item.jpg' alt='img')
-                  +e.slide--big
-                    a(href='img/product/prod-item.jpg')
-                      img(src='img/product/prod-item.jpg' alt='img')
-                  +e.slide--big
-                    a(href='img/product/prod-item.jpg')
-                      img(src='img/product/prod-item.jpg' alt='img')
-                  +e.slide--big
-                    a(href='img/product/prod-item.jpg')
-                      img(src='img/product/prod-item.jpg' alt='img')
+                +e.slider-big-container
+                  +e.slider-big-like
+                    +icon('icon-heart')
+                    | wishlist
+                  +e.slider-big
+                    +e.slide--big
+                      a(href='img/product/prod-item.jpg')
+                        img(src='img/product/prod-item.jpg' alt='img')
+                    +e.slide--big
+                      a(href='img/product/prod-item.jpg')
+                        img(src='img/product/prod-item.jpg' alt='img')
+                    +e.slide--big
+                      a(href='img/product/prod-item.jpg')
+                        img(src='img/product/prod-item.jpg' alt='img')
+                    +e.slide--big
+                      a(href='img/product/prod-item.jpg')
+                        img(src='img/product/prod-item.jpg' alt='img')
               .col-12.col-md-2
                 +e.slider-small
                   +e.slide
@@ -41,19 +45,55 @@ mixin product-head()
         .col-12.col-xl-6
           +e.H1.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
           +e.subtitle Набор: шампунь и кондиционер для сухиз волос
-          p Корейское жидкое средство для деликатной стирки и нижнего белья с серебром KMPC Nano Silver Step Detergent. Высококачественное суперконцентрированное жидкое средство подходит как для машинной,
-            |
-            a.reed-more.reed-more--dots(href="#")
-              span.reed-more__dot
-              span.reed-more__dot
-              span.reed-more__dot
-          .row.mb-5
-            .col-12.col-md-6
-              +e.article Артикул:
-                span URU09764
-              +e.code Штрих код:
-                span 1120421133410
-              .row
+          .row.mb-4.pb-2
+            .col-6.d-flex.align-items-center
+              +icon('icon-heart')
+              +icon('icon-share')
+              +e.cost 650 Р
+                +e.old-cost 1 251 Р
+              +discountType('-10', 'SALE')
+
+            .col-6
+              .d-flex
+                +b.block-add
+                  .d-flex.flex-grow-1.align-items-center
+                    +e.btn--minus
+                    +e.INPUT.form-control(type="text" value="10")
+                    +e.btn--plus
+
+                  a.btn.btn-buy(href='#') В корзину
+                    +icon('icon-basket')
+          .row
+            .col-6
+              +e.sale
+                +e.sale-title mini sale
+                  +discount(5)
+                +e.sale-subtutle от 3000 р
+                +e.cost 634 Р
+
+            .col-6
+              +e.sale
+                +e.sale-title mini sale
+                  +discount(7)
+                +e.sale-subtitle от 3000 р
+                +e.cost 620 Р
+          .row
+            .col-6
+              +e.A.btn.success-text-color(href='#') Узнать VIP цену
+            .col-6
+              +e.A.btn(href='#') Посмотреть уцененный товар
+
+          .row
+            .col-6
+              +productHeadInfo('Артикул' , 'URU09764')
+              +productHeadInfo('Штрих код' , '1120421133410')
+
+            .col-6
+              +productHeadInfoSelectedText('Бренд', 'Matrix')
+              +productHeadInfo('Фасовка' , 'Да')
+          .row
+            .col-6
+              .row.align-items-center.pt-3
                 .col-auto
                   +e.SPAN.rating
                     +stars(4, 55)
@@ -61,50 +101,9 @@ mixin product-head()
                   +e.bought
                     span.marker.marker--green 25
                     | купили
-              .row
-                .col-12
-                  +category()
-            .col-12.col-md-6
-              +b.price-block
-                +e.row
-                  .col-auto.d-flex.flex-grow-1.align-items-center
-                    +e.name price
-                    +e.BUTTON.action(data-toggle="tooltip" data-placement="top" title="Причина уценки: Дефекты на внешней упаковке товара") уценка
-                  +e.cost--old-cost
-                      strike 251 Р
-                  .col-auto
-                    +e.cost--new-cost 650 Р
-                +e.row
-                  .col-auto.d-flex.flex-grow-1.align-items-center
-                    +e.name mini sale
-                    +discount(5)
-                    +icon('icon-question')
-                  .col-auto
-                    +e.cost 531 Р
-                +e.row
-                  .col-auto.d-flex.flex-grow-1.align-items-center
-                    +e.name maxi sale
-                    +discount(15)
-                    +icon('icon-question')
-                  .col-auto
-                    +e.cost 490 Р
-                +e.row
-                  .col-auto.d-flex.flex-grow-1
-                    +e.name VIP
-                    +icon('icon-question')
-                  .col-auto
-                    +e.A.btn.btn(href='') Узнать цену
-                .d-flex
-                  +b.block-add
-                    .d-flex.flex-grow-1
-                      +e.btn--minus
-                      +e.INPUT.form-control(type="text" value="10")
-                      +e.btn--plus
-
-                    a.btn.btn-buy(href='#') В корзину
-                      +icon('icon-basket')
-          +advantages()
-
+            .col-6
+              +productHeadInfo('Категория' , 'Лицо')
+              +productHeadInfo('Назначение' , 'Питание, Лечение')
 
 
 
