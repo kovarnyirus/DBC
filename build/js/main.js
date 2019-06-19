@@ -158,4 +158,11 @@ tabscostume('tabs');
 
 
 
+$('.instagram-block__slider').slick({
+    slidesToShow: 5,
+    variableWidth: true,
+    dots: false,
+    arrows: false,
+});
+
 
