@@ -8,13 +8,13 @@ mixin bigSlider()
 mixin brendsSlider()
   +b.brand-slider
     +e.list
-      +e.IMG.slide(src='/img/brand-slider/slide1.jpg')
+      +e.IMG.slide(src='img/brand-slider/slide1.jpg')
 
-      +e.IMG.slide(src='/img/brand-slider/slide2.jpg')
+      +e.IMG.slide(src='img/brand-slider/slide2.jpg')
 
-      +e.IMG.slide(src='/img/brand-slider/slide3.jpg')
+      +e.IMG.slide(src='img/brand-slider/slide3.jpg')
 
-      +e.IMG.slide(src='/img/brand-slider/slide4.jpg')
+      +e.IMG.slide(src='img/brand-slider/slide4.jpg')
     BUTTON.btn-prev.brand-slider__btn-prev
       +icon('icon-arrow-left')
     BUTTON.btn-next.brand-slider__btn-next
@@ -25,13 +25,13 @@ mixin brendsSliderTitle(title)
     .container
       +e.H2.title= title
     +e.list
-      +e.IMG.slide(src='/img/brand-slider/slide1.jpg')
-      +e.IMG.slide(src='/img/brand-slider/slide2.jpg')
-      +e.IMG.slide(src='/img/brand-slider/slide2.jpg')
-      +e.IMG.slide(src='/img/brand-slider/slide2.jpg')
-      +e.IMG.slide(src='/img/brand-slider/slide2.jpg')
-      +e.IMG.slide(src='/img/brand-slider/slide3.jpg')
-      +e.IMG.slide(src='/img/brand-slider/slide4.jpg')
+      +e.IMG.slide(src='img/brand-slider/slide1.jpg')
+      +e.IMG.slide(src='img/brand-slider/slide2.jpg')
+      +e.IMG.slide(src='img/brand-slider/slide2.jpg')
+      +e.IMG.slide(src='img/brand-slider/slide2.jpg')
+      +e.IMG.slide(src='img/brand-slider/slide2.jpg')
+      +e.IMG.slide(src='img/brand-slider/slide3.jpg')
+      +e.IMG.slide(src='img/brand-slider/slide4.jpg')
     BUTTON.btn-prev.brand-slider__btn-prev
       +icon('icon-arrow-left')
     BUTTON.btn-next.brand-slider__btn-next
@@ -43,25 +43,25 @@ mixin saleSlider()
       - for (var x = 0; x < 3; x++)
         +e.item
           +e.A.link(href='#')
-            +e.IMG.img(src='/img/brand-slider/slide1.jpg')
+            +e.IMG.img(src='img/brand-slider/slide1.jpg')
             +e.text до
               br
               | 25%
         +e.item
           +e.A.link(href='#')
-            +e.IMG.img(src='/img/brand-slider/slide2.jpg')
+            +e.IMG.img(src='img/brand-slider/slide2.jpg')
             +e.text до
               br
               | 25%
         +e.item
           +e.A.link(href='#')
-            +e.IMG.img(src='/img/brand-slider/slide3.jpg')
+            +e.IMG.img(src='img/brand-slider/slide3.jpg')
             +e.text до
               br
               | 25%
         +e.item
           +e.A.link(href='#')
-            +e.IMG.img(src='/img/brand-slider/slide4.jpg')
+            +e.IMG.img(src='img/brand-slider/slide4.jpg')
             +e.text до
               br
               | 25%
