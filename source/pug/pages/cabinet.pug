@@ -3,8 +3,7 @@ include ../blocks/breadcrumb/breadcrumb
 include ../blocks/sliders/sliders
 include ../blocks/mixins/_mixins
 include ../blocks/advertising/advertising
-include ../blocks/cabinet-head/cabinet-head
-include ../blocks/cabinet-body/cabinet-body
+include ../blocks/cabinet/cabinet
 
 
 
@@ -16,12 +15,6 @@ block pagecontent
   +b.page-name
     .container
       +e.H2 Личный кабинет
-  +cabinet-head()
-  +cabinet-body()
-  <hr/>
-  //+product-footer()
-  +brendsSliderTitle('Популярные бренды')
-  +advertising('Рекомендуемые товары')
-  +advertising('Вы смотрели')
+  +cabinet()
 
 

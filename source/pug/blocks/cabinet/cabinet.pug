@@ -1,0 +1,100 @@
+include ../forms/forms
+mixin cabinet()
+  +b.cabinet
+    .container
+      +b.tabs
+        +e.caption
+          +e.btn.active: span МОИ ДАННЫЕ
+          +e.btn: span МОЙ WISHLIST
+          +e.btn: span история заказов
+          +e.btn: span Косметолог
+        +e.list
+
+          +e.item.active
+            .row
+              .col-12.col-md-8
+                .row
+                  .col-12
+                    .form__title ЛИЧНАЯ ИФОРМАЦИЯ
+                    +b.FORM.form-wrap
+                      .row
+                        .col-12.col-md-6
+                          +e.item
+                            +e.LABEL.label(for='name') Имя
+                            +e.INPUT.input#name(type='mane' placeholder='Имя')
+                          +e.item
+                            +e.LABEL.label(for='E-mail') E-mail
+                            +e.INPUT.input#E-mail(type='E-mail' placeholder='E-mail')
+                        .col-12.col-md-6
+                          +e.item
+                            +e.LABEL.label(for='surname') Фамилия
+                            +e.INPUT.input#surname(type='mane' placeholder='Фамилиямя')
+                          +e.item
+                            +e.LABEL.label(for='tel') Телефон
+                            +e.INPUT.input#tel(type='tel' placeholder='Телефон')
+                        .col-12
+                          +e.item
+                            +e.LABEL.label(for='address') Адрес доставки
+                            +e.INPUT.input#address(type='address' placeholder='address')
+                        .col-12
+                          +e.BUTTON.btn.btn Сохранить
+
+                    .form__title ПАРОЛЬ
+                    +b.FORM.form-wrap
+                      .row
+                        .col-12.col-md-4
+                          +e.item
+                            +e.LABEL.label(for='old-password') Старый пароль
+                            +e.INPUT.input#old-password(type='password')
+                        .col-12.col-md-4
+                          +e.item
+                            +e.LABEL.label(for='new-password') Новый пароль
+                            +e.INPUT.input#new-password(type='password')
+                        .col-12.col-md-4
+                          +e.item
+                            +e.LABEL.label(for='repeat-password') Повторите пароль
+                            +e.INPUT.input#repeat-password(type='password')
+                        .col-12
+                          +e.BUTTON.btn.btn Сохранить
+              .col-12.col-md-4
+                .form__title.form__title--checkbox ПАРОЛЬ
+                form
+                  +b.LABEL.custom-checkbox(for='1')
+                    +e.INPUT.input(type='checkbox' checked id='1')
+                    +e.SPAN.name Получать письма "Забытая корзина"
+                  +b.LABEL.custom-checkbox(for='2')
+                    +e.INPUT.input(type='checkbox' checked id='2')
+                    +e.SPAN.name Получать лучшие предложения (редко)
+                  +b.LABEL.custom-checkbox(for='3')
+                    +e.INPUT.input(type='checkbox' checked id='3')
+                    +e.SPAN.name Получать регулярную рассылку (раз в 7 дней)
+
+
+
+          +e.item
+            .row
+              .col-12
+                .product-head__code Штрих код:
+                  span 11204211334105555
+                p Крем быстро снимает воспаление и восстанавливает сухую, потрескавшуюся, раздраженную кожу рук, приносит мгновенное облегчение, смягчает и увлажняет поврежденную кожу, стимулирует восстановление коллагенового матрикса, создают на поверхности кожи рук тончайшую защитную пленку.
+
+
+          +e.item
+            .row
+              .col-12
+                .product-head__code Штрих код:
+                  span 1120421133410000
+                p Крем быстро снимает воспаление и восстанавливает сухую, потрескавшуюся, раздраженную кожу рук, приносит мгновенное облегчение, смягчает и увлажняет поврежденную кожу, стимулирует восстановление коллагенового матрикса, создают на поверхности кожи рук тончайшую защитную пленку.
+
+
+          +e.item
+            .row
+              .col-12
+                .product-head__code Штрих код:
+                  span 1120421133410000
+                p Крем быстро снимает воспаление и восстанавливает сухую, потрескавшуюся, раздраженную кожу рук, приносит мгновенное облегчение, смягчает и увлажняет поврежденную кожу, стимулирует восстановление коллагенового матрикса, создают на поверхности кожи рук тончайшую защитную пленку.
+
+
+
+
+
