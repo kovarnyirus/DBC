@@ -121,15 +121,41 @@ $(".product-head__sliders").each(function () {
     });
 });
 
+
+$('.tabs__caption').slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    loop: false,
+    speed: 450,
+    slidesToShow: 1,
+    variableWidth: true,
+    responsive: [
+        {
+            breakpoint: 99999,
+            settings: 'unslick'
+        },
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+});
+
 function tabscostume(tab) {
     $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
         $(this)
             .addClass('active').siblings().removeClass('active')
             .closest('.' + tab).find('.' + tab + '__item').hide().removeClass('active')
             .eq($(this).index()).fadeIn().addClass('active');
-
     });
 };
 tabscostume('tabs');
-// tabscostume('tabs-contact');
+
+
+
+
 
