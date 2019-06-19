@@ -57,8 +57,8 @@ mixin cabinet()
                         .col-12
                           +e.BUTTON.btn.btn Сохранить
               .col-12.col-md-4
-                .form__title.form__title--checkbox ПАРОЛЬ
-                form
+                .form__title.form__title--checkbox Дополнительно
+                form.form__additionally
                   +b.LABEL.custom-checkbox(for='1')
                     +e.INPUT.input(type='checkbox' checked id='1')
                     +e.SPAN.name Получать письма "Забытая корзина"
