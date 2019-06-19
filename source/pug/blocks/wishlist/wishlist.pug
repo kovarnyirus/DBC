@@ -1,0 +1,45 @@
+mixin wishlistNoProduct()
+  .row.align-items-center
+    .col-12.col-md-4.wishlist__no-production В wishlist нет товаров, но это легко исправить:
+    .col-12.col-md-4
+      a(href='#')
+        +banner('all-brands.jpg')
+    .col-12.col-md-4
+      a(href='#')
+        +banner('new-prod.jpg')
+
+mixin wishlist()
+  +b.wishlist
+    +e.list
+      +e.item
+        +e.like-wrapper
+          +icon('icon-like')
+        +e.title-wrapper
+          +e.category Категория
+          +e.H2.title ТОВАРЫ для дома -15%
+        +e.btn-wrapper
+          +e.A.bnt.btn(href='#') Изменить
+      +e.item
+        +e.like-wrapper
+          +icon('icon-like')
+        +e.title-wrapper
+          +e.category Бренд
+          +e.H2.title VISHI -10%
+        +e.logo-wrapper
+          a(heref='#')
+            img(src='img/brand-slider/slide1.jpg' width='197')
+        +e.btn-wrapper
+          +e.A.bnt.btn(href='#') Изменить
+      +e.item--product
+        +e.like-wrapper
+          +icon('icon-like')
+        +e.title-wrapper
+          +e.category Бренд
+          +e.H2.title VISHI -10%
+        +e.logo-wrapper
+          a(heref='#')
+            img(src='img/brand-slider/slide1.jpg' width='197')
+        +e.btn-wrapper
+          +e.A.bnt.btn(href='#') Изменить
+
+

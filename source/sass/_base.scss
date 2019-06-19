@@ -104,13 +104,22 @@ hr {
   border-color: #E2E2E2;
 }
 
-.icon {
+.header{
+  & .icon {
+    border-radius: 50%;
+    border: 1px solid #BE0B58;
+  }
+  & .icon-search{
+    border: none;
+  }
+}
+
+ .icon {
   width: 21px;
   height: 21px;
-  border-radius: 50%;
-  border: 1px solid #BE0B58;
   padding-top: 1px;
 }
+
 
 button {
   outline: none;
@@ -123,6 +132,7 @@ button:focus {
 
 a {
   color: inherit;
+  cursor: pointer;
 }
 
 .main-page {
