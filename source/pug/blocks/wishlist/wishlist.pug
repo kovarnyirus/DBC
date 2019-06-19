@@ -19,6 +19,7 @@ mixin wishlist()
           +e.H2.title ТОВАРЫ для дома -15%
         +e.btn-wrapper
           +e.A.bnt.btn(href='#') Изменить
+
       +e.item
         +e.like-wrapper
           +icon('icon-like')
@@ -30,15 +31,30 @@ mixin wishlist()
             img(src='img/brand-slider/slide1.jpg' width='197')
         +e.btn-wrapper
           +e.A.bnt.btn(href='#') Изменить
+
       +e.item--product
         +e.like-wrapper
           +icon('icon-like')
         +e.title-wrapper
-          +e.category Бренд
-          +e.H2.title VISHI -10%
-        +e.logo-wrapper
-          a(heref='#')
-            img(src='img/brand-slider/slide1.jpg' width='197')
+          +e.category товар
+        +e.product-wrapper
+          +e.IMG.product-imade(src='img/product/product1.jpg' width='62px')
+          +e.H3.product-title Alerana
+          +e.product-description  Бальзам-ополаскиватель для всех типов волос,
+            span.font-weight-bold 200 мл
+        +e.price-wrapper
+          +e.price-item
+            +e.SPAN.price-cost 327 р &nbsp
+            +e.SPAN.price-sale Price
+          +e.price-item
+            +e.SPAN.price-cost 294 р &nbsp
+            +e.SPAN.price-sale mini Sale
+          +e.price-item
+            +e.SPAN.price-cost 278 р &nbsp
+            +e.SPAN.price-sale maxi Sale
+
+
+        +e.discount -30%
         +e.btn-wrapper
           +e.A.bnt.btn(href='#') Изменить
 
