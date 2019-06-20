@@ -1,63 +1,79 @@
-.form__title{
+.form__title {
   font-weight: bold;
   font-size: 20px;
   line-height: 85%;
   margin-bottom: 17px;
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-up(md) {
     margin-bottom: 30px;
   }
-  &--checkbox{
-    @include media-breakpoint-up(md){
+
+  &--checkbox {
+    @include media-breakpoint-up(md) {
       margin-bottom: 49px;
     }
   }
 }
-.form-wrap{
+
+.form-wrap {
   margin-bottom: 32px;
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-up(md) {
     margin-bottom: 37px;
   }
-  &__input{
-   width: 100%;
+
+  &__input {
+    width: 100%;
     margin-bottom: 16px;
     padding-top: 14px;
     padding-bottom: 10px;
     color: #4D4D4D;
     line-height: 1;
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(md) {
       margin-bottom: 24px;
     }
   }
-  &__label{
+
+  &__label {
     font-size: 14px;
     line-height: 130%;
     font-weight: normal;
-    color: #9FA3A7 ;
+    color: #9FA3A7;
     margin-bottom: 0;
   }
-  &__btn{
+
+  &__btn {
     width: 281px;
   }
 }
-.form__additionally{
+
+.form__additionally {
   margin-bottom: 30px;
 }
 
 
-.documents{
-  &__wrapper{
+.documents {
+  &__wrapper {
     margin-bottom: 55px;
   }
-  &__line{
+
+  &__line {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 20px;
   }
-  &__text{
+
+  &__text {
     margin-right: 10px;
-    min-width: 300px;
+    width: 100%;
+    margin-bottom: 15px;
+    @include media-breakpoint-up(md) {
+      min-width: 300px;
+      width: auto;
+      margin-bottom: 0;
+    }
   }
-  &__add-file-label{
+
+  &__add-file-label {
     color: #6CB13E;
     border: 1px solid #6CB13E;
     padding-top: 7px;
@@ -66,31 +82,52 @@
     font-size: 14px;
     margin-right: 19px;
     width: 127px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md){
+      width: 127px;
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
   }
-  &__btn{
+
+  &__btn {
     padding-top: 7px;
     padding-bottom: 7px;
-    margin-right: 20px;
     font-weight: bold;
     font-size: 14px;
     width: 127px;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md){
+      width: 127px;
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
   }
-  &__status{
+
+  &__status {
     margin-right: 20px;
     font-weight: bold;
   }
-  &__preview-item{
+
+  &__preview{
+    width: 50%;
+    @include media-breakpoint-up(md){
+      width: auto;
+    }
+  }
+
+  &__preview-item {
     position: relative;
     padding-left: 25px;
     margin-right: 20px;
-    &:before{
+    line-height: 1;
+    &:before {
       position: absolute;
       display: block;
       content: '';
       width: 18px;
       height: 15px;
-      top: 5px;
+      top: 0;
       left: 0;
       background-image: url("data:image/svg+xml,%3Csvg width='18' height='15' viewBox='0 0 18 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 2C0.5 1.17157 1.17157 0.5 2 0.5H16C16.8284 0.5 17.5 1.17157 17.5 2V4.5V13C17.5 13.8284 16.8284 14.5 16 14.5H2C1.17157 14.5 0.5 13.8284 0.5 13V12.5V2Z' stroke='%23B2B2B2'/%3E%3Ccircle cx='10.5' cy='5.5' r='2' stroke='%23B2B2B2'/%3E%3C/svg%3E%0A");
     }
