@@ -1,0 +1,130 @@
+.favorite-products {
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-right: 43px;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 17px;
+    margin-bottom: 15px;
+    @include media-breakpoint-down(md) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &__btn {
+    width: 173px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    align-items: center;
+    @include media-breakpoint-down(md) {
+      width: 49px;
+      margin-left: 20px;
+      padding-left: 0;
+      padding-right: 0;
+      & span {
+        display: none;
+      }
+      & .icon-basket {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    @include media-breakpoint-down(md) {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  & .icon-basket {
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+  }
+
+  &__image-link {
+    margin-right: 80px;
+    @include media-breakpoint-down(md) {
+      margin-right: 20px;
+      float: left;
+    }
+  }
+
+  &__img {
+    max-width: 62px;
+  }
+
+  &__price-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    color: #e0e0e0;
+    max-width: 150px;
+  }
+
+  &__price-cost {
+    text-align: right;
+    padding-right: 5px;
+    width: auto;
+    &:first-child {
+      color: #5cbf1a;
+      font-weight: bold;
+    }
+    @include media-breakpoint-down(md){
+      text-align: left;
+    }
+  }
+  &__price-sale{
+    width: 50%;
+    flex-grow: 1;
+    &:nth-child(2) {
+      color: #000000;
+      font-weight: bold;
+    }
+  }
+
+  &__title {
+    width: 280px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #4D4D4D;
+    @include media-breakpoint-down(md) {
+      min-height: auto;
+      font-size: 14px;
+      width: 80%;
+    }
+  }
+
+  &__decoration {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 228px;
+    @include media-breakpoint-down(md) {
+      font-size: 12px;
+      margin-left: 0;
+      min-height: 56px;
+    }
+  }
+
+  & .btn-close {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-100%);
+    @include media-breakpoint-down(md) {
+      top: 15px;
+      right: 15px;
+    }
+  }
+}

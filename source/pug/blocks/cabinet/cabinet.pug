@@ -1,5 +1,6 @@
 include ../forms/forms
 include ../wishlist/wishlist
+include ../favorite-products/favorite-products
 mixin cabinet()
   +b.cabinet
     .container
@@ -75,6 +76,7 @@ mixin cabinet()
           +e.item
             +wishlistNoProduct()
             +wishlist()
+            +favorite-products()
 
 
 
