@@ -1,6 +1,10 @@
 mixin header()
 
-    // start HEADER.header
-    +b.HEADER.header
-        block
-    // end HEADER.header
+  // start HEADER.header
+  +b.HEADER.header
+    block
+    +b.header-cat
+      +e.wrapper.container
+        +e.A.link(href='#')
+          img(src='img/cat.png' width='183')
+  // end HEADER.header
