@@ -78,22 +78,32 @@ mixin cabinet()
             +wishlist()
             +favorite-products()
 
+          +e.item
 
 
           +e.item
-            .row
-              .col-12
-                .product-head__code Штрих код:
-                  span 1120421133410000
-                p Крем быстро снимает воспаление и восстанавливает сухую, потрескавшуюся, раздраженную кожу рук, приносит мгновенное облегчение, смягчает и увлажняет поврежденную кожу, стимулирует восстановление коллагенового матрикса, создают на поверхности кожи рук тончайшую защитную пленку.
+            +b.documents
+              h2 ДОКУМЕНТЫ
+              +e.wrapper
+                +e.line
+                  +e.text Загрузите Ваше фото с разворотом паспорта
+                  +e.add-file
+                    label.btn.btn-outline.documents__add-file-label(for='addfile') Выбрать файл
+                    +e.INPUT.add-file-input.visually-hidden#addfile(type='file')
+                  +e.BUTTON.btn.btn Загрузить
+                  +e.preview
+                    +e.preview-item img0563.jpg
+                  +e.status.check На проверке
+                  +e.status.success Одобрено
+                  +e.status.rejected Отклонено
+                +e.line
+                  +e.text Фото диплома или документа об образовании
+                  +e.add-file
+                    label.btn.btn-outline.documents__add-file-label(for='addfile2') Выбрать файл
+                    +e.INPUT.add-file-input.visually-hidden#addfile2(type='file')
+                  +e.BUTTON.btn.btn Загрузить
 
 
-          +e.item
-            .row
-              .col-12
-                .product-head__code Штрих код:
-                  span 1120421133410000
-                p Крем быстро снимает воспаление и восстанавливает сухую, потрескавшуюся, раздраженную кожу рук, приносит мгновенное облегчение, смягчает и увлажняет поврежденную кожу, стимулирует восстановление коллагенового матрикса, создают на поверхности кожи рук тончайшую защитную пленку.
 
 
 

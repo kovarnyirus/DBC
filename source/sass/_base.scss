@@ -104,17 +104,18 @@ hr {
   border-color: #E2E2E2;
 }
 
-.header{
+.header {
   & .icon {
     border-radius: 50%;
     border: 1px solid #BE0B58;
   }
-  & .icon-search{
+
+  & .icon-search {
     border: none;
   }
 }
 
- .icon {
+.icon {
   width: 21px;
   height: 21px;
   padding-top: 1px;
@@ -131,17 +132,26 @@ button:focus {
   outline: none;
 }
 
+button:active, button:focus {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
 a {
   color: inherit;
   cursor: pointer;
 }
 
-.btn-close{
+.btn-close {
   position: relative;
   width: 16px;
   height: 16px;
+
   &:before,
-  &:after{
+  &:after {
     position: absolute;
     display: block;
     content: '';
@@ -152,7 +162,8 @@ a {
     top: 50%;
     right: 0;
   }
-  &:after{
+
+  &:after {
     top: 50%;
     transform: rotate(-45deg);
   }
@@ -350,7 +361,7 @@ a {
   align-items: center;
 }
 
-.discount--big{
+.discount--big {
   width: 35px;
   height: 35px;
 }
@@ -408,4 +419,27 @@ input {
   & span {
     font-weight: bold;
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.success {
+  color: $success-color;
+  border-color: $success-color;
+}
+
+.check {
+  color: $check-color;
+  border-color: $check-color;
+}
+
+.rejected {
+  color: $rejected-color;
+  border-color: $rejected-color;
 }
