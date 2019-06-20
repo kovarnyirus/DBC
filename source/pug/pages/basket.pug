@@ -1,0 +1,20 @@
+extends layout/main.pug
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/sliders/sliders
+include ../blocks/mixins/_mixins
+include ../blocks/advertising/advertising
+include ../blocks/basket/basket
+
+
+
+block title
+  title Личный кабинет
+
+block pagecontent
+  +breadcrumb(' Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл', 'Главная', 'Бренды', 'Laura Rosse', 'Laura Rosse - Уход за волосами')
+  +b.page-name
+    .container
+      +e.H2 Корзина
+  +basket()
+
+

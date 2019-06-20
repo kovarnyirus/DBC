@@ -238,3 +238,13 @@ mixin productHeadInfo(name, text)
 mixin productHeadInfoSelectedText(name, text)
   .product-feature= name + ': '
     span.success-text-color= text
+
+mixin noProduct(text)
+  .row.align-items-center
+    .col-12.col-md-4.wishlist__no-production= text
+    .col-12.col-md-4
+      a(href='#')
+        +banner('all-brands.jpg')
+    .col-12.col-md-4
+      a(href='#')
+        +banner('new-prod.jpg')
