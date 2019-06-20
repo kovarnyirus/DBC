@@ -1,0 +1,31 @@
+mixin order-history()
+  +b.order-history
+    +e.item--open
+      +e.left-col
+        +e.name
+          +e.number №134667
+          +e.status.d-md-none Ожидает оплаты
+          +e.description Краткий перечнь продуктов, через запяту, в конце троеточие, при нажатии разворачивается как корзина
+
+      +e.right-col
+        +e.delivery
+          div.font-weight-bold Дата заказа:
+            |
+            sapan.font-weight-normal 21.05.2019
+          div.font-weight-bold Дата отгрузки:
+            |
+            sapan.font-weight-normal 24.05.2019
+          div.font-weight-bold Способ доставки:
+            |
+            sapan.font-weight-normal В ПВЗ Брянск, ул. Красно...
+
+        +e.cost
+            +e.cost-name Промокод
+            +e.cost-value - 12 294 р
+            +e.cost-name Доставка
+            +e.cost-value + 278 р
+            +e.cost-name Сумма заказа
+            +e.cost-value 15 327 р
+        +e.status.d-none.d-md-block Ожидает оплаты
+        +e.BUTTON.btn.btn Оплатить
+      +e.toggle

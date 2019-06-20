@@ -1,0 +1,123 @@
+.order-history {
+  &__item {
+    display: flex;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  &__left-col {
+    width: 25%;
+    padding-right: 30px;
+  }
+
+  &__number {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &__description {
+    line-height: 16px;
+  }
+
+  &__right-col {
+    width: 75%;
+    display: flex;
+    padding-right: 46px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__cost {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 20%;
+    padding-right: 10px;
+  }
+
+  &__cost-name {
+    font-weight: bold;
+    width: 50%;
+  }
+
+  &__cost-value {
+    flex-grow: 1;
+    text-align: right;
+
+    &:last-child {
+      color: $success-color;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    width: 155px;
+  }
+
+  &__status {
+    font-weight: bold;
+    width: 155px;
+    border: 1px solid #BE0B58;
+    border-radius: 250px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  &__toggle{
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #9FA3A7;
+    border-radius: 3px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5L5 1L9 5' stroke='black'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    background-position: center;
+    transform: rotate(90deg);
+  }
+  &__item--open{
+    & .order-history__description{
+      display: none;
+    }
+    & .order-history__status{
+      display: block!important;
+    }
+    & .order-history__left-col{
+      width: 70%;
+    }
+    & .order-history__right-col{
+      flex-direction: column;
+      align-items: flex-start;
+      width: 30%;
+      & .order-history__status{
+        display: none!important;
+      }
+    }
+    & .order-history__name{
+      display: flex;
+      align-items: center;
+    }
+    & .order-history__number{
+      margin-right: 20px;
+    }
+    & .order-history__delivery{
+      margin-bottom: 45px;
+      order: 2;
+    }
+    & .order-history__cost{
+      max-width: 200px;
+      order: 1;
+      margin-bottom: 45px;
+    }
+    & .order-history__btn {
+      order: 3;
+    }
+  }
+}
