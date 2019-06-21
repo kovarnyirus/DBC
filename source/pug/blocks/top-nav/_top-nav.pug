@@ -1,4 +1,5 @@
 include ../../blocks/mixins/_mixins.pug
+include ../../blocks/nav-search/nav-search.pug
 mixin top-nav()
   +b.top-nav
     .container
@@ -48,11 +49,8 @@ mixin top-nav()
         .col-2.d-none.d-md-block
           +e.text Более 70 000 товаров по закупочным ценам! Всем и каждому!
         .col-12.col-md.order-1.order-md-0
-          +b.search-block
-            +e.FORM.form
-              +e.INPUT.input
-              +e.BUTTON.btn
-                +icon('icon-search')
+          +nav-search()
+
         .col-auto.d-none.d-md-block
           +b.soc
             +soc('icon-fb')

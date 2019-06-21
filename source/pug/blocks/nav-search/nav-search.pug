@@ -1,0 +1,68 @@
+mixin nav-search()
+  +b.search-block
+    +e.FORM.form
+      +e.INPUT.input
+      +e.BUTTON.btn
+        +icon('icon-search')
+    +e.result
+      +e.result-item--product
+        +e.image-wrap
+          img(src='img/search-result.jpg' width='73')
+        +e.content
+          +e.title Крем защитный для кожи головы
+            |
+            br
+            |
+            span.font-weight-bold 100 мл
+          +e.brand EST
+            |
+            span EL
+        +e.category Товар
+
+      +e.result-item--product
+        +e.image-wrap
+          img(src='img/search-result.jpg' width='73')
+        +e.content
+          +e.title Крем защитный для кожи головы
+            |
+            br
+            |
+            span.font-weight-bold 100 мл
+          +e.brand EST
+            |
+            span EL
+        +e.category Товар
+
+      +e.result-item--caregoty
+        +e.content
+          +e.title Шампуни &nbsp
+          +e.brand EST
+            |
+            span EL
+        +e.category Категория
+
+      +e.result-item--caregoty
+        +e.content
+          +e.title Уход за волосами &nbsp
+          +e.brand EST
+            |
+            span EL
+        +e.category Категория
+
+      +e.result-item--caregoty
+        +e.content
+          +e.title Уход за кожей &nbsp
+          +e.brand EST
+            |
+            span EL
+        +e.category Категория
+
+      +e.result-item--brand
+        +e.image-wrap
+          img(src='img/brand-slider/slide2.jpg' width='77')
+        +e.content
+          +e.brand EST
+            |
+            span EL
+          +e.category Бренд
+        +e.category.d-none.d-md-block Бренд

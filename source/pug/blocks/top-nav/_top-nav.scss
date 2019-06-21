@@ -55,47 +55,6 @@
 
 }
 
-.search-block {
-  margin-bottom: 16px;
-  margin-top: 16px;
-  @include media-breakpoint-up(md) {
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-}
-
-.search-block__form {
-  position: relative;
-  max-width: 628px;
-}
-
-.search-block__input {
-  border: 1px solid #E7E7E7;
-  border-radius: 28px;
-  height: 45px;
-  display: block;
-  width: 100%;
-  padding-left: 18px;
-  padding-right: 45px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-
-}
-
-.search-block__btn {
-  position: absolute;
-  right: 8px;
-  top: 5px;
-  outline: none;
-  border: none;
-  background-color: #5CBF1A;
-  padding-left: 0;
-  padding-right: 0;
-  border-radius: 50%;
-  width: 34px;
-  height: 34px;
-}
-
 .tel-block__tel {
   color: #4D4D4D;
   font-size: 14px;

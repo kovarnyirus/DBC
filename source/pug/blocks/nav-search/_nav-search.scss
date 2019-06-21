@@ -1,0 +1,146 @@
+.search-block {
+  margin-bottom: 16px;
+  margin-top: 16px;
+  position: relative;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  &__form {
+    position: relative;
+    max-width: 628px;
+  }
+
+  &__input {
+    border: 1px solid #E7E7E7;
+    border-radius: 28px;
+    height: 45px;
+    display: block;
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 45px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+  }
+
+  &__btn {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    outline: none;
+    border: none;
+    background-color: #5CBF1A;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+  }
+
+  &__result {
+    position: absolute;
+    z-index: 100;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+    max-width: 628px;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+
+  &__result-item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    padding-left: 11px;
+    border-bottom: 1px solid #DFDFDF;
+    padding-top: 10px;
+    padding-right: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &--caregoty {
+      & .search-block__content {
+        display: flex;
+        font-size: 14px;
+        width: 100%;
+      }
+
+      @include media-breakpoint-up(md) {
+        & .search-block__content {
+          width: auto;
+          font-size: 16px;
+          margin-left: 22px;
+        }
+      }
+    }
+
+    &--brand {
+      & .search-block__image-wrap {
+        margin-right: 17px;
+        @include media-breakpoint-up(md) {
+          margin-left: 18px;
+        }
+      }
+    }
+
+    &--product {
+      position: relative;
+
+      & .search-block__content {
+        & br {
+          display: none;
+        }
+
+        width: 63%;
+      }
+
+      & .search-block__category {
+        position: absolute;
+        right: 22px;
+        bottom: 10px;
+      }
+
+      @include media-breakpoint-up(md) {
+        & .search-block__content {
+          & br {
+            display: block;
+          }
+
+          width: auto;
+        }
+        & .search-block__category {
+          position: static;
+        }
+      }
+    }
+  }
+
+  &__image-wrap {
+    margin-right: 22px;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__category {
+    color: #9FA3A7;
+  }
+
+  &__brand {
+    font-weight: bold;
+    color: #5CBF1A;
+
+    & span {
+      color: #4D4D4D;;
+    }
+  }
+
+}

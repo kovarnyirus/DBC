@@ -1,6 +1,25 @@
 mixin basket()
   +e.basket
     .container
-      +noProduct('В корзине нет товаров, но это легко исправить:')
-      +advertisingNoBg('Новинки')
-    +brendsSliderTitle('Популярные бренды')
+      +e.header-line
+        .row
+          .col-4 При заказе от 3000 рублей -
+            |
+            br
+            |
+            span.font-weight-bold цена MINI SALE
+
+          .col-4 При заказе от 7000 рублей -
+            |
+            br
+            |
+            span.font-weight-bold цена MAXI
+              |
+              span.rejected SALE
+              | + бесплатная доставка
+
+          .col-4.text-right Скидки не распространяются на товары &nbsp
+            span.font-weight-bold SALE-ценой
+
+
+

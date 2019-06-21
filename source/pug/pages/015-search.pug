@@ -1,0 +1,19 @@
+extends layout/main.pug
+include ../blocks/sliders/sliders
+include ../blocks/advertising/advertising
+include ../blocks/comp-info/comp-info
+include ../blocks/instagram/instagram
+include ../blocks/mixin-popup/mixin-popup
+
+
+block title
+  title поиск выпадающее
+
+block pagecontent
+  .main-page
+    .container
+      +bigSlider()
+      +bannerHead()
+
+
+
