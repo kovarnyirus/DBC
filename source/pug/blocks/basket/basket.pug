@@ -1,13 +1,15 @@
+include ../table-product/table-product
 mixin basket()
-  +e.basket
+  +b.basket
     .container
-      +e.header-line
-        .row
+      +e.header-line.d-none.d-md-block
+        .row.align-items-center
           .col-4 При заказе от 3000 рублей -
             |
             br
             |
-            span.font-weight-bold цена MINI SALE
+            span.font-weight-bold цена MINI
+              span.attention SALE
 
           .col-4 При заказе от 7000 рублей -
             |
@@ -15,11 +17,35 @@ mixin basket()
             |
             span.font-weight-bold цена MAXI
               |
-              span.rejected SALE
+              span.attention SALE
               | + бесплатная доставка
 
           .col-4.text-right Скидки не распространяются на товары &nbsp
-            span.font-weight-bold SALE-ценой
+            span.font-weight-bold.attention SALE-ценой
+      +e.content
+        .row
+          .col-12.col-md-8
+            +b.basket-table
+              +e.header.d-md-flex
+                +e.header-item--product Товар
+                +e.header-item--quantity Количество
+                +e.header-item--cost Цена
+                +e.header-item--total Итого
+              +e.wrapper
+                +e.item
+                  +table-product()
+                +e.item
+                  +table-product()
+                +e.item
+                  +table-product()
+                +e.item
+                  +table-product()
+                +e.item
+                  +table-product()
+
+
+          .col-12.col-md-4
+
 
 
 

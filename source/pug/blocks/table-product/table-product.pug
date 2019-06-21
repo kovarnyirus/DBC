@@ -1,0 +1,26 @@
+mixin table-product()
+  +b.table-product
+    +e.product
+      +e.IMG.img(src='img/product/product3.jpg' width='102' height='123')
+      +e.info
+        +e.title Бальзам-ополаскиватель для всех типов волос,
+          |
+          span.font-bold 200 мл
+        +e.brand Alerana
+    +e.quantity
+      +e.quantity-wrapper
+        +e.quantity-btn--minus &ndash;
+        +e.INPUT.input(type='number' value='1' min='0' max='99' placeholder='1')
+        +e.quantity-btn--plus +
+    +e.price
+      +e.price-item
+        +e.price-cost 327 р
+        +e.price-name Price
+      +e.price-item
+        +e.price-cost 294 р
+        +e.price-name mini Sale
+      +e.price-item
+        +e.price-cost 278 р
+        +e.price-name maxi Sale
+    +e.total-cost 327 р
+    +e.BUTTON.btn-del.btn-close

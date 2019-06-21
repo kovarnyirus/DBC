@@ -443,3 +443,22 @@ input {
   color: $rejected-color;
   border-color: $rejected-color;
 }
+
+.attention {
+  color: $attention-color;
+  border-color: $attention-color;
+}
+
+.font-bold{
+  font-weight: 700;
+}
+
+
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

@@ -489,14 +489,260 @@
     </div>
     <div class="basket">
       <div class="container">
-        <div class="header-line">
-          <div class="row">
+        <div class="basket__header-line d-none d-md-block">
+          <div class="row align-items-center">
             <div class="col-4">
-              При заказе от 3000 рублей -<br/><span class="font-weight-bold">цена MINI SALE</span></div>
+              При заказе от 3000 рублей -<br/><span class="font-weight-bold">цена MINI<span class="attention">SALE</span></span></div>
             <div class="col-4">
               При заказе от 7000 рублей -<br/><span class="font-weight-bold">
-                цена MAXI<span class="rejected">SALE</span>+ бесплатная доставка</span></div>
-            <div class="col-4 text-right">Скидки не распространяются на товары &nbsp<span class="font-weight-bold">SALE-ценой</span></div>
+                цена MAXI<span class="attention">SALE</span>+ бесплатная доставка</span></div>
+            <div class="col-4 text-right">Скидки не распространяются на товары &nbsp<span class="font-weight-bold attention">SALE-ценой</span></div>
+          </div>
+        </div>
+        <div class="basket__content">
+          <div class="row">
+            <div class="col-12 col-md-8">
+              <div class="basket-table">
+                <div class="basket-table__header d-md-flex">
+                  <div class="basket-table__header-item basket-table__header-item--product">Товар
+                  </div>
+                  <div class="basket-table__header-item basket-table__header-item--quantity">Количество
+                  </div>
+                  <div class="basket-table__header-item basket-table__header-item--cost">Цена
+                  </div>
+                  <div class="basket-table__header-item basket-table__header-item--total">Итого
+                  </div>
+                </div>
+                <div class="basket-table__wrapper">
+                  <div class="basket-table__item">
+                    <div class="table-product">
+                      <div class="table-product__product"><img class="table-product__img" src="img/product/product3.jpg" width="102" height="123" alt="" role="presentation"/>
+                        <div class="table-product__info">
+                          <div class="table-product__title">
+                            Бальзам-ополаскиватель для всех типов волос,<span class="font-bold">200 мл</span>
+                          </div>
+                          <div class="table-product__brand">Alerana
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__quantity">
+                        <div class="table-product__quantity-wrapper">
+                          <div class="table-product__quantity-btn table-product__quantity-btn--minus">&ndash;
+                          </div><input class="table-product__input" type="number" value="1" min="0" max="99" placeholder="1"/>
+                          <div class="table-product__quantity-btn table-product__quantity-btn--plus">+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__price">
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">327 р
+                          </div>
+                          <div class="table-product__price-name">Price
+                          </div>
+                        </div>
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">294 р
+                          </div>
+                          <div class="table-product__price-name">mini Sale
+                          </div>
+                        </div>
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">278 р
+                          </div>
+                          <div class="table-product__price-name">maxi Sale
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__total-cost">327 р
+                      </div>
+                      <button class="table-product__btn-del btn-close">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="basket-table__item">
+                    <div class="table-product">
+                      <div class="table-product__product"><img class="table-product__img" src="img/product/product3.jpg" width="102" height="123" alt="" role="presentation"/>
+                        <div class="table-product__info">
+                          <div class="table-product__title">
+                            Бальзам-ополаскиватель для всех типов волос,<span class="font-bold">200 мл</span>
+                          </div>
+                          <div class="table-product__brand">Alerana
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__quantity">
+                        <div class="table-product__quantity-wrapper">
+                          <div class="table-product__quantity-btn table-product__quantity-btn--minus">&ndash;
+                          </div><input class="table-product__input" type="number" value="1" min="0" max="99" placeholder="1"/>
+                          <div class="table-product__quantity-btn table-product__quantity-btn--plus">+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__price">
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">327 р
+                          </div>
+                          <div class="table-product__price-name">Price
+                          </div>
+                        </div>
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">294 р
+                          </div>
+                          <div class="table-product__price-name">mini Sale
+                          </div>
+                        </div>
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">278 р
+                          </div>
+                          <div class="table-product__price-name">maxi Sale
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__total-cost">327 р
+                      </div>
+                      <button class="table-product__btn-del btn-close">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="basket-table__item">
+                    <div class="table-product">
+                      <div class="table-product__product"><img class="table-product__img" src="img/product/product3.jpg" width="102" height="123" alt="" role="presentation"/>
+                        <div class="table-product__info">
+                          <div class="table-product__title">
+                            Бальзам-ополаскиватель для всех типов волос,<span class="font-bold">200 мл</span>
+                          </div>
+                          <div class="table-product__brand">Alerana
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__quantity">
+                        <div class="table-product__quantity-wrapper">
+                          <div class="table-product__quantity-btn table-product__quantity-btn--minus">&ndash;
+                          </div><input class="table-product__input" type="number" value="1" min="0" max="99" placeholder="1"/>
+                          <div class="table-product__quantity-btn table-product__quantity-btn--plus">+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__price">
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">327 р
+                          </div>
+                          <div class="table-product__price-name">Price
+                          </div>
+                        </div>
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">294 р
+                          </div>
+                          <div class="table-product__price-name">mini Sale
+                          </div>
+                        </div>
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">278 р
+                          </div>
+                          <div class="table-product__price-name">maxi Sale
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__total-cost">327 р
+                      </div>
+                      <button class="table-product__btn-del btn-close">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="basket-table__item">
+                    <div class="table-product">
+                      <div class="table-product__product"><img class="table-product__img" src="img/product/product3.jpg" width="102" height="123" alt="" role="presentation"/>
+                        <div class="table-product__info">
+                          <div class="table-product__title">
+                            Бальзам-ополаскиватель для всех типов волос,<span class="font-bold">200 мл</span>
+                          </div>
+                          <div class="table-product__brand">Alerana
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__quantity">
+                        <div class="table-product__quantity-wrapper">
+                          <div class="table-product__quantity-btn table-product__quantity-btn--minus">&ndash;
+                          </div><input class="table-product__input" type="number" value="1" min="0" max="99" placeholder="1"/>
+                          <div class="table-product__quantity-btn table-product__quantity-btn--plus">+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__price">
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">327 р
+                          </div>
+                          <div class="table-product__price-name">Price
+                          </div>
+                        </div>
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">294 р
+                          </div>
+                          <div class="table-product__price-name">mini Sale
+                          </div>
+                        </div>
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">278 р
+                          </div>
+                          <div class="table-product__price-name">maxi Sale
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__total-cost">327 р
+                      </div>
+                      <button class="table-product__btn-del btn-close">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="basket-table__item">
+                    <div class="table-product">
+                      <div class="table-product__product"><img class="table-product__img" src="img/product/product3.jpg" width="102" height="123" alt="" role="presentation"/>
+                        <div class="table-product__info">
+                          <div class="table-product__title">
+                            Бальзам-ополаскиватель для всех типов волос,<span class="font-bold">200 мл</span>
+                          </div>
+                          <div class="table-product__brand">Alerana
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__quantity">
+                        <div class="table-product__quantity-wrapper">
+                          <div class="table-product__quantity-btn table-product__quantity-btn--minus">&ndash;
+                          </div><input class="table-product__input" type="number" value="1" min="0" max="99" placeholder="1"/>
+                          <div class="table-product__quantity-btn table-product__quantity-btn--plus">+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__price">
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">327 р
+                          </div>
+                          <div class="table-product__price-name">Price
+                          </div>
+                        </div>
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">294 р
+                          </div>
+                          <div class="table-product__price-name">mini Sale
+                          </div>
+                        </div>
+                        <div class="table-product__price-item">
+                          <div class="table-product__price-cost">278 р
+                          </div>
+                          <div class="table-product__price-name">maxi Sale
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-product__total-cost">327 р
+                      </div>
+                      <button class="table-product__btn-del btn-close">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4"></div>
           </div>
         </div>
       </div>
