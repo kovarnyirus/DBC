@@ -1,0 +1,122 @@
+.basket-form {
+  background: #F2F2F2;
+  border-radius: 5px;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 26px;
+  }
+
+  &__step-wrapper {
+    margin-bottom: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__step-number {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #BE0B58;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+
+    &--done {
+      color: white;
+      background: #BE0B58;
+    }
+  }
+
+  &__step-title {
+    font-size: 16px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 11px;
+  }
+
+  &__label {
+    color: #9FA3A7;
+    margin-bottom: 0;
+  }
+
+  &__input {
+    color: #4D4D4D;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    max-width: 100%;
+  }
+
+  &__select {
+    color: #4D4D4D;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: none;
+    padding-left: 14px;
+    padding-right: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+
+    &-wrapper {
+      position: relative;
+      width: 100%;
+      cursor: pointer;
+
+      &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 100%;
+        padding: 15px;
+        cursor: pointer;
+        background-image: url("data:image/svg+xml,%3Csvg width='9' height='5' viewBox='0 0 9 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1L4.5 4L1 1' stroke='%236CB13E' stroke-width='2' stroke-miterlimit='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        pointer-events: none;
+      }
+    }
+  }
+  &__house-info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  &__house-info-item{
+    max-width: 15%;
+    & .basket-form__label{
+      font-size: 12px;
+    }
+  }
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__cost-delivery{
+    color: $success-color;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  &__foter-btn{
+    width: 188px;
+  }
+}

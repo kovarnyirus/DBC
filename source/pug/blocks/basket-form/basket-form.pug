@@ -1,0 +1,138 @@
+mixin basket-form-step-1()
+  +b.FORM.basket-form
+    +e.title Оформление заказа
+    +e.step-wrapper
+      +e.step-number 1
+      +e.step-title Выберите способ доставки:
+    +e.item
+      +e.LABEL.label(for='region') Регион доставки
+      +e.select-wrapper
+        +e.SELECT.select#region(type='mane' placeholder='')
+          option(value='moscow' selected) Москва
+          option(value='spb') Питер
+          option(value='penza') Пенза
+    +e.item
+      +e.LABEL.label(for='city') Город
+      +e.select-wrapper
+        +e.SELECT.select#city(type='mane' placeholder='')
+          option(value='moscow') Москва
+          option(value='spb') Питер
+          option(value='penza') Пенза
+    +e.item
+      +e.LABEL.label(for='type') Тип доставки
+      +e.select-wrapper
+        +e.SELECT.select#type(type='mane' placeholder='')
+          option(value='moscow' checked) Курьером
+          option(value='spb') Пункт выдачи заказов
+    +e.item
+      +e.LABEL.label(for='street') Улица
+      +e.INPUT.input#street(type='text' placeholder='')
+    +e.item
+      +e.house-info
+        +e.house-info-item
+          +e.LABEL.label(for='house') Дом
+          +e.INPUT.input#house(type='mane' placeholder='')
+        +e.house-info-item
+          +e.LABEL.label(for='str') Кор-с
+          +e.INPUT.input#str(type='mane' placeholder='')
+        +e.house-info-item
+          +e.LABEL.label(for='entrance') Под-д
+          +e.INPUT.input#entrance(type='mane' placeholder='')
+        +e.house-info-item
+          +e.LABEL.label(for='floor') Этаж
+          +e.INPUT.input#floor(type='mane' placeholder='')
+        +e.house-info-item
+          +e.LABEL.label(for='room') Кв-ра
+          +e.INPUT.input#room(type='mane' placeholder='')
+        +e.house-info-item
+          +e.LABEL.label(for='doorphone') Дом-он
+          +e.INPUT.input#doorphone(type='mane' placeholder='')
+    +e.footer
+      +e.cost-delivery-erapper
+        +e.cost-delivery-title Доставка
+        +e.cost-delivery 99 р
+      +e.BUTTON.foter-btn.btn(type='button') Следующий шаг
+
+mixin basket-form-step-1-devel()
+  +b.FORM.basket-form
+    +e.title Оформление заказа
+    +e.step-wrapper
+      +e.step-number 1
+      +e.step-title Выберите способ доставки:
+    +e.item
+      +e.LABEL.label(for='region') Регион доставки
+      +e.select-wrapper
+        +e.SELECT.select#region(type='mane' placeholder='')
+          option(value='moscow' selected) Москва
+          option(value='spb') Питер
+          option(value='penza') Пенза
+    +e.item
+      +e.LABEL.label(for='city') Город
+      +e.select-wrapper
+        +e.SELECT.select#city(type='mane' placeholder='')
+          option(value='moscow') Москва
+          option(value='spb') Питер
+          option(value='penza') Пенза
+    +e.item
+      +e.LABEL.label(for='type') Тип доставки
+      +e.select-wrapper
+        +e.SELECT.select#type(type='mane' placeholder='')
+          option(value='moscow' checked) Курьером
+          option(value='spb') Пункт выдачи заказов
+    +e.item
+      +e.LABEL.label(for='street') Улица
+      +e.INPUT.input#street(type='text' placeholder='')
+    +e.item
+      +e.house-info
+        +e.house-info-item
+          +e.LABEL.label(for='house') Дом
+          +e.INPUT.input#house(type='mane' placeholder='')
+        +e.house-info-item
+          +e.LABEL.label(for='str') Кор-с
+          +e.INPUT.input#str(type='mane' placeholder='')
+        +e.house-info-item
+          +e.LABEL.label(for='entrance') Под-д
+          +e.INPUT.input#entrance(type='mane' placeholder='')
+        +e.house-info-item
+          +e.LABEL.label(for='floor') Этаж
+          +e.INPUT.input#floor(type='mane' placeholder='')
+        +e.house-info-item
+          +e.LABEL.label(for='room') Кв-ра
+          +e.INPUT.input#room(type='mane' placeholder='')
+        +e.house-info-item
+          +e.LABEL.label(for='doorphone') Дом-он
+          +e.INPUT.input#doorphone(type='mane' placeholder='')
+    +e.footer
+      +e.cost-delivery-erapper
+        +e.cost-delivery-title Доставка
+        +e.cost-delivery 99 р
+      +e.BUTTON.foter-btn.btn(type='button') Следующий шаг
+
+mixin basket-form-step-2()
+  +b.FORM.basket-form
+    +e.title Оформление заказа
+    +e.step-wrapper
+      +e.step-number--done 1
+      +e.step-number 2
+      +e.step-title Ваши данные:
+    +e.item
+      +e.LABEL.label(for='surname') Имя: *
+      +e.INPUT.input#name(type='mane' placeholder='Имя')
+    +e.item
+      +e.LABEL.label(for='surname') Фамилия: *
+      +e.INPUT.input#surname(type='mane' placeholder='Фамилиямя')
+    +e.item
+      +e.LABEL.label(for='email') Email: *
+      +e.INPUT.input#email(type='tel' placeholder='sample@sample.com')
+    +e.item---phone
+      +e.LABEL.label(for='tel') Телефон: *
+      +e.INPUT.input#tel(type='tel' placeholder='Телефон')
+    +e.item
+      +e.LABEL.label(for='street') Улица
+      +e.INPUT.input#street(type='text' placeholder='')
+
+    +e.footer
+      +e.cost-delivery-erapper
+        +e.cost-delivery-title Доставка
+        +e.cost-delivery 99 р
+      +e.BUTTON.foter-btn.btn(type='button') Следующий шаг
