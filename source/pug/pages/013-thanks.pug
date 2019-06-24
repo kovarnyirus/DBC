@@ -1,0 +1,21 @@
+extends layout/main.pug
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/sliders/sliders
+include ../blocks/mixins/_mixins
+include ../blocks/advertising/advertising
+include ../blocks/basket/basket
+include ../blocks/thanks/thanks
+
+
+
+block title
+  title Личный кабинет
+
+block pagecontent
+  +breadcrumb('Корзина', 'Главная')
+  +b.page-name
+    .container
+      h2.text-md-center Спасибо за Ваш заказ!
+  +thanks()
+
+

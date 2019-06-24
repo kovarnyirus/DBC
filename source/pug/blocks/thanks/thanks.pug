@@ -1,0 +1,47 @@
+mixin thanks()
+ +b.thanks
+  +e.wrapper
+    +e.odrder-info
+      +e.IMG.img(src='img/thanks.png' width='385')
+      +e.odrder-info-list
+        +e.odrder-info-item Номер Вашего заказа: &nbsp;
+          |
+          span.font-bold № 131058
+
+        +e.odrder-info-item Сумма: &nbsp;
+          |
+          span.font-bold 2 368 руб с учетом доставки.
+
+        +e.odrder-info-item Способ оплаты:&nbsp;
+          |
+          span.font-bold Оплата при получении
+
+        +e.odrder-info-item К оплате: &nbsp;
+          |
+          span.font-bold 2 368 руб
+    a.btn.thanks__pay-btn(href='#') Оплатить
+    +e.message-send Информация о заказе отправлена Вам на почту.
+    h2 Выберите любимый бренд или категорию продукции
+    +e.FORM.check-brand
+      +e.check-brand-item
+        +e.select-wrapper
+          +e.SELECT.select
+            option Бренд
+            option Бренд
+            option Бренд
+            option Бренд
+      +e.check-brand-item
+        +e.select-wrapper
+          +e.SELECT.select
+            option Vishi
+            option Vishi
+            option Vishi
+            option Vishi
+
+      +e.BUTTON.check-btn.btn(type='submit') Выбрать
+    div.mb-3 Если вы хотите выбрать любимый товар, перейдите &nbsp;
+      |
+      +e.A.link(href='#') в каталог
+      | &nbsp; и отметьте его
+    div.font-bold Получить скидку вы сможете только после того как оплатите текущий заказ
+
