@@ -230,10 +230,11 @@ a {
     color: $text-color;
     font-weight: 800;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 0;
+    margin-bottom: 15px;
     @include media-breakpoint-up(md) {
       padding-top: 11px;
-      padding-bottom: 31px;
+      margin-bottom: 31px;
       font-size: 35px;
     }
   }

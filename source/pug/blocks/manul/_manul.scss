@@ -1,0 +1,22 @@
+.manul{
+  padding-top: 20px;
+  margin-bottom: 66px;
+  &__link{
+    color: $success-color;
+  }
+  & p{
+    margin-bottom: 28px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  &__img-wrapper{
+    display: flex;
+  }
+  &__img{
+    margin-right: 10px;
+    &:last-child{
+      margin-right: 0;
+      flex-grow: 1;
+    }
+  }
+}
