@@ -173,10 +173,6 @@
   }
 }
 @include media-breakpoint-down(lg){
-  .container{
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   .order-history{
     &__item{
       padding-bottom: 25px;

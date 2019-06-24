@@ -1,6 +1,6 @@
 mixin basket-form-step-1()
   +b.FORM.basket-form
-    +e.title Оформление заказа
+    +e.title.d-none.d-md-block Оформление заказа
     +e.step-wrapper
       +e.step-number 1
       +e.step-title Выберите способ доставки:
@@ -55,7 +55,7 @@ mixin basket-form-step-1()
 
 mixin basket-form-step-1-devel()
   +b.FORM.basket-form
-    +e.title Оформление заказа
+    +e.title.d-none.d-md-block Оформление заказа
     +e.step-wrapper
       +e.step-number 1
       +e.step-title Выберите способ доставки:
@@ -80,37 +80,23 @@ mixin basket-form-step-1-devel()
           option(value='moscow' checked) Курьером
           option(value='spb') Пункт выдачи заказов
     +e.item
-      +e.LABEL.label(for='street') Улица
-      +e.INPUT.input#street(type='text' placeholder='')
+      +e.LABEL.label(for='type') Выберите пункт выдачи
+      +e.select-wrapper
+        +e.SELECT.select#type(type='mane' placeholder='')
+          option(value='moscow') Курьером
+          option(value='spb' checked) Пункт выдачи заказов
     +e.item
-      +e.house-info
-        +e.house-info-item
-          +e.LABEL.label(for='house') Дом
-          +e.INPUT.input#house(type='mane' placeholder='')
-        +e.house-info-item
-          +e.LABEL.label(for='str') Кор-с
-          +e.INPUT.input#str(type='mane' placeholder='')
-        +e.house-info-item
-          +e.LABEL.label(for='entrance') Под-д
-          +e.INPUT.input#entrance(type='mane' placeholder='')
-        +e.house-info-item
-          +e.LABEL.label(for='floor') Этаж
-          +e.INPUT.input#floor(type='mane' placeholder='')
-        +e.house-info-item
-          +e.LABEL.label(for='room') Кв-ра
-          +e.INPUT.input#room(type='mane' placeholder='')
-        +e.house-info-item
-          +e.LABEL.label(for='doorphone') Дом-он
-          +e.INPUT.input#doorphone(type='mane' placeholder='')
+      +e.A.map(href='#') Выбрать на карте
     +e.footer
       +e.cost-delivery-erapper
         +e.cost-delivery-title Доставка
         +e.cost-delivery 99 р
       +e.BUTTON.foter-btn.btn(type='button') Следующий шаг
 
+
 mixin basket-form-step-2()
   +b.FORM.basket-form
-    +e.title Оформление заказа
+    +e.title.d-none.d-md-block Оформление заказа
     +e.step-wrapper
       +e.step-number--done 1
       +e.step-number 2
@@ -126,13 +112,36 @@ mixin basket-form-step-2()
       +e.INPUT.input#email(type='tel' placeholder='sample@sample.com')
     +e.item---phone
       +e.LABEL.label(for='tel') Телефон: *
-      +e.INPUT.input#tel(type='tel' placeholder='Телефон')
+      +e.phone-row
+        +e.SELECT.select#region(type='mane' placeholder='')
+          option(value='moscow' selected) Россия +7
+          option(value='spb') Россия +7
+          option(value='penza') Россия +7
+        +e.INPUT.input--phone#tel(type='tel' placeholder='Телефон')
     +e.item
-      +e.LABEL.label(for='street') Улица
-      +e.INPUT.input#street(type='text' placeholder='')
-
+      +e.LABEL.label(for='comment') Комментарий к заказу:
+      +e.TEXTAREA.textarea#comment(type='text' placeholder='')
+    +e.payment-method
+      +e.payment-method-title Выберите способ оплаты
+      +e.payment-method-wrapper
+        +e.INPUT.radio-btn.visually-hidden#1(type='radio' name='raz' valiu='1')
+        +e.LABEL.radio-label(for='1') Оплата
+          |
+          br/
+          |
+          span.text-black.font-bold при получении
+        +e.INPUT.radio-btn.visually-hidden#2(type='radio' name='raz' valiu='2')
+        +e.LABEL.radio-label(for='2') Онлайн-оплата через систему &nbsp;
+          |
+          span.font-bold IntellectMoney
+    +e.total-sum
+      .font-bold Итого сумма заказа с учетом доставки
+      +e.total-sum-number 1 112 р
     +e.footer
-      +e.cost-delivery-erapper
-        +e.cost-delivery-title Доставка
-        +e.cost-delivery 99 р
-      +e.BUTTON.foter-btn.btn(type='button') Следующий шаг
+      +e.BUTTON.foter-btn--back.btn(type='button') Назад
+      +e.BUTTON.foter-btn.btn(type='button') Оформить заказ
+    +e.policy Нажимая на кнопку "оформить заказ"  я даю свое согласие на оработку персональных данных согласно &nbsp;
+      +e.A.policy-link(href='#') Политике конфиденциальности
+    +b.LABEL.custom-checkbox(for='yes')
+      +e.INPUT.input(type='checkbox' checked id='yes')
+      +e.SPAN.name Получать лучшие предложения (редко)

@@ -470,3 +470,20 @@ input::-webkit-inner-spin-button {
 .no-production {
   font-size: 20px;
 }
+textarea{
+  resize: none;
+  border: none;
+  margin-bottom: 20px;
+}
+
+@include media-breakpoint-down(lg){
+  //.container{
+  //  padding-left: 20px;
+  //  padding-right: 20px;
+  //}
+  //.row{
+  //  margin-left: -20px;
+  //  margin-right: -20px;
+  //
+  //}
+}
