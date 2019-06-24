@@ -130,6 +130,7 @@ $('.tabs__caption').slick({
     speed: 450,
     slidesToShow: 1,
     variableWidth: true,
+    rows: 0,
     responsive: [
         {
             breakpoint: 99999,
@@ -165,4 +166,7 @@ $('.instagram-block__slider').slick({
     arrows: false,
 });
 
+$( ".order-history__toggle" ).click(function() {
+    $(this).closest(".order-history__item").toggleClass('order-history__item--open');
+});
 

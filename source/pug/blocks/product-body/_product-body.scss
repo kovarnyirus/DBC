@@ -1,18 +1,34 @@
-.tabs__caption{
+.tabs__caption {
   display: flex;
   margin-bottom: 30px;
-  border-bottom: 4px solid #F6F6F6;
   padding-top: 55px;
+  position: relative;
+  &:before {
+    display: block;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    content: '';
+    border-bottom: 4px solid #F6F6F6;
+  }
+  @include media-breakpoint-up(md){
+    &:before {
+      bottom: -4px;
+    }
+  }
 }
 
-.tabs__item{
+.tabs__item {
   display: none;
-  &.active{
+
+  &.active {
     display: block;
   }
 }
 
-.tabs__btn{
+.tabs__btn {
   padding-bottom: 30px;
   padding-left: 42px;
   padding-right: 42px;
@@ -20,8 +36,13 @@
   font-size: 14px;
   text-transform: uppercase;
   position: relative;
-  &.active{
-    &:before{
+  margin-bottom: 7px;
+  @include media-breakpoint-up(md){
+    margin-bottom: 0;
+  }
+
+  &.active {
+    &:before {
       position: absolute;
       display: block;
       content: '';
@@ -33,14 +54,15 @@
       left: 0;
     }
   }
-  span{
+
+  span {
     display: inline-block;
     cursor: pointer;
     text-align: center;
   }
 }
 
-.tabs__btn-number{
- color: #5CBF1A;
+.tabs__btn-number {
+  color: #5CBF1A;
   margin-left: 5px;
 }

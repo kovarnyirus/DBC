@@ -2,7 +2,7 @@ include ../table-product/table-product
 mixin basket()
   +b.basket
     .container
-      +e.header-line.d-none.d-md-block
+      +e.header-line.d-none.d-lg-block
         .row.align-items-center
           .col-4 При заказе от 3000 рублей -
             |
@@ -24,9 +24,9 @@ mixin basket()
             span.font-weight-bold.attention SALE-ценой
       +e.content
         .row
-          .col-12.col-md-8
+          .col-12.col-lg-8.mb-3
             +b.basket-table
-              +e.header.d-md-flex
+              +e.header.d-lg-flex
                 +e.header-item--product Товар
                 +e.header-item--quantity Количество
                 +e.header-item--cost Цена
@@ -42,14 +42,47 @@ mixin basket()
                   +table-product()
                 +e.item
                   +table-product()
-      +e.footer
-        .row
-          .col-12.col-md-2
-            
+              +e.footer
+                .row
+                  .col-12.col-lg-3.mb-3
+                    +e.footer-item
+                      +e.LABEL.label Промокод:
+                      +e.input-wrapper
+                        +e.INPUT.input
+                        +e.BUTTON.btn--ok ок
+                  .col-12.col-lg-3.mb-3
+                    +e.footer-item
+                      +e.LABEL.label Персональный промокод:
+                      +e.input-wrapper
+                        +e.INPUT.input
+                        +e.BUTTON.btn.btn-close
+                  .col-12.col-lg-3.mb-3
+                    +e.footer-item
+                      +e.LABEL.label Оплата баллами
+                      .col-auto.font-bold.flex-grow-1.text-right.attention.pr-0 12 589 б.
+                      +e.input-wrapper
+                        +e.INPUT.input
+                        +e.BUTTON.btn--ok ок
+                  .col-12.col-lg-3.mb-3
+                    .row
+                      .col-6.mb-4 Скидка
+                        |
+                        span
+                          +icon('icon-question')
+                      +e.total-discount.col-6.text-right.mb-4 256 р
+                      .col-6 Итого
+                      +e.total-sum.col-6.text-right 1003 р
+                .row
+                  .col-12.text-md-right Купи товар еще на &nbsp;
+                    |
+                    span.attention.font-bold 500 р &nbsp;
+                    |
+                    span.font-bold.success-text-color и получи выгоную цену
 
-
-
-          .col-12.col-md-4
+          .col-12.col-lg-4
+            .row.justify-content-between
+              .col-auto Общая сумма заказа
+              .col-auto 1003 р
 
 
 

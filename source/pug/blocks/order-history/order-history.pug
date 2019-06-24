@@ -1,11 +1,18 @@
 mixin order-history()
   +b.order-history
-    +e.item--open
+    +e.item
       +e.left-col
         +e.name
           +e.number №134667
           +e.status.d-md-none Ожидает оплаты
           +e.description Краткий перечнь продуктов, через запяту, в конце троеточие, при нажатии разворачивается как корзина
+        +e.product-list
+          +table-product()
+          +table-product()
+          +table-product()
+          +table-product()
+          +table-product()
+          +table-product()
 
       +e.right-col
         +e.delivery
