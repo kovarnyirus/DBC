@@ -5,6 +5,7 @@ include ../../blocks/header/_header.pug
 include ../../blocks/top-nav/_top-nav.pug
 include ../../blocks/catalog-nav/_catalog-nav.pug
 include ../../blocks/footer/footer
+include ../../blocks/modal/modal
 
 doctype html
 html(lang="ru")
@@ -35,7 +36,9 @@ html(lang="ru")
     //- link(rel="stylesheet", href="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css")
 
     //- link(rel="stylesheet", href="css/main.css")
+    link(rel="stylesheet", type="text/css", href="css/magnific-popup.css")
     link(rel="stylesheet", type="text/css", href="css/style.min.css")
+
 
 
 
@@ -45,6 +48,7 @@ html(lang="ru")
       +catalog-nav()
     block pagecontent
 
+    +modals()
     +footer()
     //+modal()
 
@@ -92,5 +96,7 @@ html(lang="ru")
     //script(src="libs/select2/select2.min.js")
     //script(src="libs/TouchSwipe/jquery.touchSwipe.min.js")
     script(type="text/javascript", src="js/slick.js")
+    script(type="text/javascript", src="js/jquery.magnific-popup.min.js")
+    script(type="text/javascript", src="js/jquery.maskedinput.js")
 
     script(type="text/javascript", src="js/main.js")

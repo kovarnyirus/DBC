@@ -18,6 +18,7 @@
     <!--link(rel="stylesheet", type="text/css", href="libs/jQueryFormStyler/dist/jquery.formstyler.theme.css")-->
     <!--link(rel="stylesheet", type="text/css", href="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css")-->
     <!--link(rel="stylesheet", type="text/css", href="libs/select2/select2.min.css")-->
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
@@ -952,6 +953,292 @@
         </svg>
       </BUTTON>
     </div>
+    <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-dialog">
+      <form novalidate="novalidate">
+        <div class="modal-wrap__head">
+          <svg class="icon icon-user ">
+            <use xlink:href="img/svg/sprite.svg#icon-user"></use>
+          </svg>
+          <div class="modal-wrap__title">Диалоговое окно
+          </div>
+        </div>
+        <div class="modal-wrap__body">
+          <div class="modal-wrap__text text-center">На вашу почту мы отправили инструкцию по востановлению пароля (или другая возможная информация)
+          </div>
+          <button class="modal-wrap__btn modal-wrap__btn--small btn" type="submit">OK
+          </button>
+          <!--диалоговое окно-->
+        </div>
+      </form>
+    </div>
+    <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-recover-email">
+      <form novalidate="novalidate">
+        <div class="modal-wrap__head">
+          <svg class="icon icon-user ">
+            <use xlink:href="img/svg/sprite.svg#icon-user"></use>
+          </svg>
+          <div class="modal-wrap__title">Забыли пароль?
+          </div>
+        </div>
+        <div class="modal-wrap__body">
+          <div class="modal-wrap__text text-center">Укажите Ваш e-mail, либо введите номер телефона
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="modal-wrap__input-wrap modal-wrap__input-wrap--label"><input class="modal-wrap__input" type="email" required="required"/>
+                <label class="modal-wrap__label" for="email">Ваш email
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+            </div>
+          </div>
+          <button class="modal-wrap__btn btn" type="submit"> Сбросить пароль
+          </button>
+        </div>
+        <div class="modal-wrap__footer">
+          <div class="text">Вспомнили пароль? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#">Войти</a>
+        </div>
+        <!--введите пароль для восстановления-->
+      </form>
+    </div>
+    <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-recover-sms">
+      <form novalidate="novalidate">
+        <div class="modal-wrap__head">
+          <svg class="icon icon-user ">
+            <use xlink:href="img/svg/sprite.svg#icon-user"></use>
+          </svg>
+          <div class="modal-wrap__title">Забыли пароль?
+          </div>
+        </div>
+        <div class="modal-wrap__body">
+          <div class="modal-wrap__text text-center">Введите код из смс
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="modal-wrap__input-wrap modal-wrap__input-wrap--label"><input class="modal-wrap__input" type="email" required="required"/>
+                <label class="modal-wrap__label" for="email">Ваш email
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+            </div>
+          </div>
+          <button class="modal-wrap__btn btn" type="submit"> Сбросить пароль
+          </button>
+        </div>
+        <div class="modal-wrap__footer">
+          <div class="text">Вспомнили пароль? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#">Войти</a>
+        </div>
+        <!--sms-->
+      </form>
+    </div>
+    <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-recover-new-pass">
+      <form novalidate="novalidate">
+        <div class="modal-wrap__head">
+          <svg class="icon icon-user ">
+            <use xlink:href="img/svg/sprite.svg#icon-user"></use>
+          </svg>
+          <div class="modal-wrap__title">Забыли пароль?
+          </div>
+        </div>
+        <div class="modal-wrap__body">
+          <div class="modal-wrap__text text-center">Создайте новый пароль
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="modal-wrap__input-wrap modal-wrap__input-wrap--label"><input class="modal-wrap__input" type="password" required="required"/>
+                <label class="modal-wrap__label" for="password">Пароль
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="modal-wrap__input-wrap"><input class="modal-wrap__input" type="password" placeholder="Повторить пароль" required="required"/>
+              </div>
+              <!-- +e.input-wrap-->
+            </div>
+          </div>
+          <button class="modal-wrap__btn btn" type="submit"> Сбросить пароль
+          </button>
+        </div>
+        <div class="modal-wrap__footer">
+          <div class="text">Вспомнили пароль? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#">Войти</a>
+        </div>
+      </form>
+    </div>
+    <!--new парот-->
+    <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-reg-soc">
+      <form novalidate="novalidate">
+        <div class="modal-wrap__head">
+          <svg class="icon icon-user ">
+            <use xlink:href="img/svg/sprite.svg#icon-user"></use>
+          </svg>
+          <div class="modal-wrap__title">Регистрация через соц. сеть
+          </div>
+        </div>
+        <div class="modal-wrap__body">
+          <div class="modal-wrap__text text-center">Заполните дополнительную информацию
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="modal-wrap__input-wrap modal-wrap__input-wrap--label"><input class="modal-wrap__input" type="E-mail"/>
+                <label class="modal-wrap__label" for="E-mail">sadavan@yandex.ru
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="modal-wrap__soc-info">
+                <div>Имя</div>
+                <div class="text-primary">Виктория Александровская</div>
+              </div>
+              <div class="modal-wrap__input-wrap modal-wrap__input-wrap--label"><input class="modal-wrap__input" type="password" required="required"/>
+                <label class="modal-wrap__label" for="password">Пароль
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="modal-wrap__input-wrap"><input class="modal-wrap__input" type="password" placeholder="Повторить пароль" required="required"/>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="modal-wrap__input-wrap"><input class="modal-wrap__input" type="tel" placeholder="+7(999)999-99-99" required="required"/>
+              </div>
+              <!-- +e.input-wrap-->
+            </div>
+          </div>
+          <button class="modal-wrap__btn modal-wrap__btn--reg btn" type="submit">Регистрация
+          </button>
+          <label class="custom-checkbox" for="1"><input class="custom-checkbox__input" type="checkbox" checked="checked" id="1"/><span class="custom-checkbox__name">
+            Я даю свое согласие на обработку персональных данных согласно &nbsp;<a class="modal-wrap__link" href="#">Политике конфиденциальности</a></span>
+          </label>
+          <label class="custom-checkbox" for="2"><input class="custom-checkbox__input" type="checkbox" checked="checked" id="2"/><span class="custom-checkbox__name">Получать лучшие предложения (редко)</span>
+          </label>
+        </div>
+        <div class="modal-wrap__footer">
+          <div class="text">Есть аккаунт? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#">Войти</a>
+        </div>
+      </form>
+    </div>
+    <!--рег через соцсети-->
+    <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-reg">
+      <form novalidate="novalidate">
+        <div class="modal-wrap__head">
+          <svg class="icon icon-user ">
+            <use xlink:href="img/svg/sprite.svg#icon-user"></use>
+          </svg>
+          <div class="modal-wrap__title">Регистрация
+          </div>
+        </div>
+        <div class="modal-wrap__body">
+          <div class="modal-wrap__text text-center">Заполните информацию о себе
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="modal-wrap__input-wrap modal-wrap__input-wrap--label"><input class="modal-wrap__input" type="E-mail" required="required"/>
+                <label class="modal-wrap__label" for="E-mail">E-mail
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="modal-wrap__input-wrap modal-wrap__input-wrap--label"><input class="modal-wrap__input" type="password" required="required"/>
+                <label class="modal-wrap__label" for="password">Пароль
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="modal-wrap__input-wrap"><input class="modal-wrap__input" type="password" placeholder="Повторить пароль" required="required"/>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="modal-wrap__input-wrap"><input class="modal-wrap__input" type="text" placeholder="Ваше имя" required="required"/>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="modal-wrap__input-wrap"><input class="modal-wrap__input" type="text" placeholder="Ваша фамилия" required="required"/>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="modal-wrap__input-wrap"><input class="modal-wrap__input" type="tel" placeholder="+7(999)999-99-99" required="required"/>
+              </div>
+              <!-- +e.input-wrap-->
+            </div>
+          </div>
+          <label class="custom-checkbox" for="2"><input class="custom-checkbox__input" type="checkbox" checked="checked" id="2"/><span class="custom-checkbox__name">Я косметолог</span>
+          </label>
+          <button class="modal-wrap__btn modal-wrap__btn--reg btn" type="submit">Регистрация
+          </button>
+          <div class="modal-wrap__add-file">
+            <input class="visually-hidden" id="passport" type="file"/>
+            <label class="modal-wrap__add-file-wrapper" for="passport"><span class="modal-wrap__add-file-label">Загрузите Ваше фото с разворотом паспорта</span><span class="modal-wrap__add-file-btn">Выбрать файл</span><span class="modal-wrap__file-name">asdasd.png</span>
+            </label>
+          </div>
+          <div class="modal-wrap__add-file">
+            <input class="visually-hidden" id="passport" type="file"/>
+            <label class="modal-wrap__add-file-wrapper" for="passport"><span class="modal-wrap__add-file-label">Фото диплома или документа об образовании</span><span class="modal-wrap__add-file-btn">Выбрать файл</span><span class="modal-wrap__file-name">asdasd.png</span>
+            </label>
+          </div>
+        </div>
+        <div class="modal-wrap__text modal-wrap__text--small">
+          Нажимая на кнопку "регистарция" вы соглашаетесь на обработку персональных данных в соответствии с &nbsp;<a class="modal-wrap__link" href="#">Оферой</a>&nbsp; и<a class="modal-wrap__link" href="#"> Политикой конфиденциальности</a>
+        </div>
+        <label class="custom-checkbox" for="2"><input class="custom-checkbox__input" type="checkbox" checked="checked" id="2"/><span class="custom-checkbox__name">Получать лучшие предложения (редко)</span>
+        </label>
+        <div class="modal-wrap__alt-reg">Зарегистрироваться с помощью
+        </div>
+        <div class="modal-wrap__soc-list"><a class="modal-wrap__soc-item" href="#">
+          <svg class="icon icon-vk ">
+            <use xlink:href="img/svg/sprite.svg#icon-vk"></use>
+          </svg></a><a class="modal-wrap__soc-item" href="#">
+          <svg class="icon icon-instagram ">
+            <use xlink:href="img/svg/sprite.svg#icon-instagram"></use>
+          </svg></a><a class="modal-wrap__soc-item" href="#">
+          <svg class="icon icon-fb ">
+            <use xlink:href="img/svg/sprite.svg#icon-fb"></use>
+          </svg></a>
+        </div>
+        <div class="modal-wrap__footer">
+          <div class="text">Есть аккаунт? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#">Войти</a>
+        </div>
+      </form>
+    </div>
+    <!--рег-->
+    <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-login">
+      <form novalidate="novalidate">
+        <div class="modal-wrap__head">
+          <svg class="icon icon-user ">
+            <use xlink:href="img/svg/sprite.svg#icon-user"></use>
+          </svg>
+          <div class="modal-wrap__title">Вход
+          </div>
+        </div>
+        <div class="modal-wrap__body">
+          <div class="modal-wrap__text text-center">Введите Ваши данные для входа
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="modal-wrap__input-wrap modal-wrap__input-wrap--label"><input class="modal-wrap__input" type="E-mail" required="required"/>
+                <label class="modal-wrap__label" for="E-mail">E-mail
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="modal-wrap__input-wrap modal-wrap__input-wrap--label"><input class="modal-wrap__input" type="password" required="required"/>
+                <label class="modal-wrap__label" for="password">Пароль
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+            </div>
+          </div>
+          <button class="modal-wrap__btn btn" type="submit">Войти
+          </button>
+        </div>
+        <div class="modal-wrap__alt-reg">Войти с помощью
+        </div>
+        <div class="modal-wrap__soc-list"><a class="modal-wrap__soc-item" href="#">
+          <svg class="icon icon-vk ">
+            <use xlink:href="img/svg/sprite.svg#icon-vk"></use>
+          </svg></a><a class="modal-wrap__soc-item" href="#">
+          <svg class="icon icon-instagram ">
+            <use xlink:href="img/svg/sprite.svg#icon-instagram"></use>
+          </svg></a><a class="modal-wrap__soc-item" href="#">
+          <svg class="icon icon-fb ">
+            <use xlink:href="img/svg/sprite.svg#icon-fb"></use>
+          </svg></a>
+        </div>
+        <div class="modal-wrap__footer">
+          <div class="text">Есть аккаунт? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#">Войти</a>
+        </div>
+      </form>
+    </div>
+    <!--рег-->
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -1105,6 +1392,8 @@
     <!--script(src="libs/select2/select2.min.js")-->
     <!--script(src="libs/TouchSwipe/jquery.touchSwipe.min.js")-->
     <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
