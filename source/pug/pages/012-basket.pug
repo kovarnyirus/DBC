@@ -3,6 +3,7 @@ include ../blocks/breadcrumb/breadcrumb
 include ../blocks/sliders/sliders
 include ../blocks/mixins/_mixins
 include ../blocks/advertising/advertising
+include ../blocks/mixin-popup/mixin-popup
 include ../blocks/basket/basket
 
 
@@ -16,5 +17,6 @@ block pagecontent
     .container
       +e.H2 Корзина
   +basket()
+  +map()
 
 

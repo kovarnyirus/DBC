@@ -86,12 +86,14 @@ mixin basket-form-step-1-devel()
           option(value='moscow') Курьером
           option(value='spb' checked) Пункт выдачи заказов
     +e.item
-      +e.A.map(href='#') Выбрать на карте
+      +e.A.map.popup-with-move-anim(href='#popup-map') Выбрать на карте
     +e.footer
       +e.cost-delivery-erapper
         +e.cost-delivery-title Доставка
         +e.cost-delivery 99 р
       +e.BUTTON.foter-btn.btn(type='button') Следующий шаг
+
+
 
 
 mixin basket-form-step-2()
