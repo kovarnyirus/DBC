@@ -1,0 +1,19 @@
+extends layout/main.pug
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/sliders/sliders
+include ../blocks/mixins/_mixins
+include ../blocks/news/news
+include ../blocks/error-page/error-page
+
+
+
+
+block title
+  title Гланая
+
+block pagecontent
+  +breadcrumb("BDC news", "Главная")
+  +error-page()
+
+
+
