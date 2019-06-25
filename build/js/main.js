@@ -194,4 +194,10 @@ jQuery(document).ready(function ($) {
         });
     });
 
+
+    $('[data-toggle="tooltip-catalog"]').tooltip({
+        html: true,
+        placement: 'top',
+        template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+    });
 });

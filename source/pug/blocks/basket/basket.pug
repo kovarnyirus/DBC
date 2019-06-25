@@ -68,7 +68,10 @@ mixin basket()
                     .row
                       .col-6.mb-4 Скидка
                         |
-                        span
+                        span(data-toggle="tooltip-catalog" data-placement="top"
+                          title="<div class='basket-tt'> Промокод (-10%)  - 250 р</div> " +
+                          "<div class='basket-tt'>Личный промокод (-5%)  - 450 р</div> " +
+                          "<div class='basket-tt'>Оплата баллами - 69 р</div>")
                           +icon('icon-question')
                       +e.total-discount.col-6.text-right.mb-4 256 р
                       .col-6 Итого

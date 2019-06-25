@@ -30,6 +30,13 @@
       font-size: 14px;
     }
   }
+  &-tt{
+    width: 284px;
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
 }
 
 .table-product__product,
