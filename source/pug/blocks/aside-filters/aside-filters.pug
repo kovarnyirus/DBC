@@ -4,7 +4,7 @@ mixin aside-filters()
       +e.group-top
         +e.group-name Категории
         +e.group-checked 3
-        +e.group-clear Сбросить
+        +e.BUTTON.group-clear Сбросить
       +e.UL.list
       -var filterlist = ['Волосы', 'Все для бритья', 'Гигиена', 'Дезодоранты', 'Дети', 'Дом', 'Здоровье', 'Израильская косметика', 'Корейская бытовая химия', 'Корейская и японская косметика', 'Корейская косметика', 'Косметические наборы', 'Кремы']
       each filter, index in filterlist
@@ -17,7 +17,7 @@ mixin aside-filters()
       +e.group-top
         +e.SPAN.group-name Бренды
         +e.SPAN.group-checked 2
-        +e.SPAN.group-clear Сбросить
+        +e.BUTTON.SPAN.group-clear Сбросить
       +e.UL.list
       -var brands = ['A-Derma ',  'Aasha Herbals ',  'Academie ',  'Ahava ',  'Alerana ',  'Algotherm ',  'A-Derma ',  'Aasha ', 'Herbals ',  'Academie ',  'Ahava ',  'Alerana ', 'Algotherm ',  'Ahava' ]
       -var brandCity = [' Франция', ' Франция', ' Франция', 'Израиль', 'Россия', 'Франция', 'Франция', 'Франция', 'Франция', 'Израиль', 'Россия', 'Франция', 'Израиль', 'Израиль']
@@ -30,7 +30,7 @@ mixin aside-filters()
       +e.group-top
         +e.SPAN.group-name метки
         +e.SPAN.group-checked 3
-        +e.SPAN.group-clear Сбросить
+        +e.BUTTON.SPAN.group-clear Сбросить
       +e.UL.list
         -var filterlist = ['Волосы', 'Все для бритья', 'Гигиена', 'Дезодоранты', 'Дети', 'Дом', 'Здоровье', 'Израильская косметика', 'Корейская бытовая химия', 'Корейская и японская косметика', 'Корейская косметика', 'Косметические наборы', 'Кремы']
         each filter, index in filterlist
