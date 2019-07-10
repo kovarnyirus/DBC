@@ -200,4 +200,5 @@ jQuery(document).ready(function ($) {
         placement: 'top',
         template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
     });
+    $(".js-range-slider").ionRangeSlider();
 });

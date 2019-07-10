@@ -25,8 +25,6 @@ mixin icon(name,mod)
   svg(class="icon " + name + ' ' + mod)
     use(xlink:href="img/svg/sprite.svg#" + name)
 
-
-
 mixin dropdown-catalog ()
   +b.catalog-dropdown
     .row
@@ -52,7 +50,7 @@ mixin banner(src)
       +e.IMG.img(src='img/' + src)
 
 mixin bannerHead()
-    .row
+    .row.mb-4
       .col-12.col-md-4.mb-2
         a(href='#')
           img(src='img/image9.jpg', alt='img')
@@ -111,8 +109,6 @@ mixin banner3()
         a(href="#")
           img(src="img/image8.jpg")
 
-
-
 mixin product-item(img, title, description, size)
   +b.product-item
     +e.img-wrap(href="#")
@@ -163,7 +159,6 @@ mixin stars(active, num)
       .col-auto.pl-0
         span.num= num
 
-
 mixin starsLine(active, num, line )
   +b.stars
     .d-flex.align-items-center
@@ -191,8 +186,6 @@ mixin star(namber)
           else
             +e.SPAN.item: +icon("icon-star")
 
-
-
 mixin category()
   +b.product-category
     +e.h2.title Категории этого товара:
@@ -204,8 +197,6 @@ mixin category()
       span.reed-more__dot
       span.reed-more__dot
       span.reed-more__dot
-
-
 
 mixin discount(num)
   span.discount= num + '%'
@@ -248,3 +239,32 @@ mixin noProduct(text)
     .col-12.col-md-4
       a(href='#')
         +banner('new-prod.jpg')
+
+mixin mnu()
+  - var nav= {"ВОЛОСЫ":"#","ЛИЦО":"#","МАКИЯЖ ":"#","МАКИЯЖ ":"#","ТЕЛО ":"#","НОГТИ ":"#","ДЕТИ ":"#","ДОМ ":"#","МУЖЧИНАМ ":"#","ПАРФЮМЕРИЯ ":"#","ГИГИЕНА ":"#","ЗДОРОВЬЕ ":"#","ПРОЧЕЕ ":"#"}
+  +e.nav
+    +e.item
+      +b.dropdown-cat
+        +e.link--toggle-js(href="#") КАТАЛОГ
+        +e.menu
+          .d-none.d-lg-block
+            - var nav2= {"Электронные шлемы MCScap":"#","Электроды, гель и аксессуары":"#","Электроды":"#","Текстильные шлемы":"#","Адаптеры":"#","Гель и аксессуары":"#","Мобильная система NeoRecCap":"#"}
+            +b.dropdown-cat-has-children.custom-scroll-js
+              each linkPatch, linkName in nav2
+                +e.item--js
+                  +e.item-inner
+                    +e.A.link(href= linkPatch)= linkName
+                  +b.dropdown-cat-sub-wrap.custom-scroll-js
+                    .row
+                      .col-7
+                        +e.text-block
+                          +e.title= linkName
+                          +e.text Краткое описание текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М
+                          +e.A.btn(href="#") В раздел
+
+                      .col
+                        img.res-i(src="img/nav-img.png", alt="")
+              +e.A.btn(href="#") Создать свой MCScap
+
+    each linkPatch, linkName in nav
+      +e.item: +e.A.link(href= linkPatch)= linkName

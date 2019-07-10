@@ -49,7 +49,7 @@ mixin aside-filters()
           +e.LABEL
           +e.INPUT.max-cost(type='text')
       +e.range
-        input(type="range")
+        input.js-range-slider(type="text" name="my_range" data-type="double")
     .row
       .col-6
         +e.BUTTON.btn-reset.btn.btn-outline(type="submit") Сбросить все
