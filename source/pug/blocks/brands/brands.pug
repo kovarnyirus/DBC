@@ -1,0 +1,88 @@
+mixin brandCol(item)
+  each val in item
+    +e.item
+      a(href='#')= val
+        span Франция
+
+mixin brands()
+  +b.brands
+    .container
+      +e.header.row
+        .col-12.col-md-auto
+          form
+            +e.form-wrapper
+              +e.SELECT.select.select2--js
+                option(selected disabled) Все страны
+                option( ) Все страны1
+                option( ) Все страны2
+                option( ) Все страны3
+              +e.input-wrap
+                +e.INPUT.input(type='text' placeholder='Поиск по бренду')
+                +icon('icon-search')
+        .col-12.col-md-auto.flex-grow-1.d-flex.align-items-center
+          +e.UL.name-list
+            -var barndsNames = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Y', 'А', 'Б', 'Г', 'З', 'К', 'Л', 'М', 'О', 'С', 'Т', 'Х', 'Ш', '0-9']
+            each brand in barndsNames
+              +e.LI.name-item
+                +e.A.name-item-link(href="#")=brand
+                +brand()
+        .col-12.col-md-auto.row.justify-content-between
+            +e.BUTTON.header-btn.btn.btn-outline NEW
+            +e.BUTTON.header-btn.btn.btn-outline SALE
+            +e.BUTTON.header-btn.btn.btn-outline Промокод
+
+
+    hr
+    .container
+      +e.row.row.justify-content-between
+        .col-12.col-md-2
+          +e.title A
+        .col-12.col-md
+          -var brand =[ 'A-Derma ', 'Aasha Herbals ', 'Academie ', 'Ahava ', 'Alerana ', 'Algotherm ' ]
+          +brandCol(brand)
+          +e.item
+            a(href='#') Academie
+              span Франция
+              +e.SPAN.new new
+          +e.item
+            +e.SPAN.sale
+              +discount('')
+            a(href='#') Academie
+              span Франция
+            +e.SPAN.new new
+        .col-12.col-md
+          -var brand2 =[ 'Always ', 'American Crew ', 'Anastasia Beverly Hills ', ' Anskin ','Antonio Banderas ', 'Apieu ']
+          +brandCol(brand2)
+        .col-12.col-md
+          -var brand3 =[ ' Aravia Professional ', ' Assistant Professional ', 'Atb Lab ', 'Aveeno ', 'Avene ','Avent Philips ']
+          +brandCol(brand3)
+    hr
+    .container
+      +e.row.row.justify-content-between
+        .col-12.col-md-2
+          +e.title B
+        .col-12.col-md
+          -var brand =[ 'A-Derma ', 'Aasha Herbals ', 'Academie ', 'Ahava ', 'Alerana ', 'Algotherm ', 'Ahava ', 'Alerana ', 'Algotherm ' ]
+          +brandCol(brand)
+        .col-12.col-md
+          -var brand2 =[ 'Always ', 'American Crew ', 'Anastasia Beverly Hills ', ' Anskin ','Antonio Banderas ', 'Apieu ']
+          +brandCol(brand2)
+        .col-12.col-md
+          -var brand3 =[ ' Aravia Professional ', ' Assistant Professional ', 'Atb Lab ', 'Aveeno ', 'Avene ','Avent Philips ']
+          +brandCol(brand3)
+    hr
+    .container
+      +e.row.row.justify-content-between
+        .col-12.col-md-2
+          +e.title C
+        .col-12.col-md
+          -var brand =[ 'A-Derma ', 'Aasha Herbals ', 'Academie ', 'Ahava ', 'Alerana ', 'Algotherm ' ]
+          +brandCol(brand)
+        .col-12.col-md
+          -var brand2 =[ 'Always ', 'American Crew ', 'Anastasia Beverly Hills ', ' Anskin ','Antonio Banderas ', 'Apieu ']
+          +brandCol(brand2)
+        .col-12.col-md
+          -var brand3 =[ ' Aravia Professional ', ' Assistant Professional ', 'Atb Lab ', 'Aveeno ', 'Avene ','Avent Philips ']
+          +brandCol(brand3)
+
+

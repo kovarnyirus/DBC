@@ -200,5 +200,36 @@ jQuery(document).ready(function ($) {
         placement: 'top',
         template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
     });
+
+    // range в каталоге
     $(".js-range-slider").ionRangeSlider();
+
+
+    $('.select2--js').select2({
+        minimumResultsForSearch: -1
+    });
+
+
+    $('.brands__name-list').slick({
+        slidesToShow: 5,
+        variableWidth: true,
+        dots: false,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 99999,
+                settings: 'unslick'
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
 });
+
+

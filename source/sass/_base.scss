@@ -585,3 +585,34 @@ textarea {
 .irs--flat .irs-max {
   display: none;
 }
+
+.select2-container--default .select2-selection--single{
+  border: 2px solid #9FA3A7;
+  border-radius: 5px;
+  width: 158px;
+  height: 40px;
+  font-size: 14px;
+  color: #4D4D4D;
+  @include media-breakpoint-down(md){
+    width: 130px;
+  }
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #4D4D4D;
+  line-height: 37px;
+}
+
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+  border: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='9' height='5' viewBox='0 0 9 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1L4.5 4L1 1' stroke='%236CB13E' stroke-width='2' stroke-miterlimit='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  top: 71%;
+  width: 10px;
+  height: 10px;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+  transform: rotate(180deg);
+  top: 60%;
+}

@@ -1,0 +1,22 @@
+extends layout/main.pug
+include ../blocks/sliders/sliders
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/advertising/advertising
+include ../blocks/comp-info/comp-info
+include ../blocks/instagram/instagram
+include ../blocks/brands/brands
+
+
+block title
+  title Гланая
+
+block pagecontent
+  +breadcrumb("BDC news", "Главная")
+  +b.page-name
+    .container
+      +e.H2 Бренды
+  +brands()
+
+
+
+
