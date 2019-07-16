@@ -1,0 +1,84 @@
+.wholesale {
+  &__form-wrap {
+    position: relative;
+    min-height: 486px;
+    background: #EBEFE2;
+    margin-top: 30px;
+    margin-bottom: 66px;
+    padding-top: 39px;
+    padding-bottom: 35px;
+
+    & .custom-checkbox__name {
+      font-size: 12px;
+      line-height: 130%;
+    }
+
+    & textarea {
+      height: 60px;
+    }
+    @include media-breakpoint-down(md){
+      padding-bottom: 36px;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__form-img {
+    position: absolute;
+    top: 0;
+    @include media-breakpoint-down(md){
+      display: none;
+    }
+  }
+
+  &__format-title{
+    margin-top: 81px;
+    @include media-breakpoint-down(md){
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__format-number {
+    color: #5CBF1A;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 100%;
+    margin-bottom: 50px;
+    margin-top: 88px;
+    @include media-breakpoint-down(md){
+      margin-top: 20px;
+      margin-bottom: 0;
+      padding-right: 30px;
+      min-width: 71px;
+      font-weight: bold;
+      font-size: 50px;
+      line-height: 100%;
+
+    }
+  }
+
+  &__format-text {
+    color: #4D4D4D;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 130%;
+    margin-bottom: 70px;
+    @include media-breakpoint-down(md) {
+      margin-top: 20px;
+      margin-bottom: 0;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 130%;
+      & br{
+        display: none;
+      }
+    }
+  }
+  @include media-breakpoint-down(md){
+    & h2{
+      font-size: 16px;
+    }
+    padding-bottom: 40px;
+  }
+
+}

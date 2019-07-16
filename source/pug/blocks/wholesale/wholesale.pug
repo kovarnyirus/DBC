@@ -1,0 +1,128 @@
+mixin wholesale()
+	+b.wholesale
+		.container
+			div.h2.mt-5.mb-4.success-text-color Почему выбирают именно нас в качестве оптового поставщика брендовой косметики
+			div.h2.mb-5 Потому что с нами работать и удобно, и выгодно, и надежно!
+			h2 БОЛЕЕ 300 БРЕНДОВ
+			h2.ttn.font-weight-normal.mb-5 для салонов, магазинов, интернет-магазинов
+		+brendsSlider()
+		+e.form-wrap
+			+e.IMG.form-img(src='img/form-img.png' width='697' alt='img')
+			.container
+				.row
+					.col-12.col-md-3.offset-md-3
+						.h2.text-md-right Оставьте заявку и с Вами свяжется персональный менеджер:
+					.col-12.col-md-6
+						+e.FORM.form
+							.row
+								.col-12.col-md-6
+									.form-item
+										label Имя
+										input(type='text' placeholder='Имя')
+								.col-12.col-md-6
+									.form-item
+										label Фамилия
+										input(type='text' placeholder='Фамилия')
+								.col-12.col-md-6
+									.form-item
+										label Город
+										input(type='text' placeholder='Город')
+								.col-12.col-md-6
+									.form-item.form-item--select
+										label Тип бизнеса
+										select
+											option(checked) тип бизнеса
+								.col-12.col-md-6
+									.form-item
+										label e-mail
+										input(type='text' placeholder='sample@sample.com')
+								.col-12.col-md-6
+									.form-item
+										label Телефон
+										input(type='tel' placeholder='телефон')
+								.col-12
+									.form-item
+										label Ваше сообщение
+										textarea(type='text' placeholder='Ваше сообщение')
+								.col-12
+									.row
+										.col-12.col-md-4
+											button.btn.w-100.mb-3 Отправить
+										.col-12.col-md-4
+											+b.LABEL.custom-checkbox(for='1')
+												+e.INPUT.input(type='checkbox' checked id='1')
+												+e.SPAN.name Я даю свое согласие на обработку персональных данных согласно
+													|
+													a.modal-wrap__link(href='#') Политике конфиденциальности
+										.col-12.col-md-4
+											+b.LABEL.custom-checkbox(for='1')
+												+e.INPUT.input(type='checkbox' checked id='1')
+												+e.SPAN.name Получать лучшие предложения (редко)
+		.container
+			.row.justify-content-center.justify-content-md-start
+				.col-12
+					.h2.mb-5 ПРЕИМУЩЕСТВА РАБОТЫ С НАМИ:
+				.col.mb-3
+					img.mb-3.mb-md-5(src='img/wholesale/img1.svg' width='64')
+					h2.font-weight-normal 300+ брендов в
+						|
+						br/ наличии на
+						|
+						br/ складе
+				.col.mb-3
+					img.mb-3.mb-md-5(src='img/wholesale/img2.svg' width='64')
+					h2.font-weight-normal Лучшие
+						|
+						br/ оптовые
+						|
+						br/ цены
+				.col.mb-3
+					img.mb-3.mb-md-5(src='img/wholesale/img3.svg' width='64')
+					h2.font-weight-normal Доставка
+						|
+						br/ в любую точку
+						|
+						br/ РФ
+				.col.mb-3
+					img.mb-3.mb-md-5(src='img/wholesale/img4.svg' width='64')
+					h2.font-weight-normal Маркетинговая
+						|
+						br/ поддержка
+						|
+						br/ от производителя
+				.col-auto.col-md.mb-3
+					img.mb-3.mb-md-5(src='img/wholesale/img5.svg' width='64')
+					h2.font-weight-normal 10 000
+						|
+						br/ постоянных
+						|
+						br/ клиентов
+			.row
+				.col-12
+					+e.format-title.h2 ФОРМАТЫ СОТРУДНИЧЕСТВА:
+				.col-12.col-md-2.d-flex.d-md-block
+					+e.format-number 1
+					+e.format-text Классические оптовые
+						|
+						br/ поставки
+				.col-12.col-md-2.offset-md-1.d-flex.d-md-block
+					+e.format-number 2
+					+e.format-text Работаем с	юридическими лицами и организаторами СП
+				.col-12.col-md-2.offset-md-1.d-flex.d-md-block
+					+e.format-number 3
+					+e.format-text Dropshipping
+						|
+						br/ для интернет-
+						|
+						br/ магазинов
+				.col-12.col-md-2.offset-md-1.d-flex.d-md-block
+					+e.format-number 4
+					+e.format-text Fullfillment
+						|
+						br/ для интернет-
+						|
+						br/ магазинов
+
+
+
+
