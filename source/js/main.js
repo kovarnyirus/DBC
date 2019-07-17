@@ -188,12 +188,17 @@ jQuery(document).ready(function ($) {
 
     $('input[type="tel"]').mask("+7(999) 999-9999", {});
 
-    $(window).on("load", function () {
-        $(".custom-scroll-js").mCustomScrollbar({
-            autoHideScrollbar: true,
-        });
+    $(".custom-scroll-js").mCustomScrollbar({
+        autoHideScrollbar: true,
     });
 
+
+    $(".custom-scroll-js3").mCustomScrollbar({
+        autoHideScrollbar: true,
+    });
+    $(".custom-scroll-js2").mCustomScrollbar({
+        autoHideScrollbar: true,
+    });
 
     $('[data-toggle="tooltip-catalog"]').tooltip({
         html: true,

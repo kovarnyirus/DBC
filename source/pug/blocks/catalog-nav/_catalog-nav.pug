@@ -12,16 +12,78 @@ mixin catalog-nav()
 			.row
 				.col-12.d-none.d-md-block
 					+e.UL.category
-						+e.LI.category-item--dropdown
+						+e.LI.category-item--catalog
 							+e.A.category-item-link(href="#") КАТАЛОГ
-							//+dropdown-catalog()
+							+e.catalog-dropdown
+								.row
+									+e.catalog-col.col-2
+										ul
+											li: a.success-text-color(href='#') НОВИНКИ
+											li: a.attention(href='#') РАСПРОДАЖА
+											li: a(href='#') ВОЛОСЫ
+											li: a(href='#') ЛИЦО
+											li: a(href='#') МАКИЯЖ
+											li: a(href='#') ТЕЛО
+											li: a(href='#') НОГТИ
+											li: a(href='#') ДЕТИ
+											li: a(href='#') ДОМ
+											li: a(href='#') МУЖЧИНАМ
+											li: a(href='#') ПАРФЮМЕРИЯ
+											li: a(href='#') ГИГИЕНА
+											li: a(href='#') ЗДОРОВЬЕ
+
+									+e.catalog-col.col-2
+										ul.custom-scroll-js
+											li: a(href='#') Шампуни
+											li: a(href='#') Кондиционеры для волос
+											li: a(href='#') Маски для волос
+											li: a(href='#') Масла для волос
+											li: a(href='#') Сыворотки для волос
+											li: a(href='#') Ампулы для волос
+											li: a(href='#') Пилинги и скрабы для волос
+											li: a(href='#') Для укладки волос
+											li: a(href='#') Окрашивание волос
+											li: a(href='#') Кератиновое выпрямление волос
+											li: a(href='#') Шампуни
+											li: a(href='#') Кондиционеры для волос
+											li: a(href='#') Маски для волос
+											li: a(href='#') Масла для волос
+											li: a(href='#') Сыворотки для волос
+											li: a(href='#') Ампулы для волос
+											li: a(href='#') Пилинги и скрабы для волос
+											li: a(href='#') Для укладки волос
+											li: a(href='#') Окрашивание волос
+											li: a(href='#') Кератиновое выпрямление волос
+									+e.catalog-col.col-2
+										ul.custom-scroll-js
+											li: a(href='#') ШАМПУНИ
+											li: a(href='#') Сухие шампуни
+											li: a(href='#') Для сухих волос
+											li: a(href='#') Для крашенных волос
+											li: a(href='#') Оттеночный шампунь
+											li: a(href='#') Для роста волос
+											li: a(href='#') Против выпадения волос
+											li: a(href='#') Для жирных волос
+											li: a(href='#') От перхоти
+											li: a(href='#') Для вьющихся волос
+											li: a(href='#') Безсульфатные
+											li: a(href='#') Оттеночный шампунь
+											li: a(href='#') Для роста волос
+											li: a(href='#') Против выпадения волос
+											li: a(href='#') Для жирных волос
+											li: a(href='#') От перхоти
+											li: a(href='#') Для вьющихся волос
+											li: a(href='#') Безсульфатные
+									+e.catalog-col.col-6
+										+e.IMG.catalog-img(src='img/menu-banner.jpg' width='664')
+
 						-var categoryArr = ['ВОЛОСЫ', 'ЛИЦО', 'МАКИЯЖ', 'ТЕЛО', 'НОГТИ', 'ДЕТИ', 'ДОМ', 'МУЖЧИНАМ', 'ПАРФЮМЕРИЯ', 'ГИГИЕНА', 'ЗДОРОВЬЕ', 'ПРОЧЕЕ']
 						each cat in categoryArr
 							+e.LI.category-item
 								+e.A.category-item-link(href="#")=cat
-								+e.cat
+								+e.category-dropdown
 									+e.row
-										+e.col
+										+e.category-col
 											ul
 												li: a.active(href='#') ШАМПУНИ
 												li: a(href='#') Сухие шампуни
@@ -36,7 +98,7 @@ mixin catalog-nav()
 												li: a(href='#') Безсульфатные
 											ul
 												li: a(href='#') КОНДИЦИОНЕРЫ ДЛЯ ВОЛОС
-										+e.col
+										+e.category-col
 											ul
 												li: a(href='#') МАСКИ ДЛЯ ВОЛОС
 												li: a(href='#') Маски для окрашенных волос
@@ -48,7 +110,7 @@ mixin catalog-nav()
 											ul
 												li: a(href='#') СЫВОРОТКИ ДЛЯ ВОЛОС
 												li: a(href='#') Сыворотка для роста волос
-										+e.col
+										+e.category-col
 											ul
 												li: a(href='#') АМПУЛЫ ДЛЯ ВОЛОС
 												li: a(href='#') Ампулы против выпадения волос
@@ -67,7 +129,7 @@ mixin catalog-nav()
 												li: a(href='#') Крем для укладки волос
 												li: a(href='#') Пудра для укладки волос
 
-										+e.col
+										+e.category-col
 											ul
 												li: a(href='#') ОКРАШИВАНИЕ ВОЛОС
 												li: a(href='#') Краска для волос
@@ -86,7 +148,7 @@ mixin catalog-nav()
 												li: a(href='#') Резинки
 												li: a(href='#') Бигуди
 
-										+e.col
+										+e.category-col
 											ul
 												li: a(href='#') ЗАЩИТА ОТ СОЛНЦА ДЛЯ ВОЛОС
 												li: a(href='#') Солнцезащитные спреи для волос
