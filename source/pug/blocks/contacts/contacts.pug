@@ -1,0 +1,79 @@
+mixin contacts()
+	+b.contacts
+		.container
+			.row
+				.col-12.col-md-6
+					.row.mb-3
+						.col-12
+							a.h5.font-weight-bold(href='tel:88007754636') 8 (800) 775-46-36
+							| &nbsp;звонок&nbsp;бесплатный
+						.col-12
+							a.h5.font-weight-bold(href='tel:88007754636') 8 (800) 775-46-36
+							| &nbsp;звонок&nbsp;бесплатный
+					.row.mb-3
+						.col-12.mb-1.font-weight-bold Мы на связи:
+						.col-12 по будням с 9:00 до 19:00
+						.col-12 по выходным с 9:00 до 18:00
+						.col-12 Заказы через сайт принимаются круглосуточно
+					.row.mb-3
+						.col-12.mb-1.font-weight-bold E-mail:
+						.col-12
+							a.success-text-color.font-weight-bold(href='client@beautydiscount.ru') client@beautydiscount.ru
+					.row
+						.col-12
+							+e.distributors BEAUTYDISCOUNT является официальным реселлером на территории Российской Федерации брендов E.L.F., L.A. Girl, Naobay, Australis, Obsessive Compulsive Cosmetics. По вопросам оптовых закупок просьба обращаться
+								|
+								br/ на email:
+								|
+								a.success-text-color(href='#') opt@beautydiscount.ru
+					.row.mb-2
+						.col-12.font-weight-bold Реквизиты
+						.col-12
+							table
+								tr
+									td(colspan='2') ИП ОРЛОВ ЭДУАРД БОРИСОВИЧ
+								tr
+									td ИНН:
+									td 773501326500
+								tr
+									td ОГРН
+									td № 312774614600251 от 25.05.2012 г.
+
+								tr
+									td Юридический адрес:
+									td 124460, г.Москва, г.Зеленоград, корп.1201, кв.40
+
+								tr
+									td Почтовый адрес:
+									td 124498, г. Москва, г. Зеленоград, проезд 4806, д.6
+
+				.col-12.col-md-6
+					+e.form-wrap
+						+e.FORM.form
+							+e.form-title Обратная связь
+							.form-item
+								label Имя
+								input(type='text' placeholder='Имя')
+							.form-item
+								label e-mail
+								input(type='text' placeholder='sample@sample.com')
+							.form-item
+								label Ваше сообщение
+								textarea(type='text' placeholder='Ваше сообщение')
+							.row
+								.col-auto
+									+e.IMG.form-captcha(src='img/captcha.jpg' width='102')
+								.col
+									.form-item.contacts__form-item--code
+										label код с картинки
+										input(type='text')
+								.col
+									+e.BUTTON.form-btn.btn Отправить
+								.col-12
+									+b.LABEL.custom-checkbox(for='1')
+										+e.INPUT.input(type='checkbox' checked id='1')
+										+e.SPAN.name Я даю свое согласие на обработку персональных данных согласно
+											|
+											a.modal-wrap__link(href='#') Политике конфиденциальности
+
+
