@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .catalog-nav__category-item-link {
@@ -13,13 +14,81 @@
   font-weight: bold;
 }
 
+.catalog-nav__category-item {
+  padding: 13px;
+  &:first-child{
+    text-align: left;
+  }
+  &:hover {
+    background-color: #5CBF1A;
+    & .catalog-nav__cat {
+      display: block;
+    }
+    & .catalog-nav__category-item-link{
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.catalog-nav__cat {
+  position: absolute;
+  max-width: 1415px;
+  display: none;
+  left: 0;
+  top: 45px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.12);
+  z-index: 5;
+  & li{
+    color: #4D4D4D;
+    font-size: 14px;
+    line-height: 130%;
+    padding-bottom: 3px;
+    margin-bottom: 5px;
+    text-align: left;
+    &:first-child{
+      font-weight: bold;
+    }
+    & .active{
+      border-bottom: 1px solid #5CBF1A ;
+    }
+  }
+  & ul{
+    margin-bottom: 30px;
+  }
+  & a{
+    &:hover{
+      text-decoration: none;
+      color: #5CBF1A;
+    }
+  }
+}
+
+.catalog-nav__row {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 35px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.catalog-nav__col {
+  width: 20%;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
 .catalog-nav__brand-wrapper {
   display: flex;
   overflow-x: hidden;
-  & .slick-list{
+
+  & .slick-list {
     overflow-x: hidden;
   }
-  @include media-breakpoint-up(md){
+
+  @include media-breakpoint-up(md) {
     overflow-x: visible;
   }
 }
@@ -35,7 +104,7 @@
   flex-wrap: wrap;
 }
 
-.catalog-nav__brand-title{
+.catalog-nav__brand-title {
   margin-top: 14px;
   text-transform: uppercase;
   background-color: #676767;
@@ -59,13 +128,15 @@
 .catalog-nav__brand-item {
   position: relative;
   margin-left: 15px;
+
   &:hover {
     & .dropdown-brand {
       display: flex;
       z-index: 2000;
     }
   }
-  @include media-breakpoint-up(md){
+
+  @include media-breakpoint-up(md) {
     margin-left: 0;
   }
 }
@@ -103,10 +174,11 @@
 
 }
 
-.dropdown-brand__link{
-  color: #4D4D4D ;
+.dropdown-brand__link {
+  color: #4D4D4D;
   margin-bottom: 15px;
-  & span{
+
+  & span {
     color: #9FA3A7;
   }
 }

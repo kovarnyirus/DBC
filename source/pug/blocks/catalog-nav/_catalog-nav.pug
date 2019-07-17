@@ -1,100 +1,184 @@
 include ../../blocks/mixins/_mixins.pug
 
 mixin dropdown-menu()
-  +e.dropdown-menu()
-    .row
+	+e.dropdown-menu()
+		.row
 
 
 
 mixin catalog-nav()
-  +b.catalog-nav
-    .container
-      .row
-        .col-12.d-none.d-md-block
-          +e.UL.category
-            +e.LI.category-item--dropdown
-              +e.A.category-item-link(href="#") КАТАЛОГ
-              //+dropdown-catalog()
-            -var categoryArr = ['ВОЛОСЫ', 'ЛИЦО', 'МАКИЯЖ', 'ТЕЛО', 'НОГТИ', 'ДЕТИ', 'ДОМ', 'МУЖЧИНАМ', 'ПАРФЮМЕРИЯ', 'ГИГИЕНА', 'ЗДОРОВЬЕ', 'ПРОЧЕЕ']
-            each cat in categoryArr
-              +e.LI.category-item
-                +e.A.category-item-link(href="#")=cat
+	+b.catalog-nav
+		.container
+			.row
+				.col-12.d-none.d-md-block
+					+e.UL.category
+						+e.LI.category-item--dropdown
+							+e.A.category-item-link(href="#") КАТАЛОГ
+							//+dropdown-catalog()
+						-var categoryArr = ['ВОЛОСЫ', 'ЛИЦО', 'МАКИЯЖ', 'ТЕЛО', 'НОГТИ', 'ДЕТИ', 'ДОМ', 'МУЖЧИНАМ', 'ПАРФЮМЕРИЯ', 'ГИГИЕНА', 'ЗДОРОВЬЕ', 'ПРОЧЕЕ']
+						each cat in categoryArr
+							+e.LI.category-item
+								+e.A.category-item-link(href="#")=cat
+								+e.cat
+									+e.row
+										+e.col
+											ul
+												li: a.active(href='#') ШАМПУНИ
+												li: a(href='#') Сухие шампуни
+												li: a(href='#') Для сухих волос
+												li: a(href='#') Для крашенных волос
+												li: a(href='#') Оттеночный шампунь
+												li: a(href='#') Для роста волос
+												li: a(href='#') Против выпадения волос
+												li: a(href='#') Для жирных волос
+												li: a(href='#') От перхоти
+												li: a(href='#') Для вьющихся волос
+												li: a(href='#') Безсульфатные
+											ul
+												li: a(href='#') КОНДИЦИОНЕРЫ ДЛЯ ВОЛОС
+										+e.col
+											ul
+												li: a(href='#') МАСКИ ДЛЯ ВОЛОС
+												li: a(href='#') Маски для окрашенных волос
+												li: a(href='#') Маски против выпадения
+											ul
+												li: a(href='#') МАСЛА ДЛЯ ВОЛОС
+												li: a(href='#') Аргановое масло
+												li: a(href='#') Кокосовое масло для волос
+											ul
+												li: a(href='#') СЫВОРОТКИ ДЛЯ ВОЛОС
+												li: a(href='#') Сыворотка для роста волос
+										+e.col
+											ul
+												li: a(href='#') АМПУЛЫ ДЛЯ ВОЛОС
+												li: a(href='#') Ампулы против выпадения волос
+												li: a(href='#') Ампулы для роста волос
+											ul
+												li: a(href='#') ПИЛИНГИ И СКРАБЫ ДЛЯ ВОЛОС
+											ul
+												li: a(href='#') ДЛЯ УКЛАДКИ ВОЛОС
+												li: a(href='#') Воск для укладки волос
+												li: a(href='#') Паста для укладки волос
+												li: a(href='#') Гель для укладки волос
+												li: a(href='#') Лак для укладки волос
+												li: a(href='#') Спрей для укладки волос
+												li: a(href='#') Мусс для укладки волос
+												li: a(href='#') Пенка для укладки волос
+												li: a(href='#') Крем для укладки волос
+												li: a(href='#') Пудра для укладки волос
 
+										+e.col
+											ul
+												li: a(href='#') ОКРАШИВАНИЕ ВОЛОС
+												li: a(href='#') Краска для волос
+												li: a(href='#') Окислители для окрашивания
+												li: a(href='#') Оттеночные средства
+												li: a(href='#') Кисти и аксессуары для волос
+											ul
+												li: a(href='#') КЕРАТИНОВОЕ ВЫПРЯМЛЕНИЕ ВОЛОС
+											ul
+												li: a(href='#') КЕРАТИНОВОЕ ВЫПРЯМЛЕНИЕ ВОЛОС
+											ul
+												li: a(href='#') ДЛЯ ХИМИЧЕСКОЙ ЗАВИВКИ ВОЛОС
+											ul
+												li: a(href='#') АКСЕССУАРЫ ДЛЯ ВОЛОС
+												li: a(href='#') Расчески и щетки
+												li: a(href='#') Резинки
+												li: a(href='#') Бигуди
 
-        .col-12
-          +e.brand-wrapper
-            +e.brand-title
-              +e.A(href="#") БРЕНДЫ
-            +e.UL.brand
-              -var barndsNames = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Y', 'А', 'Б', 'Г', 'З', 'К', 'Л', 'М', 'О', 'С', 'Т', 'Х', 'Ш', '0-9']
-              each brand in barndsNames
-                +e.LI.brand-item
-                  +e.A.brand-item-link(href="#")=brand
-                  +brand()
+										+e.col
+											ul
+												li: a(href='#') ЗАЩИТА ОТ СОЛНЦА ДЛЯ ВОЛОС
+												li: a(href='#') Солнцезащитные спреи для волос
+											ul
+												li: a(href='#') ТЕРМОЗАЩИТА ДЛЯ ВОЛОС
+											ul
+												li: a(href='#') ЛАМИНИРОНИЕ ВОЛОС
+											ul
+												li: a(href='#') ЛОСЬОНЫ ДЛЯ ВОЛОС
+												li: a(href='#') Лосьон от выпадения волос
+												li: a(href='#') Лосьон для роста волос
+											ul
+												li: a(href='#') БАЛЬЗАМЫ ДЛЯ ВОЛОС
+												li: a(href='#') Оттеночный бальзам
+												li: a(href='#') Бальзам для сухих
+												li: a(href='#') Бальзам для окрашенных волос
+												li: a(href='#') Корейский бальзам для волос
+
+				.col-12
+					+e.brand-wrapper
+						+e.brand-title
+							+e.A(href="#") БРЕНДЫ
+						+e.UL.brand
+							-var barndsNames = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Y', 'А', 'Б', 'Г', 'З', 'К', 'Л', 'М', 'О', 'С', 'Т', 'Х', 'Ш', '0-9']
+							each brand in barndsNames
+								+e.LI.brand-item
+									+e.A.brand-item-link(href="#")=brand
+									+brand()
 
 
 mixin catalogHederNav()
-  .catalog__head
-    .row
-      .col-12.col-md-6
-        .row.align-items-center
-          .col-12.col-md-5
-            +b.sort
-              button.btn.sort__btn Сначала дешевые
-              .dropdown-menu
-                a.dropdown-item()
-          .col-7.d-none.d-md-block
-            .row.align-items-center
-              .col-auto Отображать по:
-              .col-auto
-                a.quantity.active(href="#") 16
-                a.quantity(href="#") 24
-                a.quantity(href="#") 32
-      .col-6.d-none.d-md-block
-        .row.align-items-center.justify-content-end
-          .col-auto Всего:
-            strong 12 580 товаров
-          .col-auto
-            +b.UL.pagination
-              +e.LI.item
-                +e.A.link.active(href='#') 1
-              +e.LI.item
-                +e.A.link(href='#') 2
-              +e.LI.item
-                +e.A.link(href='#') 3
-              +e.LI.item
-                +e.A.link--dots(href='#') ...
-              +e.LI.item
-                +e.A.link(href='#') 156
+	.catalog__head
+		.row
+			.col-12.col-md-6
+				.row.align-items-center
+					.col-12.col-md-5
+						+b.sort
+							button.btn.sort__btn Сначала дешевые
+							.dropdown-menu
+								a.dropdown-item()
+					.col-7.d-none.d-md-block
+						.row.align-items-center
+							.col-auto Отображать по:
+							.col-auto
+								a.quantity.active(href="#") 16
+								a.quantity(href="#") 24
+								a.quantity(href="#") 32
+			.col-6.d-none.d-md-block
+				.row.align-items-center.justify-content-end
+					.col-auto Всего:
+						strong 12 580 товаров
+					.col-auto
+						+b.UL.pagination
+							+e.LI.item
+								+e.A.link.active(href='#') 1
+							+e.LI.item
+								+e.A.link(href='#') 2
+							+e.LI.item
+								+e.A.link(href='#') 3
+							+e.LI.item
+								+e.A.link--dots(href='#') ...
+							+e.LI.item
+								+e.A.link(href='#') 156
 
 mixin catalogFooterNav()
-  +e.footer
-    .row
-      .col-12.d-md-none
-        button.btn.load-more Загрузить еще
-      .col-6.d-none.d-md-block
-        .row
-          .col-8
-            .row.align-items-center
-              .col-auto Отображать по:
-              .col-auto
-                a.quantity.active(href="#") 16
-                a.quantity(href="#") 24
-                a.quantity(href="#") 32
-      .col-6.d-none.d-md-block
-        .row.align-items-center.justify-content-end
-          .col-auto Всего:
-            strong 12 580 товаров
-          .col-auto
-            +b.UL.pagination
-              +e.LI.item
-                +e.A.link.active(href='#') 1
-              +e.LI.item
-                +e.A.link(href='#') 2
-              +e.LI.item
-                +e.A.link(href='#') 3
-              +e.LI.item
-                +e.A.link--dots(href='#') ...
-              +e.LI.item
-                +e.A.link(href='#') 156
-      .col-12.d-md-none
+	+e.footer
+		.row
+			.col-12.d-md-none
+				button.btn.load-more Загрузить еще
+			.col-6.d-none.d-md-block
+				.row
+					.col-8
+						.row.align-items-center
+							.col-auto Отображать по:
+							.col-auto
+								a.quantity.active(href="#") 16
+								a.quantity(href="#") 24
+								a.quantity(href="#") 32
+			.col-6.d-none.d-md-block
+				.row.align-items-center.justify-content-end
+					.col-auto Всего:
+						strong 12 580 товаров
+					.col-auto
+						+b.UL.pagination
+							+e.LI.item
+								+e.A.link.active(href='#') 1
+							+e.LI.item
+								+e.A.link(href='#') 2
+							+e.LI.item
+								+e.A.link(href='#') 3
+							+e.LI.item
+								+e.A.link--dots(href='#') ...
+							+e.LI.item
+								+e.A.link(href='#') 156
+			.col-12.d-md-none
