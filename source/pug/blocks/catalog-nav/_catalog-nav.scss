@@ -16,6 +16,7 @@
 
 .catalog-nav__category-item {
   padding: 13px;
+  padding-bottom: 8px;
 
   &:first-child {
     text-align: left;
@@ -212,8 +213,8 @@
 .catalog-nav__brand-title {
   text-transform: uppercase;
   background-color: #676767;
-  padding-left: 7px;
-  padding-right: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
   display: flex;
   align-items: center;
   color: #ffffff;
@@ -232,6 +233,8 @@
 .catalog-nav__brand-item {
   position: relative;
   margin-left: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 
   &:hover {
     & .dropdown-brand {

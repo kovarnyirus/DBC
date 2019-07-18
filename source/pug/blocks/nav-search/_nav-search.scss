@@ -18,28 +18,36 @@
   &__input {
     border: 1px solid #E7E7E7;
     border-radius: 28px;
-    height: 45px;
+    height: 40px;
     display: block;
     width: 100%;
     padding-left: 18px;
     padding-right: 45px;
     padding-top: 7px;
     padding-bottom: 7px;
+    @include media-breakpoint-up(md){
+      height: 45px;
+    }
 
   }
 
   &__btn {
     position: absolute;
     right: 8px;
-    top: 5px;
     outline: none;
     border: none;
     background-color: #5CBF1A;
     padding-left: 0;
     padding-right: 0;
     border-radius: 50%;
-    width: 34px;
-    height: 34px;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include media-breakpoint-up(md){
+      width: 34px;
+      height: 34px;
+    }
   }
 
   &__result {
