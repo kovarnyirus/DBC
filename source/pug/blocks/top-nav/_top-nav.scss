@@ -2,13 +2,13 @@
   padding-top: 26px;
   padding-bottom: 15px;
   @include media-breakpoint-up(md) {
-    padding-bottom: 20px;
+    padding-bottom: 1px;
   }
 }
 
 .top-nav__nav {
   display: flex;
-  margin-bottom: 21px;
+  margin-bottom: 15px;
 }
 
 .top-nav__item {

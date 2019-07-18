@@ -204,14 +204,12 @@
   display: flex;
   justify-content: space-between;
   background-color: #F1F1F1;
-  margin-top: 14px;
   padding-right: 12px;
   padding-left: 12px;
   flex-wrap: wrap;
 }
 
 .catalog-nav__brand-title {
-  margin-top: 14px;
   text-transform: uppercase;
   background-color: #676767;
   padding-left: 7px;
@@ -244,6 +242,11 @@
 
   @include media-breakpoint-up(md) {
     margin-left: 0;
+  }
+  &:last-child{
+    & .catalog-nav__brand-item-link{
+      letter-spacing: 0.3em;
+    }
   }
 }
 

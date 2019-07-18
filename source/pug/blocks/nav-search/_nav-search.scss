@@ -10,6 +10,9 @@
   &__form {
     position: relative;
     max-width: 628px;
+    @include media-breakpoint-up(md){
+      margin-left: 47px;
+    }
   }
 
   &__input {
