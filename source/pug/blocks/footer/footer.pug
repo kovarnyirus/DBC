@@ -28,7 +28,7 @@ mixin footer()
                 +e.phone-description Для Москвы и МО
         .col-6.col-md-2.offset-md-1
           +b.NAV.footer-catalog
-            +e.h2.title Каталог
+            +e.H2.title Каталог
             +e.UL.list
               -var categoryArr = ['Волосы', 'Лицо', 'Макияж', 'Тело', 'Ногти', 'Дети', 'Дом', 'Мужчинам', 'Парфюмерия', 'Гигиена', 'Здоровье', 'Прочее']
               each cat in categoryArr
@@ -36,14 +36,14 @@ mixin footer()
                   +e.A.item-link(href="#")=cat
         .col-6.col-md-2
           +b.services
-            +e.h2.title Сервис и поддержка
+            +e.H2.title Сервис и поддержка
             +e.UL.list
               -var serv = ['Как покупать', 'Возвраты и обмены', 'Доставка и оплата', 'Личный кабинет', 'Опт', 'Политика конфиденциальности']
               each item in serv
                 +e.LI.item
                   +e.A.item-link(href="#")=item
 
-            +e.h2.title.services__title--additional ДОПОЛНИТЕЛЬНЫЕ СЕРВИСЫ
+            +e.H2.title--additional ДОПОЛНИТЕЛЬНЫЕ СЕРВИСЫ
             -var addserv = ['Мобильное приложение', 'BDC Статьи', 'Пункты самовывоза']
             each item in addserv
               +e.LI.item
@@ -62,7 +62,7 @@ mixin footer()
             +soc('icon-instagram')
             +soc('icon-vk')
           +b.pay-method
-            +e.h2.title.d-none.d-md-block Способы оплаты
+            +e.H2.title.d-none.d-md-block Способы оплаты
             +e.wrapper
               +e.IMG.img(src='img/visa.png')
               +e.IMG.img(src='img/mastercard.png')
