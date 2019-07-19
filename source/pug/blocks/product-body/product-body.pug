@@ -174,6 +174,179 @@ mixin product-body()
                           +e.add-photo
                     +e.form-footer
                       +e.BUTTON.btn.btn Оставить отзыв
+mixin product-body-2()
+  +b.product-body
+    .container
+      +b.tabs
+        +e.caption
+          +e.btn: span ОПИСАНИЕ
+          +e.btn: span Активные компоненты
+          +e.btn: span Способ применения
+          +e.btn.active: span Отзывы
+            +e.SPAN.btn-number 9
+          +e.btn: span Консультация
+
+        +e.list
+          +e.item
+            .row
+              .col-12
+                .product-head__code Штрих код:
+                  span 11204211334106666
+                p Крем быстро снимает воспаление и восстанавливает сухую, потрескавшуюся, раздраженную кожу рук, приносит мгновенное облегчение, смягчает и увлажняет поврежденную кожу, стимулирует восстановление коллагенового матрикса, создают на поверхности кожи рук тончайшую защитную пленку.
+          +e.item
+            .row
+              .col-12
+                .product-head__code Штрих код:
+                  span 11204211334105555
+                p Крем быстро снимает воспаление и восстанавливает сухую, потрескавшуюся, раздраженную кожу рук, приносит мгновенное облегчение, смягчает и увлажняет поврежденную кожу, стимулирует восстановление коллагенового матрикса, создают на поверхности кожи рук тончайшую защитную пленку.
+          +e.item
+            .row
+              .col-12
+                .product-head__code Штрих код:
+                  span 1120421133410000
+                p Крем быстро снимает воспаление и восстанавливает сухую, потрескавшуюся, раздраженную кожу рук, приносит мгновенное облегчение, смягчает и увлажняет поврежденную кожу, стимулирует восстановление коллагенового матрикса, создают на поверхности кожи рук тончайшую защитную пленку.
+          //отзывы
+          +e.item.active
+            .row
+              .col-12.col-lg-8
+                p.font-weight-bold Пока нет ни одного отзыва.
+                  span.font-weight-normal Станьте первым кто оставит отзыв, воспользуйтесь формой справа
+              .col-12.col-lg-4
+                +b.statistics
+                  +e.item
+                    +starsLine(5, 10, 87)
+                    +starsLine(4, 15, 77)
+                    +starsLine(3, 45, 50)
+                    +starsLine(2, 1, 30)
+                    +starsLine(1, 10, 10)
+                +b.write-comment
+                  +e.FORM.form
+                    +e.title Написать отзыв
+                    +e.INPUT.input(id='name' type='text' placeholder='Имя *')
+                    +e.INPUT.input(id='city' type='text' placeholder='Город *')
+                    +e.INPUT.input(id='email' type='email' placeholder='E-mail*')
+                    +e.assessment
+                      +e.assessment-title Оценка
+                      +star(3)
+                    +e.comment
+                      +e.comment-title Ваш отзыв
+                      textarea(placeholder='Напишите отзыв')
+                    +e.photo
+                      +e.photo-title Фото (до 5 шт.)
+                      +e.photo-list
+                        +e.photo-item
+                          +e.IMG.photo-img(src='' alt='img')
+                          +e.photo-btn-del
+                        +e.photo-item
+                          +e.IMG.photo-img(src='' alt='img')
+                          +e.photo-btn-del
+                        +e.photo-item
+                          +e.IMG.photo-img(src='' alt='img')
+                          +e.photo-btn-del
+                        +e.photo-item
+                          +e.add-photo
+                    +e.form-footer
+                      +e.form-footer-text За отзыв мы начислим Вам -
+                        apan.points 100 баллов
+                      +e.BUTTON.btn.btn Оставить отзыв
+                    +e.policy Нажимая на кнопку «Отправить отзыв», вы даете согласие на&nbsp
+                      a(href='') обработку своих персональных данных.
+                  +e.footer
+                    +e.footer-text Баллы начисляются только зарегистрированным пользователям.
+                    +e.A.footer-link(href='#') Регистрация
+                    span &nbsp или &nbsp
+                    +e.A.footer-link(href='#') Вход
+
+                +b.write-comment
+                  +e.FORM.form
+                    +e.title Написать отзыв
+                    +e.assessment
+                      +e.assessment-title Оценка
+                      +star(3)
+                    +e.comment
+                      +e.comment-title Ваш отзыв
+                      textarea(placeholder='Напишите отзыв')
+                    +e.photo
+                      +e.photo-title Фото (до 5 шт.)
+                      +e.photo-list
+                        +e.photo-item
+                          +e.IMG.photo-img(src='' alt='img')
+                          +e.photo-btn-del
+                        +e.photo-item
+                          +e.IMG.photo-img(src='' alt='img')
+                          +e.photo-btn-del
+                        +e.photo-item
+                          +e.IMG.photo-img(src='' alt='img')
+                          +e.photo-btn-del
+                        +e.photo-item
+                          +e.add-photo
+                    +e.form-footer
+                      +e.form-footer-text За отзыв мы начислим Вам -
+                        apan.points 100 баллов
+                      +e.BUTTON.btn.btn Оставить отзыв
+
+
+          +e.item
+            .row
+              .col-8
+                p.font-weight-bold Пока нет ни одного вопроса.
+                  span.font-weight-normal Станьте первым кто задаст вопрос, воспользуйтесь формой справа
+              .col-4
+                +b.write-comment
+                  +e.FORM.form
+                    +e.title Задать вопрос
+                    +e.INPUT.input(id='name' type='text' placeholder='Имя *')
+                    +e.INPUT.input(id='city' type='text' placeholder='Город *')
+                    +e.INPUT.input(id='email' type='email' placeholder='E-mail*')
+                    +e.comment
+                      +e.comment-title Ваш вопрос
+                      textarea(placeholder='Текст вопроса')
+                    +e.photo
+                      +e.photo-title Фото (до 5 шт.)
+                      +e.photo-list
+                        +e.photo-item
+                          +e.IMG.photo-img(src='' alt='img')
+                          +e.photo-btn-del
+                        +e.photo-item
+                          +e.IMG.photo-img(src='' alt='img')
+                          +e.photo-btn-del
+                        +e.photo-item
+                          +e.IMG.photo-img(src='' alt='img')
+                          +e.photo-btn-del
+                        +e.photo-item
+                          +e.add-photo
+                    +e.form-footer
+                      +e.BUTTON.btn.btn Оставить отзыв
+                    +e.policy Нажимая на кнопку «Отправить отзыв», вы даете согласие на&nbsp
+                      a(href='') обработку своих персональных данных.
+                  +e.footer
+                    +e.footer-text Баллы начисляются только зарегистрированным пользователям.
+                    +e.A.footer-link(href='#') Регистрация
+                    span &nbsp или &nbsp
+                    +e.A.footer-link(href='#') Вход
+
+                +b.write-comment
+                  +e.FORM.form
+                    +e.title Задать вопрос
+                    +e.comment
+                      +e.comment-title Ваш вопрос
+                      textarea(placeholder='Текст вопроса')
+                    +e.photo
+                      +e.photo-title Фото (до 5 шт.)
+                      +e.photo-list
+                        +e.photo-item
+                          +e.IMG.photo-img(src='' alt='img')
+                          +e.photo-btn-del
+                        +e.photo-item
+                          +e.IMG.photo-img(src='' alt='img')
+                          +e.photo-btn-del
+                        +e.photo-item
+                          +e.IMG.photo-img(src='' alt='img')
+                          +e.photo-btn-del
+                        +e.photo-item
+                          +e.add-photo
+                    +e.form-footer
+                      +e.BUTTON.btn.btn Оставить отзыв
 
 
 
