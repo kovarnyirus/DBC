@@ -86,7 +86,7 @@
   overflow: hidden;
   position: absolute;
   left: 0;
-  top: 45px;
+  top: 41px;
   z-index: 5;
   background: #FFFFFF;
   box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.12);
@@ -145,6 +145,10 @@
       font-size: 14px;
       line-height: 130%;
       padding-right: 30px;
+      & a:hover{
+        color: #5CBF1A;
+        text-decoration: none;
+      }
     }
   }
   &:nth-child(3){
@@ -158,6 +162,10 @@
       font-size: 14px;
       line-height: 130%;
       padding-right: 30px;
+      & a:hover{
+        color: #5CBF1A;
+        text-decoration: none;
+      }
     }
   }
   &:nth-child(4){
