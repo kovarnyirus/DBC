@@ -53,6 +53,11 @@
 .documents {
   &__wrapper {
     margin-bottom: 55px;
+    @include media-breakpoint-up(lg){
+      padding-top: 10px;
+      font-size: 16px;
+    }
+
   }
 
   &__line {
@@ -70,6 +75,7 @@
       min-width: 300px;
       width: auto;
       margin-bottom: 0;
+      margin-right: 30px;
     }
   }
 
@@ -100,13 +106,17 @@
     @include media-breakpoint-up(md){
       width: 127px;
       margin-bottom: 0;
-      margin-right: 20px;
+      margin-right: 23px;
     }
   }
 
   &__status {
     margin-right: 20px;
     font-weight: bold;
+    @include media-breakpoint-up(md){
+      font-size: 14px;
+      margin-right: 38px;
+    }
   }
 
   &__preview{
@@ -119,7 +129,7 @@
   &__preview-item {
     position: relative;
     padding-left: 25px;
-    margin-right: 20px;
+    margin-right: 25px;
     line-height: 1;
     &:before {
       position: absolute;
