@@ -135,6 +135,18 @@ jQuery(document).ready(function ($) {
 
     });
 
+
+    $('.product-head__video-link').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+    });
+
+
+
     $('.tabs__caption').slick({
         dots: false,
         arrows: false,
