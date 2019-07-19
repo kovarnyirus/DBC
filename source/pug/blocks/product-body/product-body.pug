@@ -34,8 +34,6 @@ mixin product-body()
           +e.item.active
             .row
               .col-12.col-lg-8
-                p.font-weight-bold Пока нет ни одного отзыва.
-                  span.font-weight-normal Станьте первым кто оставит отзыв, воспользуйтесь формой справа
                 +reviews()
               .col-12.col-lg-4
                 +b.statistics
@@ -115,12 +113,10 @@ mixin product-body()
           +e.item
             .row
               .col-8
-                p.font-weight-bold Пока нет ни одного вопроса.
-                  span.font-weight-normal Станьте первым кто задаст вопрос, воспользуйтесь формой справа
                 +reviews()
               .col-4
                 +b.write-comment
-                  +b.FORM.form
+                  +e.FORM.form
                     +e.title Задать вопрос
                     +e.INPUT.input(id='name' type='text' placeholder='Имя *')
                     +e.INPUT.input(id='city' type='text' placeholder='Город *')
