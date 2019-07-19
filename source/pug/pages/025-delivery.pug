@@ -1,0 +1,19 @@
+extends layout/main.pug
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/sliders/sliders
+include ../blocks/mixins/_mixins
+include ../blocks/delivery/delivery
+
+
+
+block title
+	title Гланая
+
+block pagecontent
+	+breadcrumb("BDC news", "Система скидок")
+	+b.page-name
+		.container
+			+e.H2 Доставка и оплата в интернет-магазине BDC
+	+delivery()
+
+
