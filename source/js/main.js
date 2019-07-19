@@ -123,6 +123,18 @@ jQuery(document).ready(function ($) {
     });
 
 
+
+
+    $('.product-head__slide--big a').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        mainClass: 'mfp-img-mobile',
+        image: {
+            verticalFit: true
+        }
+
+    });
+
     $('.tabs__caption').slick({
         dots: false,
         arrows: false,

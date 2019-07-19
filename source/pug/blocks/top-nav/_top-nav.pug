@@ -4,11 +4,11 @@ mixin top-nav()
   +b.top-nav
     .container
       .row.justify-content-between
-        .col-6.d-md-none.d-flex.justify-content-between
+        .col-6.d-lg-none.d-flex.justify-content-between
           button.toggle-menu
             span
           +e.BUTTON.catalog-btn.btn каталог
-        .col-6.d-none.d-md-block
+        .col-6.col-lg-8.d-none.d-lg-block
           +e.UL.nav
             +e.LI.item
               +e.A.link(href="#") Бренды
@@ -26,7 +26,7 @@ mixin top-nav()
               +e.A.link(href="#") Распродажа
             +e.LI.item
               +e.A.link(href="#") Опт
-        .col-6.col-md-3
+        .col-6.col-lg-4
           .row.justify-content-end
             .col-auto
               +e.A.user
@@ -46,7 +46,7 @@ mixin top-nav()
         .col-6.col-md-auto.order-2.order-md-0
           +e.A.logo(href='/')
             img(src='img/header-logo.png' alt='logo' width='122')
-        .col-2.d-none.d-md-block
+        .col-2.d-none.d-lg-block
           +e.text Более 70 000 товаров по закупочным ценам! Всем и каждому!
         .col-12.col-md.order-1.order-md-0
           +nav-search()
