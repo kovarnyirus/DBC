@@ -1,12 +1,24 @@
 jQuery(document).ready(function ($) {
+    let brandSliderBtrPrew = '<button class="btn-prev brand-slider__btn-prev">\n' +
+        '          <svg class="icon icon-arrow-left ">\n' +
+        '            <use xlink:href="img/svg/sprite.svg#icon-arrow-left"></use>\n' +
+        '          </svg>\n' +
+        '        </button>';
+    let brandSliderBtrnext = '<button class="btn-next brand-slider__btn-next">\n' +
+        '          <svg class="icon icon-arrow-right ">\n' +
+        '            <use xlink:href="img/svg/sprite.svg#icon-arrow-right"></use>\n' +
+        '          </svg>\n' +
+        '        </button>'
     $('.brand-slider__list').slick({
         infinite: true,
         speed: 300,
         slidesToShow: 2,
         centerMode: true,
         variableWidth: true,
-        prevArrow: $('.brand-slider__btn-prev'),
-        nextArrow: $('.brand-slider__btn-next'),
+        dots: false,
+        prevArrow: brandSliderBtrPrew,
+        nextArrow: brandSliderBtrnext,
+        arrows: true,
         responsive: [{
 
             breakpoint: 768,
@@ -17,6 +29,7 @@ jQuery(document).ready(function ($) {
 
         }]
     });
+
     $('.sale-slider__list').slick({
         infinite: true,
         speed: 300,
@@ -37,6 +50,7 @@ jQuery(document).ready(function ($) {
 
         }]
     });
+
     $('.advertising__slider').slick({
         infinite: true,
         speed: 300,
@@ -123,8 +137,6 @@ jQuery(document).ready(function ($) {
     });
 
 
-
-
     $('.product-head__slide--big a').magnificPopup({
         type: 'image',
         closeOnContentClick: true,
@@ -144,7 +156,6 @@ jQuery(document).ready(function ($) {
         preloader: false,
         fixedContentPos: false
     });
-
 
 
     $('.tabs__caption').slick({
