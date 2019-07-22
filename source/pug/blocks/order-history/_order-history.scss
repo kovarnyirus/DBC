@@ -1,7 +1,7 @@
 .order-history {
   &__item {
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 53px;
     border-bottom: 1px solid #DDDDDD;
     margin-bottom: 24px;
     position: relative;
@@ -16,6 +16,9 @@
     @include media-breakpoint-up(md){
       width: 25%;
       padding-right: 30px;
+    }
+    @include media-breakpoint-up(xl){
+      padding-right: 132px;
     }
   }
 
@@ -68,6 +71,7 @@
 
   &__btn {
     width: 155px;
+    margin-right: 5px;
   }
 
   &__status {
@@ -87,8 +91,8 @@
 
   &__toggle {
     position: absolute;
-    right: 0;
-    bottom: 50px;
+    right: 3px;
+    top: 27px;
     width: 20px;
     height: 20px;
     border: 1px solid #9FA3A7;
@@ -124,14 +128,14 @@
     }
 
     & .order-history__left-col {
-      width: 70%;
+      width: 73%;
     }
 
     & .order-history__right-col {
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
-      width: 30%;
+      width: 25%;
 
       & .order-history__status {
         display: none !important;
@@ -145,7 +149,8 @@
     }
 
     & .order-history__number {
-      margin-right: 20px;
+      margin-right: 35px;
+      font-size: 20px;
     }
 
     & .order-history__delivery {
