@@ -1,6 +1,7 @@
-.aside-filter{
+.aside-filter {
   margin-bottom: 20px;
 }
+
 .aside-filter__group {
   background-color: #F6F6F6;
   border-radius: 5px;
@@ -145,7 +146,7 @@
   }
 }
 
-.search-page{
+.search-page {
   & .product-item {
     width: 20%;
     @include media-breakpoint-down(sm) {
@@ -154,7 +155,7 @@
   }
 }
 
-.search-page__no-result{
+.search-page__no-result {
   font-size: 20px;
   color: $primary;
   margin-bottom: 0;
@@ -189,7 +190,7 @@
 .product-item__img {
 }
 
-.product-item__img-wrap{
+.product-item__img-wrap {
   display: block;
   min-height: 244px;
   max-height: 100%;
@@ -212,12 +213,32 @@
 
 .product-item__price {
   margin-top: 25px;
+  width: 80%;
 
   & td {
     min-width: 80px;
     @include media-breakpoint-down(sm) {
       min-width: 55px;
     }
+  }
+
+  & tr:first-child {
+    & .product-item__price-val {
+      color: #4D4D4D;
+    }
+
+  }
+
+  & tr:last-child {
+    & .product-item__price-val {
+      color: #BE0B58;
+      font-size: 14px;
+      @include media-breakpoint-down(md){
+        font-size: 12px;
+        white-space: nowrap;
+      }
+    }
+
   }
 
 }
@@ -229,6 +250,12 @@
 
 .product-item__price-val {
   text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  color: #5CBF1A;
+  @include media-breakpoint-down(md){
+    font-size: 14px;
+  }
 }
 
 .product-item__icons {
@@ -268,7 +295,7 @@
 .product-item__basket {
   position: absolute;
   right: 10px;
-  bottom: 25px;
+  bottom: 35px;
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid #BE0B58;
@@ -343,11 +370,13 @@
   &.active {
     border: 2px solid #5CBF1A;
   }
-  &:hover{
+
+  &:hover {
     border: 2px solid #E9458B;
     text-decoration: none;
   }
-  &:active{
+
+  &:active {
     border: 2px solid #BE0B58;
   }
 }
@@ -372,11 +401,13 @@
   &--dots {
     border: none;
   }
-  &:hover{
+
+  &:hover {
     border: 2px solid #E9458B;
     text-decoration: none;
   }
-  &:active{
+
+  &:active {
     border: 2px solid #BE0B58;
   }
 }
