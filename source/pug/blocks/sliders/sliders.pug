@@ -61,12 +61,39 @@ mixin saleSlider()
 					+e.text до
 						br
 						| 25%
-		BUTTON.btn-prev.brand-slider__btn-prev
-			+icon('icon-arrow-left')
-		BUTTON.btn-next.brand-slider__btn-next
-			+icon('icon-arrow-right')
+			+e.item
+				+e.A.link(href='#')
+					+e.IMG.img(src='img/brand-slider/slide1.jpg')
+					+e.text до
+						br
+						| 25%
+			+e.item
+				+e.A.link(href='#')
+					+e.IMG.img(src='img/brand-slider/slide2.jpg')
+					+e.text до
+						br
+						| 25%
+			+e.item
+				+e.A.link(href='#')
+					+e.IMG.img(src='img/brand-slider/slide3.jpg')
+					+e.text до
+						br
+						| 25%
+			+e.item
+				+e.A.link(href='#')
+					+e.IMG.img(src='img/brand-slider/slide4.jpg')
+					+e.text до
+						br
+						| 25%
+
+
 
 mixin slider-buttons()
+	BUTTON.btn-prev.brand-slider__btn-prev
+		+icon('icon-arrow-left')
+	BUTTON.btn-next.brand-slider__btn-next
+		+icon('icon-arrow-right')
+
 	BUTTON.btn-prev.brand-slider__btn-prev
 		+icon('icon-arrow-left')
 	BUTTON.btn-next.brand-slider__btn-next

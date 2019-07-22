@@ -36,16 +36,15 @@ jQuery(document).ready(function ($) {
         infinite: true,
         speed: 300,
         slidesToShow: 6,
-        slidesToScroll: 4,
         centerMode: true,
         variableWidth: true,
-        prevArrow: $('.sale-slider__btn-prev'),
-        nextArrow: $('.sale-slider__btn-next'),
+        // prevArrow: $('.sale-slider__btn-prev'),
+        // nextArrow: $('.sale-slider__btn-next'),
         responsive: [{
 
             breakpoint: 768,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: 4,
                 arrows: false
             }
 
