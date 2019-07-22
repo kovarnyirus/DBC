@@ -10,13 +10,14 @@ include ../blocks/table-product/table-product
 
 
 block title
-  title Личный кабинет
+	title Личный кабинет
 
 block pagecontent
-  +breadcrumb(' Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл', 'Главная', 'Бренды', 'Laura Rosse', 'Laura Rosse - Уход за волосами')
-  +b.page-name
-    .container
-      +e.H2 Личный кабинет
-  +cabinet()
+	+breadcrumb(' Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл', 'Главная', 'Бренды', 'Laura Rosse', 'Laura Rosse - Уход за волосами')
+	+b.page-name
+		.container
+			+e.H2 Личный кабинет
+	+cabinet()
+	+brendsSliderTitle('популярные бренды')
 
 
