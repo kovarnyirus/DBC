@@ -12,7 +12,8 @@ jQuery(document).ready(function ($) {
     $('.brand-slider__list').slick({
         infinite: true,
         speed: 300,
-        slidesToShow: 2,
+        slidesToShow: 6,
+        slidesToScroll: 2,
         centerMode: true,
         variableWidth: true,
         dots: false,
