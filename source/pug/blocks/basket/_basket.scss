@@ -31,13 +31,21 @@
     }
   }
   &-tt{
-    width: 284px;
     display: flex;
-    font-size: 12px;
     justify-content: space-between;
     margin-bottom: 12px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+    & span{
+      color: #333333;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 130%;
+    }
   }
 }
+
 
 .table-product__product,
 .basket-table__header-item--product {

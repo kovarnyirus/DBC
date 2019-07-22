@@ -517,7 +517,15 @@ textarea {
   -webkit-box-shadow: 0 0 .9375rem rgba(0, 0, 0, .25);;
   box-shadow: 0 0 .9375rem rgba(0, 0, 0, .25);
   border-radius: 5px;
-  padding: .5rem .75rem;
+  padding: 10px;
+  width: 284px !important;
+  min-width: 284px !important;
+  max-width: 284px !important;
+  opacity: 1 !important;
+  filter: alpha(opacity=100);
+}
+
+.tooltip.show {
   opacity: 1;
 }
 
@@ -527,9 +535,7 @@ textarea {
 }
 
 .tooltip {
-  width: 284px !important;
-  min-width: 284px !important;
-  max-width: 284px !important;
+  margin-right: 200px;
   opacity: 1;
 }
 
