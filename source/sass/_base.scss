@@ -243,8 +243,8 @@ a {
     padding-bottom: 0;
     margin-bottom: 15px;
     @include media-breakpoint-up(md) {
-      padding-top: 11px;
-      margin-bottom: 31px;
+      padding-top: 0;
+      margin-bottom: 23px;
       font-size: 35px;
     }
   }
