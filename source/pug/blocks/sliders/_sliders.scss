@@ -18,10 +18,21 @@
   position: relative;
   padding-left: 50px;
   padding-right: 50px;
+  @include media-breakpoint-down(md){
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   & .slick-track {
     display: flex;
     align-items: center;
+  }
+  & .btn-prev{
+    position: absolute;
+    left: -40px;
+  }
+  & .btn-next{
+    right: -40px;
   }
 }
 

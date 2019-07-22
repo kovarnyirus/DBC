@@ -21,9 +21,10 @@ jQuery(document).ready(function ($) {
         arrows: true,
         responsive: [{
 
-            breakpoint: 768,
+            breakpoint: 990,
             settings: {
-                slidesToShow: 4
+                slidesToShow: 4,
+                arrows: false,
             }
 
 
