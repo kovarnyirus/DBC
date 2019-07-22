@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
         dots: false,
         prevArrow: brandSliderBtrPrew,
         nextArrow: brandSliderBtrnext,
-        arrows: true,
+        arrows: false,
         responsive: [{
 
             breakpoint: 990,
