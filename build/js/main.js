@@ -8,7 +8,19 @@ jQuery(document).ready(function ($) {
         '          <svg class="icon icon-arrow-right ">\n' +
         '            <use xlink:href="img/svg/sprite.svg#icon-arrow-right"></use>\n' +
         '          </svg>\n' +
-        '        </button>'
+        '        </button>';
+
+    let advertisingSliderNext = '<button class="btn-next advertising__btn-next slick-arrow" style="">\n' +
+        '              <svg class="icon icon-arrow-right ">\n' +
+        '                <use xlink:href="img/svg/sprite.svg#icon-arrow-right"></use>\n' +
+        '              </svg>\n' +
+        '            </button>' ;
+    let advertisingSliderPrev = '<button class="btn-prev advertising__btn-prev slick-arrow" style="">\n' +
+        '              <svg class="icon icon-arrow-left ">\n' +
+        '                <use xlink:href="img/svg/sprite.svg#icon-arrow-left"></use>\n' +
+        '              </svg>\n' +
+        '            </button>'
+
     $('.brand-slider__list').slick({
         infinite: true,
         speed: 300,
@@ -58,8 +70,8 @@ jQuery(document).ready(function ($) {
         slidesToShow: 2,
         variableWidth: true,
         dots: false,
-        prevArrow: $('.advertising__btn-prev'),
-        nextArrow: $('.advertising__btn-next'),
+        prevArrow: advertisingSliderPrev,
+        nextArrow: advertisingSliderNext,
         responsive: [{
 
             breakpoint: 768,

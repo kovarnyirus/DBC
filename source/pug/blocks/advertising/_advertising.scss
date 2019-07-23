@@ -14,6 +14,9 @@
 
 .advertising__slider-wrapper{
   position: relative;
+  & .product-item{
+    background-color: white;
+  }
 }
 
 .advertising__title {
@@ -35,6 +38,7 @@
 
 .advertising__btn-prev,
 .advertising__btn-next{
+  z-index: 4;
   top: -50px;
   width: 36px;
   height: 36px;

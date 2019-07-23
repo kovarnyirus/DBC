@@ -167,12 +167,13 @@
   }
 
   & .product-item {
-    width: 258px;
+    background-color: white;
     @include media-breakpoint-down(sm) {
       width: 160px;
     }
   }
 }
+
 
 .search-page {
   & .product-item {
@@ -222,6 +223,10 @@
   display: block;
   min-height: 244px;
   max-height: 100%;
+  & img{
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .product-item__description {
@@ -449,8 +454,16 @@
   width: 100%;
   text-align: left;
   padding-top: 11px;
-  padding-bottom: 17px;
-  padding-left: 14px;
+  padding-bottom: 12px;
+
+  margin-top: 15px;
+  @include media-breakpoint-down(xl){
+    text-align: center;
+  }
+  @include media-breakpoint-up(xl){
+    margin-top: 0;
+    padding-left: 14px;
+  }
 }
 
 .load-more {
