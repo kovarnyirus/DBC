@@ -2047,9 +2047,6 @@
           <button class="modal-wrap__btn btn" type="submit"> Сбросить пароль
           </button>
         </div>
-        <div class="modal-wrap__footer">
-          <div class="text">Вспомнили пароль? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#">Войти</a>
-        </div>
       </form>
     </div>
     <!--new парот-->
@@ -2067,11 +2064,10 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-12">
-              <div class="modal-wrap__input-wrap modal-wrap__input-wrap--label"><input class="modal-wrap__input" type="E-mail"/>
-                <label class="modal-wrap__label" for="E-mail">sadavan@yandex.ru
-                </label>
+              <div class="modal-wrap__soc-info">
+                <div>E-mail</div>
+                <div class="text-primary">sadavan@yandex.ru</div>
               </div>
-              <!-- +e.input-wrap-->
               <div class="modal-wrap__soc-info">
                 <div>Имя</div>
                 <div class="text-primary">Виктория Александровская</div>
@@ -2098,7 +2094,7 @@
           </label>
         </div>
         <div class="modal-wrap__footer">
-          <div class="text">Есть аккаунт? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#">Войти</a>
+          <div class="text">Есть аккаунт? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#"> Войти</a>
         </div>
       </form>
     </div>
@@ -2143,18 +2139,20 @@
           </div>
           <label class="custom-checkbox" for="2"><input class="custom-checkbox__input" type="checkbox" checked="checked" id="2"/><span class="custom-checkbox__name">Я косметолог</span>
           </label>
+          <div class="modal-wrap__add-file">
+            <input class="visually-hidden" id="passport" type="file"/>
+            <label class="modal-wrap__add-file-wrapper" for="passport"><span class="modal-wrap__add-file-label">Загрузите Ваше фото с разворотом паспорта</span><span class="modal-wrap__add-file-btn">Выбрать файл</span>
+              <!--+e.SPAN.file-name asdasd.png-->
+            </label>
+          </div>
+          <div class="modal-wrap__add-file">
+            <input class="visually-hidden" id="passport" type="file"/>
+            <label class="modal-wrap__add-file-wrapper" for="passport"><span class="modal-wrap__add-file-label">Фото диплома или документа об образовании</span><span class="modal-wrap__add-file-btn">Выбрать файл</span>
+              <!--+e.SPAN.file-name asdasd.png-->
+            </label>
+          </div>
           <button class="modal-wrap__btn modal-wrap__btn--reg btn" type="submit">Регистрация
           </button>
-          <div class="modal-wrap__add-file">
-            <input class="visually-hidden" id="passport" type="file"/>
-            <label class="modal-wrap__add-file-wrapper" for="passport"><span class="modal-wrap__add-file-label">Загрузите Ваше фото с разворотом паспорта</span><span class="modal-wrap__add-file-btn">Выбрать файл</span><span class="modal-wrap__file-name">asdasd.png</span>
-            </label>
-          </div>
-          <div class="modal-wrap__add-file">
-            <input class="visually-hidden" id="passport" type="file"/>
-            <label class="modal-wrap__add-file-wrapper" for="passport"><span class="modal-wrap__add-file-label">Фото диплома или документа об образовании</span><span class="modal-wrap__add-file-btn">Выбрать файл</span><span class="modal-wrap__file-name">asdasd.png</span>
-            </label>
-          </div>
         </div>
         <div class="modal-wrap__text modal-wrap__text--small">
           Нажимая на кнопку "регистарция" вы соглашаетесь на обработку персональных данных в соответствии с &nbsp;<a class="modal-wrap__link" href="#">Оферой</a>&nbsp; и<a class="modal-wrap__link" href="#"> Политикой конфиденциальности</a>
@@ -2163,19 +2161,18 @@
         </label>
         <div class="modal-wrap__alt-reg">Зарегистрироваться с помощью
         </div>
-        <div class="modal-wrap__soc-list"><a class="modal-wrap__soc-item" href="#">
-          <svg class="icon icon-vk ">
-            <use xlink:href="img/svg/sprite.svg#icon-vk"></use>
-          </svg></a><a class="modal-wrap__soc-item" href="#">
-          <svg class="icon icon-instagram ">
-            <use xlink:href="img/svg/sprite.svg#icon-instagram"></use>
-          </svg></a><a class="modal-wrap__soc-item" href="#">
-          <svg class="icon icon-fb ">
-            <use xlink:href="img/svg/sprite.svg#icon-fb"></use>
-          </svg></a>
-        </div>
+        <!--+e.soc-list-->
+        <!--  +e.A.soc-item(href='#')-->
+        <!--   +icon('icon-vk')-->
+        <!--  +e.A.soc-item(href='#')-->
+        <!--    +icon('icon-instagram')-->
+        <!--  +e.A.soc-item(href='#')-->
+        <!--    +icon('icon-fb')-->
+        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+        <script src="https://yastatic.net/share2/share.js"></script>
+        <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir"></div>
         <div class="modal-wrap__footer">
-          <div class="text">Есть аккаунт? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#">Войти</a>
+          <div class="text">Есть аккаунт? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#"> Войти</a>
         </div>
       </form>
     </div>
@@ -2205,29 +2202,52 @@
               </div>
               <!-- +e.input-wrap-->
             </div>
+            <div class="col-auto ml-auto mb-2"><a class="modal-wrap__link modal-wrap__link--footer" href="#">Забыли пароль?</a>
+            </div>
           </div>
           <button class="modal-wrap__btn btn" type="submit">Войти
           </button>
         </div>
         <div class="modal-wrap__alt-reg">Войти с помощью
         </div>
-        <div class="modal-wrap__soc-list"><a class="modal-wrap__soc-item" href="#">
-          <svg class="icon icon-vk ">
-            <use xlink:href="img/svg/sprite.svg#icon-vk"></use>
-          </svg></a><a class="modal-wrap__soc-item" href="#">
-          <svg class="icon icon-instagram ">
-            <use xlink:href="img/svg/sprite.svg#icon-instagram"></use>
-          </svg></a><a class="modal-wrap__soc-item" href="#">
-          <svg class="icon icon-fb ">
-            <use xlink:href="img/svg/sprite.svg#icon-fb"></use>
-          </svg></a>
-        </div>
+        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js">
+          <script src="https://yastatic.net/share2/share.js"></script>
+          <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir"></div>
+        </script>
         <div class="modal-wrap__footer">
-          <div class="text">Есть аккаунт? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#">Войти</a>
+          <div class="text">Нет аккаунта?  </div><a class="modal-wrap__link modal-wrap__link--footer" href="#"> Зарегистрироваться</a>
         </div>
       </form>
     </div>
     <!--рег-->
+    <!--введите код из смс-->
+    <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-sms">
+      <form novalidate="novalidate">
+        <div class="modal-wrap__head">
+          <svg class="icon icon-user ">
+            <use xlink:href="img/svg/sprite.svg#icon-user"></use>
+          </svg>
+          <div class="modal-wrap__title">Забыли пароль?
+          </div>
+        </div>
+        <div class="modal-wrap__body">
+          <div class="modal-wrap__text text-center">Введите код из смс
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="modal-wrap__input-wrap"><input class="modal-wrap__input" type="password" placeholder="Введите код из смс" required="required"/>
+              </div>
+              <!-- +e.input-wrap-->
+            </div>
+          </div>
+          <button class="modal-wrap__btn btn" type="submit">Сбросить пароль
+          </button>
+        </div>
+        <div class="modal-wrap__footer">
+          <div class="text">Вспомнили пароль? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#"> Войти</a>
+        </div>
+      </form>
+    </div>
     <footer class="footer">
       <div class="container">
         <div class="row">

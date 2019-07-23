@@ -79,7 +79,6 @@ mixin modals()
           +inputLabel("password","Пароль")(required)
           +input("password","Повторить пароль")(required)
       +e.btn.btn(type="submit")  Сбросить пароль
-    +footerForm('Вспомнили пароль? ', 'Войти')
   //new парот
 
 
@@ -92,7 +91,7 @@ mixin modals()
       +e.text.text-center Заполните дополнительную информацию
       .row.justify-content-center
         .col-12
-          +inputLabel('E-mail', 'sadavan@yandex.ru')
+          +socInfo('E-mail', 'sadavan@yandex.ru')
           +socInfo('Имя', 'Виктория Александровская')
           +inputLabel("password","Пароль")(required)
           +input("password","Повторить пароль")(required)
@@ -106,7 +105,7 @@ mixin modals()
       +b.LABEL.custom-checkbox(for='2')
         +e.INPUT.input(type='checkbox' checked id='2')
         +e.SPAN.name Получать лучшие предложения (редко)
-    +footerForm('Есть аккаунт? ', 'Войти')
+    +footerForm('Есть аккаунт? ', ' Войти')
   //рег через соцсети
 
 
@@ -128,19 +127,19 @@ mixin modals()
       +b.LABEL.custom-checkbox(for='2')
           +e.INPUT.input(type='checkbox' checked id='2')
           +e.SPAN.name Я косметолог
-      +e.btn--reg.btn(type="submit") Регистрация
       +e.add-file
         input.visually-hidden#passport(type='file')
         +e.LABEL.add-file-wrapper(for='passport')
           +e.add-file-label Загрузите Ваше фото с разворотом паспорта
           span.modal-wrap__add-file-btn Выбрать файл
-          +e.SPAN.file-name asdasd.png
+          //+e.SPAN.file-name asdasd.png
       +e.add-file
         input.visually-hidden#passport(type='file')
         +e.LABEL.add-file-wrapper(for='passport')
           +e.add-file-label Фото диплома или документа об образовании
           span.modal-wrap__add-file-btn Выбрать файл
-          +e.SPAN.file-name asdasd.png
+          //+e.SPAN.file-name asdasd.png
+      +e.btn--reg.btn(type="submit") Регистрация
     +e.text--small Нажимая на кнопку "регистарция" вы соглашаетесь на обработку персональных данных в соответствии с &nbsp;
         |
         +e.A.link(href='#') Оферой
@@ -151,14 +150,17 @@ mixin modals()
       +e.SPAN.name Получать лучшие предложения (редко)
 
     +e.alt-reg Зарегистрироваться с помощью
-    +e.soc-list
-      +e.A.soc-item(href='#')
-       +icon('icon-vk')
-      +e.A.soc-item(href='#')
-        +icon('icon-instagram')
-      +e.A.soc-item(href='#')
-        +icon('icon-fb')
-    +footerForm('Есть аккаунт? ', 'Войти')
+    //+e.soc-list
+    //  +e.A.soc-item(href='#')
+    //   +icon('icon-vk')
+    //  +e.A.soc-item(href='#')
+    //    +icon('icon-instagram')
+    //  +e.A.soc-item(href='#')
+    //    +icon('icon-fb')
+    script(src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+    script(src="https://yastatic.net/share2/share.js")
+    .ya-share2(data-services="collections,vkontakte,facebook,odnoklassniki,moimir")
+    +footerForm('Есть аккаунт? ', ' Войти')
   //рег
 
   +form-wrap()(id="modal-login" class="zoom-anim-dialog mfp-hide modal-win modal-form ")
@@ -171,18 +173,29 @@ mixin modals()
         .col-12
           +inputLabel("E-mail","E-mail")(required)
           +inputLabel("password","Пароль")(required)
+        .col-auto.ml-auto.mb-2
+          +e.A.link--footer(href='#') Забыли пароль?
       +e.btn.btn(type="submit") Войти
     +e.alt-reg Войти с помощью
-    +e.soc-list
-      +e.A.soc-item(href='#')
-        +icon('icon-vk')
-      +e.A.soc-item(href='#')
-        +icon('icon-instagram')
-      +e.A.soc-item(href='#')
-        +icon('icon-fb')
-    +footerForm('Есть аккаунт? ', 'Войти')
+    script(src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+      script(src="https://yastatic.net/share2/share.js")
+      .ya-share2(data-services="collections,vkontakte,facebook,odnoklassniki,moimir")
+    +footerForm('Нет аккаунта?  ', ' Зарегистрироваться')
   //рег
 
+  //введите код из смс
+
+  +form-wrap()(id="modal-sms" class="zoom-anim-dialog mfp-hide modal-win modal-form ")
+    +e.head
+      +icon('icon-user')
+      +e.title Забыли пароль?
+    +e.body
+      +e.text.text-center Введите код из смс
+      .row.justify-content-center
+        .col-12
+          +input("password","Введите код из смс")(required)
+      +e.btn.btn(type="submit") Сбросить пароль
+    +footerForm('Вспомнили пароль? ', ' Войти')
 
 
 
