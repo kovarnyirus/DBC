@@ -166,6 +166,11 @@
     border: 1px solid #000000;
     border-radius: 50%;
   }
+  &__favorable-price{
+    text-align: right;
+    font-size: 16px;
+    color: #9FA3A7;
+  }
 }
 
 .tooltip-catalog-wrapper{
