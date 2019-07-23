@@ -33,6 +33,12 @@
     width: 277px;
     margin-left: 3px;
     margin-right: 3px;
+    @include media-breakpoint-down(xl){
+      width: 272px;
+    }
+    @include media-breakpoint-down(lg){
+      width: 277px;
+    }
   }
 }
 
