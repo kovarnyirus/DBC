@@ -161,9 +161,13 @@
   display: flex;
   flex-wrap: wrap;
   margin-right: -7px;
+
   @include media-breakpoint-down(sm) {
     margin-left: -15px;
     margin-right: -15px;
+  }
+  @include media-breakpoint-up(lg) {
+    justify-content: space-between;
   }
 
   & .product-item {
@@ -201,8 +205,8 @@
   padding-top: 22px;
   position: relative;
   margin-bottom: 18px;
-  width: 277px;
-  max-width: 277px;
+  width: 258px;
+  max-width: 258px;
   margin-right: 7px;
 
   &:last-child {
@@ -455,12 +459,14 @@
   text-align: left;
   padding-top: 11px;
   padding-bottom: 12px;
+  padding-left: 0;
+  padding-right: 0;
 
   margin-top: 15px;
   @include media-breakpoint-down(xl){
     text-align: center;
   }
-  @include media-breakpoint-up(xl){
+  @media (min-width: 1465px) {
     margin-top: 0;
     padding-left: 14px;
   }
