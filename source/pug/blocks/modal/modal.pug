@@ -193,7 +193,13 @@ mixin modals()
       +e.text.text-center Введите код из смс
       .row.justify-content-center
         .col-12
-          +input("password","Введите код из смс")(required)
+          +e.input-wrap--sms
+            +e.INPUT.input(type='password')
+            +e.sms-placeholder
+              +e.SPAN.sms-placeholder-dot
+              +e.SPAN.sms-placeholder-dot
+              +e.SPAN.sms-placeholder-dot
+              +e.SPAN.sms-placeholder-dot
       +e.btn.btn(type="submit") Сбросить пароль
     +footerForm('Вспомнили пароль? ', ' Войти')
 

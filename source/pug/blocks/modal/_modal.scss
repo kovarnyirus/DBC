@@ -83,6 +83,7 @@
 
   &__input-wrap {
     margin-bottom: 13px;
+    position: relative;
     &--label{
       position: relative;
       & .modal-wrap__label{
@@ -99,6 +100,11 @@
         padding-bottom: 2px;
         color: #4D4D4D;
       }
+    }
+    &--sms{
+        & input{
+          border: none;
+        }
     }
   }
 
@@ -219,5 +225,32 @@
       padding: 0;
     }
   }
+  &__sms-placeholder{
+    display: flex;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  &__sms-placeholder-dot{
+    width: 10px;
+    height: 10px;
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  &__input{
+    &:focus{
+      outline: none;
+      border: none;
+      & + .modal-wrap__sms-placeholder{
+        display: none;
+      }
+    }
+  }
+
 }
 
