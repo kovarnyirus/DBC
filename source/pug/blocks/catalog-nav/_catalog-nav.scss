@@ -17,7 +17,7 @@
 .catalog-nav__category-item {
   padding: 13px;
   padding-bottom: 8px;
-  transform: .3s;
+  transition: .2s;
 
   &:first-child {
     text-align: left;
