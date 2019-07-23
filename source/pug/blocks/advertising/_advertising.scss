@@ -15,7 +15,13 @@
 .advertising__slider-wrapper{
   position: relative;
   & .product-item{
+    width: 277px;
     background-color: white;
+    max-width: 277px;
+    @include media-breakpoint-down(xl){
+      max-width: 100%;
+      width: 260px;
+    }
   }
 }
 
@@ -34,9 +40,12 @@
     margin-left: 3px;
     margin-right: 3px;
     @include media-breakpoint-down(xl){
-      width: 272px;
+      width: 273px;
     }
     @include media-breakpoint-down(lg){
+      width: 277px;
+    }
+    @media (min-width: 1465px) {
       width: 277px;
     }
   }
