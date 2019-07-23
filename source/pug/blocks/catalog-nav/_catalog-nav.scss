@@ -17,13 +17,20 @@
 .catalog-nav__category-item {
   padding: 13px;
   padding-bottom: 8px;
+  transform: .3s;
 
   &:first-child {
     text-align: left;
     padding-left: 0;
+    &:hover {
+      padding-left: 13px;
+    }
   }
   &:last-child {
     padding-right: 0;
+    &:hover {
+      padding-right: 13px;
+    }
   }
 
   &:hover {
