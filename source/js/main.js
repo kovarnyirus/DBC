@@ -273,6 +273,11 @@ jQuery(document).ready(function ($) {
         ]
     });
 
+    jQuery('.aside-filter__toggle').on('click', function(e) {
+        e.preventDefault();
+        jQuery(this).closest('.aside-filter__group').toggleClass('aside-filter__group--active');
+    });
+
 });
 
 

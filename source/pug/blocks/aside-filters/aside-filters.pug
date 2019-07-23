@@ -1,57 +1,60 @@
 mixin aside-filters()
-  +b.aside-filter
-    +e.group
-      +e.group-top
-        +e.group-name Категории
-        +e.group-checked 3
-        +e.BUTTON.group-clear Сбросить
-      +e.UL.list
-      -var filterlist = ['Волосы', 'Все для бритья', 'Гигиена', 'Дезодоранты', 'Дети', 'Дом', 'Здоровье', 'Израильская косметика', 'Корейская бытовая химия', 'Корейская и японская косметика', 'Корейская косметика', 'Косметические наборы', 'Кремы']
-      each filter, index in filterlist
-        +e.LI.item
-          +b.LABEL.custom-checkbox(for=index)
-            +e.INPUT.input(type='checkbox' id=index)
-            +e.SPAN.name= filter
+	+b.aside-filter
+		+e.group--active
+			+e.group-top
+				+e.group-name Категории
+				+e.group-checked 3
+				+e.BUTTON.group-clear Сбросить
+				+e.BUTTON.toggle
+			+e.UL.list
+				-var filterlist = ['Волосы', 'Все для бритья', 'Гигиена', 'Дезодоранты', 'Дети', 'Дом', 'Здоровье', 'Израильская косметика', 'Корейская бытовая химия', 'Корейская и японская косметика', 'Корейская косметика', 'Косметические наборы', 'Кремы']
+				each filter, index in filterlist
+					+e.LI.item
+						+b.LABEL.custom-checkbox(for=index)
+							+e.INPUT.input(type='checkbox' id=index)
+							+e.SPAN.name= filter
 
-    +e.group
-      +e.group-top
-        +e.SPAN.group-name Бренды
-        +e.SPAN.group-checked 2
-        +e.BUTTON.SPAN.group-clear Сбросить
-      +e.UL.list
-      -var brands = ['A-Derma ',  'Aasha Herbals ',  'Academie ',  'Ahava ',  'Alerana ',  'Algotherm ',  'A-Derma ',  'Aasha ', 'Herbals ',  'Academie ',  'Ahava ',  'Alerana ', 'Algotherm ',  'Ahava' ]
-      -var brandCity = [' Франция', ' Франция', ' Франция', 'Израиль', 'Россия', 'Франция', 'Франция', 'Франция', 'Франция', 'Израиль', 'Россия', 'Франция', 'Израиль', 'Израиль']
-      each brand, index in brands
-        +b.LABEL.custom-checkbox(for=index + 15)
-          +e.INPUT.input(type='checkbox' id=index + 15)
-          +e.SPAN.name= brand
-          +e.SPAN.description=brandCity[index]
-    +e.group
-      +e.group-top
-        +e.SPAN.group-name метки
-        +e.SPAN.group-checked 3
-        +e.BUTTON.SPAN.group-clear Сбросить
-      +e.UL.list
-        -var filterlist = ['Волосы', 'Все для бритья', 'Гигиена', 'Дезодоранты', 'Дети', 'Дом', 'Здоровье', 'Израильская косметика', 'Корейская бытовая химия', 'Корейская и японская косметика', 'Корейская косметика', 'Косметические наборы', 'Кремы']
-        each filter, index in filterlist
-          +e.LI.item
-            +b.LABEL.custom-checkbox(for=index + 30)
-              +e.INPUT.input(type='checkbox' id=index + 30)
-              +e.SPAN.name= filter
-    +e.group
-      +e.group-top
-        +e.SPAN.group-name цена
-      +e.rang-wrap
-        +e.range-input
-          +e.LABEL
-          +e.INPUT.min-cost(type='text')
-        +e.range-input
-          +e.LABEL
-          +e.INPUT.max-cost(type='text')
-      +e.range
-        input.js-range-slider(type="text" name="my_range" data-type="double")
-    .row
-      .col-6
-        +e.BUTTON.btn-reset.btn.btn-outline(type="submit") Сбросить все
-      .col-6
-        +e.BUTTON.btn-show.btn(type="submit") Показать товары
+		+e.group
+			+e.group-top
+				+e.SPAN.group-name Бренды
+				+e.SPAN.group-checked 2
+				+e.BUTTON.group-clear Сбросить
+				+e.BUTTON.toggle
+			+e.UL.list
+				-var brands = ['A-Derma ',  'Aasha Herbals ',  'Academie ',  'Ahava ',  'Alerana ',  'Algotherm ',  'A-Derma ',  'Aasha ', 'Herbals ',  'Academie ',  'Ahava ',  'Alerana ', 'Algotherm ',  'Ahava' ]
+				-var brandCity = [' Франция', ' Франция', ' Франция', 'Израиль', 'Россия', 'Франция', 'Франция', 'Франция', 'Франция', 'Израиль', 'Россия', 'Франция', 'Израиль', 'Израиль']
+				each brand, index in brands
+					+b.LABEL.custom-checkbox(for=index + 15)
+						+e.INPUT.input(type='checkbox' id=index + 15)
+						+e.SPAN.name= brand
+						+e.SPAN.description=brandCity[index]
+		+e.group
+			+e.group-top
+				+e.SPAN.group-name метки
+				+e.SPAN.group-checked 3
+				+e.BUTTON.group-clear Сбросить
+				+e.BUTTON.toggle
+			+e.UL.list
+				-var filterlist = ['Волосы', 'Все для бритья', 'Гигиена', 'Дезодоранты', 'Дети', 'Дом', 'Здоровье', 'Израильская косметика', 'Корейская бытовая химия', 'Корейская и японская косметика', 'Корейская косметика', 'Косметические наборы', 'Кремы']
+				each filter, index in filterlist
+					+e.LI.item
+						+b.LABEL.custom-checkbox(for=index + 30)
+							+e.INPUT.input(type='checkbox' id=index + 30)
+							+e.SPAN.name= filter
+		+e.group
+			+e.group-top
+				+e.SPAN.group-name цена
+			+e.rang-wrap
+				+e.range-input
+					+e.LABEL
+					+e.INPUT.min-cost(type='text')
+				+e.range-input
+					+e.LABEL
+					+e.INPUT.max-cost(type='text')
+			+e.range
+				input.js-range-slider(type="text" name="my_range" data-type="double")
+		.row
+			.col-6
+				+e.BUTTON.btn-reset.btn.btn-outline(type="submit") Сбросить все
+			.col-6
+				+e.BUTTON.btn-show.btn(type="submit") Показать товары
