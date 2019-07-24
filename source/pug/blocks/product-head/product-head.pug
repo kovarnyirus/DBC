@@ -93,11 +93,11 @@ mixin product-head()
               +productHeadInfo('Категория' , 'Лицо')
               +productHeadInfo('Назначение' , 'Питание, Лечение')
             .col-12.col-md-6.order-md-1
-              .row.align-items-center.pt-3
-                .col-auto
+              .row.align-items-center.pt-3.mb-2
+                .col-auto.mb-1
                   +e.SPAN.rating
                     +stars(4, 55)
-                .col-auto
+                .col-auto.mb-1
                   +e.bought
                     span.marker.marker--green 25
                     | купили
