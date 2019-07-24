@@ -162,7 +162,7 @@ mixin stars(active, num)
 mixin starsLine(active, num, line )
   +b.stars
     .d-flex.align-items-center
-      .col-6.col-xl-4
+      .col-6.col-xl-5.col-xxl-4
         +e.wrapper.d-flex.align-items-center
           - for (var x = 0; x < 5; x++)
               if x < active
@@ -171,7 +171,7 @@ mixin starsLine(active, num, line )
                 +e.SPAN.item: +icon("icon-star")
           .col-auto.pl-2.pr-0
             span.num= num
-      .col-6.col-xl-8.pl-0.pr-0
+      .col-6.col-xl-7.col-xxl-8.pl-0.pr-0
         .d-flex.align-items-center
           +e.line
             +e.line-active(style='width:' +line +'%')
