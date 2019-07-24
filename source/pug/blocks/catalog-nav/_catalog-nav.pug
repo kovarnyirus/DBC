@@ -185,10 +185,14 @@ mixin catalogHederNav()
 			.col-12.col-md-6
 				.row.align-items-center
 					.col-12.col-md-5
-						+b.sort
-							button.btn.sort__btn.mb-2.mb-xl-0 Сначала дешевые
-							.dropdown-menu
-								a.dropdown-item()
+						.catalog__sort
+							select.catalog__sort-select.mb-2.mb-xl-0
+								option(value='down' selected) Сначала дешевые
+								option(value='up') Сначала дорогие
+							//button.btn.sort__btn.mb-2.mb-xl-0 Сначала дешевые
+							//.dropdown-menu
+							//	a.dropdown-item()
+
 					.col-7.d-none.d-md-block
 						.row.align-items-center
 							.col-auto.mb-2.mb-xl-0 Отображать по:
@@ -243,4 +247,3 @@ mixin catalogFooterNav()
 								+e.A.link--dots(href='#') ...
 							+e.LI.item
 								+e.A.link(href='#') 156
-			.col-12.d-md-none

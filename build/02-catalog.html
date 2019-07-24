@@ -2069,9 +2069,14 @@
                 <div class="col-12 col-md-6">
                   <div class="row align-items-center">
                     <div class="col-12 col-md-5">
-                      <div class="sort">
-                        <button class="btn sort__btn mb-2 mb-xl-0">Сначала дешевые</button>
-                        <div class="dropdown-menu"><a class="dropdown-item"></a></div>
+                      <div class="catalog__sort">
+                        <select class="catalog__sort-select mb-2 mb-xl-0">
+                          <option value="down" selected="selected">Сначала дешевые</option>
+                          <option value="up">Сначала дорогие</option>
+                        </select>
+                        <!--button.btn.sort__btn.mb-2.mb-xl-0 Сначала дешевые-->
+                        <!--.dropdown-menu-->
+                        <!--	a.dropdown-item()-->
                       </div>
                     </div>
                     <div class="col-7 d-none d-md-block">
@@ -2859,7 +2864,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 d-md-none"></div>
               </div>
             </div>
           </div>
