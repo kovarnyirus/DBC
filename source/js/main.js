@@ -39,8 +39,6 @@ jQuery(document).ready(function ($) {
                 slidesToShow: 4,
                 arrows: false,
             }
-
-
         }]
     });
 
