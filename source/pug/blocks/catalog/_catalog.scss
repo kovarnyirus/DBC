@@ -127,10 +127,12 @@
 .aside-filter__dropdown-item > .aside-filter__dropdown-list{
   overflow: hidden;
   max-height: 0;
+  transition: .2s;opacity: 0;
 }
 
 .aside-filter__dropdown-item--open > .aside-filter__dropdown-list{
   max-height: 100%;
+  opacity: 1;
 }
 
 .aside-filter__btn-reset,
