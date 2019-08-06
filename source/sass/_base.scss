@@ -735,3 +735,48 @@ textarea {
   display: flex!important;
   justify-content: center;
 }
+
+.custom-checkbox__input {
+  display: none;
+}
+
+.custom-checkbox {
+  display: flex;
+}
+
+.custom-checkbox__name {
+  position: relative;
+  padding-left: 37px;
+  cursor: pointer;
+  color: #4D4D4D;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 1px solid #9FA3A7;
+    border-radius: 2px;
+    background: #FFFFFF;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.custom-checkbox__description {
+  color: #9FA3A7;
+}
+
+.custom-checkbox__input:checked {
+  & + .custom-checkbox__name {
+    font-weight: bold;
+
+    &:before {
+      background-image: url("../img/svg/checked.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
