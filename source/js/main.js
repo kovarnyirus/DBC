@@ -238,7 +238,6 @@ jQuery(document).ready(function ($) {
         autoHideScrollbar: true,
     });
 
-
     $(".custom-scroll-js3").mCustomScrollbar({
         autoHideScrollbar: true,
     });
@@ -286,6 +285,11 @@ jQuery(document).ready(function ($) {
     jQuery('.aside-filter__toggle').on('click', function(e) {
         e.preventDefault();
         jQuery(this).closest('.aside-filter__group').toggleClass('aside-filter__group--active');
+    });
+
+    jQuery('.custom-checkbox__name').on('click', function(e) {
+        e.preventDefault();
+        jQuery(this).closest('.aside-filter__dropdown-item').toggleClass('aside-aside-filter__dropdown-item--open');
     });
 
 });

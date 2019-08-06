@@ -1,0 +1,71 @@
+extends layout/main.pug
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/sliders/sliders
+include ../blocks/mixins/_mixins
+include ../blocks/advertising/advertising
+include ../blocks/aside-filters/aside-filters
+
+
+mixin catalogHederCategory()
+	.catalog__cetegory
+		.row
+			.col-4
+				ul.catalog__category-list
+					li.catalog__category-item
+						a.catalog__category-link(href='') Шампуни
+					li.catalog__category-item
+						a.catalog__category-link(href='') Для укладки волос
+					li.catalog__category-item
+						a.catalog__category-link(href='') Защита от солнца для волос
+					li.catalog__category-item
+						a.catalog__category-link(href='') Сыворотки для волос
+			.col-4
+				ul.catalog__category-list
+					li.catalog__category-item
+						a.catalog__category-link(href='') Шампуни
+					li.catalog__category-item
+						a.catalog__category-link(href='') Для укладки волос
+					li.catalog__category-item
+						a.catalog__category-link(href='') Защита от солнца для волос
+					li.catalog__category-item
+						a.catalog__category-link(href='') Сыворотки для волос
+			.col-4
+				ul.catalog__category-list
+					li.catalog__category-item
+						a.catalog__category-link(href='') Шампуни
+					li.catalog__category-item
+						a.catalog__category-link(href='') Для укладки волос
+					li.catalog__category-item
+						a.catalog__category-link(href='') Защита от солнца для волос
+					li.catalog__category-item
+						a.catalog__category-link(href='') Сыворотки для волос
+
+
+
+block title
+	title Гланая
+
+block pagecontent
+	+breadcrumb("Каталог", "Главная")
+	+b.page-name
+		.container
+			+e.H2 Новинки
+	+b.catalog
+		.container
+			.row
+				.col-12.col-md-3
+					aside.aside
+						form.smartfilter
+							+aside-filters()
+				.col-12.col-md-9
+					+catalogHederCategory()
+					+catalogHederNav()
+					+catalogItems('1')
+					+banner('banner.jpg')
+					+catalogItems('1')
+					+banner2()
+					+catalogItems('2')
+					+catalogFooterNav()
+
+	+advertising('реклама')
+

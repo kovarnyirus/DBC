@@ -3,24 +3,24 @@ include ../mixins/_mixins
 include ../../blocks/advertising/advertising
 include ../../blocks/aside-filters/aside-filters
 mixin catalog()
-  +b.catalog
-    .container
-      .row
-        .col-12.col-md-3
-          aside.aside
-            .smartfilter
-              +aside-filters()
-        .col-12.col-md-9
-          +bigSlider()
-          +brendsSlider()
-          +catalogHederNav()
-          +catalogItems('1')
-          +banner()
-          +catalogItems('1')
-          +banner2()
-          +catalogItems('2')
-          +catalogFooterNav()
+	+b.catalog
+		.container
+			.row
+				.col-12.col-md-3
+					aside.aside
+						.smartfilter
+							+aside-filters()
+				.col-12.col-md-9
+					+bigSlider()
+					+brendsSlider()
+					+catalogHederNav()
+					+catalogItems('1')
+					+banner()
+					+catalogItems('1')
+					+banner2()
+					+catalogItems('2')
+					+catalogFooterNav()
 
-  +advertising('реклама')
+	+advertising('реклама')
 
 
