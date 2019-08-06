@@ -12,13 +12,13 @@ mixin aside-filters()
 					+e.LI.item.aside-filter__dropdown-item
 						+b.LABEL.custom-checkbox(for=index)
 							+e.INPUT.input(type='checkbox' id=index)
-							+e.SPAN.name--dropdown-open= filter
+							+e.SPAN.name--dropdown= filter
 						+e.dropdown-list
 							each filter2, index2 in ['Подкатегория 1', 'Подкатегория 2']
 								+e.dropdown-item
 									+b.LABEL.custom-checkbox(for=index2 + '22')
 										+e.INPUT.input(type='checkbox' id=index2 + '22')
-										+e.SPAN.name--dropdown-open= filter2
+										+e.SPAN.name--dropdown= filter2
 									+e.dropdown-list
 										each filter3, index3 in ['Подкатегория 1', 'Подкатегория 2', 'Подкатегория 3']
 											+e.item
