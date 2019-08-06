@@ -102,6 +102,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
+    transform: rotate(0deg);
   }
 
 }
@@ -114,9 +115,22 @@
     padding-left: 30px;
   }
 }
+.aside-filter__dropdown-list{
+  & .aside-filter__item{
+    padding-left: 30px;
+  }
+}
 
-.aside-aside-filter__dropdown-item--open {
 
+
+
+.aside-filter__dropdown-item > .aside-filter__dropdown-list{
+  overflow: hidden;
+  max-height: 0;
+}
+
+.aside-filter__dropdown-item--open > .aside-filter__dropdown-list{
+  max-height: 100%;
 }
 
 .custom-checkbox__input {

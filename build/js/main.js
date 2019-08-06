@@ -287,10 +287,10 @@ jQuery(document).ready(function ($) {
         jQuery(this).closest('.aside-filter__group').toggleClass('aside-filter__group--active');
     });
 
-    // $('.custom-checkbox__name--dropdown').on('click', function(e) {
-    //     e.preventDefault();
-    //     jQuery(this).siblings(".aside-filter__dropdown-list").toggleClass('aside-aside-filter__dropdown-item--open');
-    // });
+    $('.custom-checkbox__name--dropdown').on('click', function(e) {
+        jQuery(this).toggleClass('custom-checkbox__name--dropdown-open');
+        jQuery(this).closest('.aside-filter__dropdown-item').toggleClass('aside-filter__dropdown-item--open');
+    });
 
 });
 

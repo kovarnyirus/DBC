@@ -6,22 +6,22 @@ mixin aside-filters()
 				+e.group-checked 3
 				+e.BUTTON.group-clear Сбросить
 				+e.BUTTON.toggle
-			+e.UL.list.custom-scroll-js
+			+e.UL.list
 				-var filterlist = ['Волосы', 'Все для бритья', 'Гигиена', 'Дезодоранты', 'Дети', 'Дом', 'Здоровье', 'Израильская косметика', 'Корейская бытовая химия', 'Корейская и японская косметика', 'Корейская косметика', 'Косметические наборы', 'Кремы']
 				each filter, index in filterlist
 					+e.LI.item.aside-filter__dropdown-item
 						+b.LABEL.custom-checkbox(for=index)
 							+e.INPUT.input(type='checkbox' id=index)
 							+e.SPAN.name--dropdown= filter
-						+e.dropdown-list
+						+e.UL.dropdown-list
 							each filter2, index2 in ['Подкатегория 1', 'Подкатегория 2']
-								+e.dropdown-item
+								+e.LI.dropdown-item
 									+b.LABEL.custom-checkbox(for=index2 + '22')
 										+e.INPUT.input(type='checkbox' id=index2 + '22')
 										+e.SPAN.name--dropdown= filter2
-									+e.dropdown-list
+									+e.UL.dropdown-list
 										each filter3, index3 in ['Подкатегория 1', 'Подкатегория 2', 'Подкатегория 3']
-											+e.item
+											+e.LI.dropdown-item
 												+b.LABEL.custom-checkbox(for=index3 + '33')
 													+e.INPUT.input(type='checkbox' id=index3 + '33')
 													+e.SPAN.name= filter3
