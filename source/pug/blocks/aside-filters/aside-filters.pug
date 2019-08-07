@@ -59,10 +59,10 @@ mixin aside-filters()
 			+e.rang-wrap
 				+e.range-input
 					+e.LABEL
-					+e.INPUT.min-cost(type='text')
+					+e.INPUT.min-cost(type='text' placeholder='От')
 				+e.range-input
 					+e.LABEL
-					+e.INPUT.max-cost(type='text')
+					+e.INPUT.max-cost(type='text' placeholder='До')
 			+e.range
 				input.js-range-slider(type="text" name="my_range" data-type="double")
 		.row
