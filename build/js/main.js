@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
         '              <svg class="icon icon-arrow-right ">\n' +
         '                <use xlink:href="img/svg/sprite.svg#icon-arrow-right"></use>\n' +
         '              </svg>\n' +
-        '            </button>' ;
+        '            </button>';
     let advertisingSliderPrev = '<button class="btn-prev advertising__btn-prev slick-arrow" style="">\n' +
         '              <svg class="icon icon-arrow-left ">\n' +
         '                <use xlink:href="img/svg/sprite.svg#icon-arrow-left"></use>\n' +
@@ -282,12 +282,31 @@ jQuery(document).ready(function ($) {
         ]
     });
 
-    jQuery('.aside-filter__toggle').on('click', function(e) {
-        e.preventDefault();
-        jQuery(this).closest('.aside-filter__group').toggleClass('aside-filter__group--active');
+    $(".custom-scroll-js-aside").mCustomScrollbar({
+        autoHideScrollbar: true,
     });
 
-    $('.custom-checkbox__name--dropdown').on('click', function(e) {
+
+    // jQuery('.aside-filter__toggle').on('click', function (e) {
+    //     e.preventDefault();
+    //     jQuery(this).closest('.aside-filter__group').toggleClass('aside-filter__group--active');
+    // });
+
+
+    // jQuery('.aside-filter__toggle').on('click', function (e) {
+    //     e.preventDefault();
+    //     var wrapper = jQuery(this).closest('.aside-filter__group');
+    //     var classOnWrapper = jQuery(this).closest('.aside-filter__group').hasClass('aside-filter__group--active');
+    //     if (classOnWrapper) {
+    //         // jQuery(this).closest('.custom-scroll-js-aside').mCustomScrollbar("disable");
+    //     } else {
+    //         // jQuery(this).closest('.custom-scroll-js-aside').mCustomScrollbar("update");
+    //     }
+    //     wrapper.toggleClass('aside-filter__group--active');
+    //
+    // });
+
+    $('.custom-checkbox__name--dropdown').on('click', function (e) {
         jQuery(this).toggleClass('custom-checkbox__name--dropdown-open');
         jQuery(this).closest('.aside-filter__dropdown-item').toggleClass('aside-filter__dropdown-item--open');
     });

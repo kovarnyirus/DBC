@@ -548,4 +548,22 @@
     font-size: 14px;
     line-height: 189%;
   }
+  &__cetegory-more{
+    margin-top: 20px;
+    position: relative;
+    padding-right: 15px;
+    display: inline-block;
+    &:before{
+      display: block;
+      content: '»';
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      transform: translate(-50%,-50%);
+      color: #4d4d4d;
+      text-align: center;
+    }
+  }
 }
