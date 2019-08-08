@@ -311,6 +311,11 @@ jQuery(document).ready(function ($) {
         jQuery(this).closest('.aside-filter__dropdown-item').toggleClass('aside-filter__dropdown-item--open');
     });
 
+    // mobile menu toggle
+
+    $(".toggle-menu").click(function () {
+        $(".mobile-menu").toggleClass('mobile-menu--open');
+    });
 });
 
 

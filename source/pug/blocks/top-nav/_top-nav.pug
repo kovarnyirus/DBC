@@ -1,70 +1,113 @@
 include ../../blocks/mixins/_mixins.pug
 include ../../blocks/nav-search/nav-search.pug
+
+mixin mob-mnu()
+	+b.mobile-menu
+		.container
+			+e.wrapper
+				.row.align-items-center.justify-content-between
+					.col-auto
+						button.toggle-menu.toggle-menu--menu-open
+							span
+					.col-auto
+						+e.A.logo(href="#")
+							img(src="img/header-logo.png", alt="logo" width='50')
+					.col-12
+						nav
+							+e.UL.list
+								+e.LI.item
+									+e.A.link(href="#") Бренды
+								+e.LI.item
+									+e.A.link(href="#") О нас
+								+e.LI.item
+									+e.A.link(href="#") Как покупать
+								+e.LI.item
+									+e.A.link(href="#") Новинки
+								+e.LI.item
+									+e.A.link(href="#") Доставка и оплата
+								+e.LI.item
+									+e.A.link(href="#") Контакты
+								+e.LI.item--active
+									+e.A.link(href="#") Распродажа
+								+e.LI.item
+									+e.A.link(href="#") Опт
+					.col-12
+						+b.tel-block
+							+e.item
+								+e.A.tel(href='#') 8 (800) 775-46-36
+								+e.description.text-left.mb-1 Звонок бесплатный
+							+e.item
+								+e.A.tel(href='#') 8 (499) 645-53-65
+								+e.description.text-left.mb-1 Для Москвы и МО
+
+	//  мобильное меню
+
+
 mixin top-nav()
-  +b.top-nav
-    .container
-      .row.justify-content-between
-        .col-6.d-lg-none.d-flex.justify-content-between
-          button.toggle-menu
-            span
-          +e.BUTTON.catalog-btn.btn каталог
-        .col-6.col-lg-8.d-none.d-lg-block
-          +e.UL.nav
-            +e.LI.item
-              +e.A.link(href="#") Бренды
-            +e.LI.item
-              +e.A.link(href="#") О нас
-            +e.LI.item
-              +e.A.link(href="#") Как покупать
-            +e.LI.item
-              +e.A.link(href="#") Новинки
-            +e.LI.item
-              +e.A.link(href="#") Доставка и оплата
-            +e.LI.item
-              +e.A.link(href="#") Контакты
-            +e.LI.item--active
-              +e.A.link(href="#") Распродажа
-            +e.LI.item
-              +e.A.link(href="#") Опт
-        .col-6.col-lg-4
-          .row.justify-content-end
-            .col-auto
-              +e.A.user
-                .row
-                  .col-auto
-                    +icon('icon-user')
-                  .col.d-none.d-md-block Ольга В.
-            .col-auto
+	+b.top-nav
+		.container
+			.row.justify-content-between
+				.col-6.d-lg-none.d-flex.justify-content-between
+					button.toggle-menu
+						span
+					+e.BUTTON.catalog-btn.btn каталог
+				.col-6.col-lg-8.d-none.d-lg-block
+					+e.UL.nav
+						+e.LI.item
+							+e.A.link(href="#") Бренды
+						+e.LI.item
+							+e.A.link(href="#") О нас
+						+e.LI.item
+							+e.A.link(href="#") Как покупать
+						+e.LI.item
+							+e.A.link(href="#") Новинки
+						+e.LI.item
+							+e.A.link(href="#") Доставка и оплата
+						+e.LI.item
+							+e.A.link(href="#") Контакты
+						+e.LI.item--active
+							+e.A.link(href="#") Распродажа
+						+e.LI.item
+							+e.A.link(href="#") Опт
+				.col-6.col-lg-4
+					.row.justify-content-end
+						.col-auto
+							+e.A.user
+								.row
+									.col-auto
+										+icon('icon-user')
+									.col.d-none.d-md-block Ольга В.
+						.col-auto
 
-              +e.A.favourites
-                +icon('icon-heart')
-            .col-auto
-              +e.A.basket
-                +icon('icon-basket')
-                +e.basket-price.d-none.d-md-block 18 560 р.
-      .row.align-items-center
-        .col-6.col-md-auto.order-2.order-md-0
-          +e.A.logo(href='/')
-            img(src='img/header-logo.png' alt='logo' width='122')
-        .col-2.d-none.d-lg-block
-          +e.text Более 70 000 товаров по закупочным ценам! Всем и каждому!
-        .col-12.col-md.order-1.order-md-0
-          +nav-search()
+							+e.A.favourites
+								+icon('icon-heart')
+						.col-auto
+							+e.A.basket
+								+icon('icon-basket')
+								+e.basket-price.d-none.d-md-block 18 560 р.
+			.row.align-items-center
+				.col-6.col-md-auto.order-2.order-md-0
+					+e.A.logo(href='/')
+						img(src='img/header-logo.png' alt='logo' width='122')
+				.col-2.d-none.d-lg-block
+					+e.text Более 70 000 товаров по закупочным ценам! Всем и каждому!
+				.col-12.col-md.order-1.order-md-0
+					+nav-search()
 
-        .col-auto.d-none.d-md-block
-          +b.soc
-            +soc('icon-fb')
-            +soc('icon-instagram')
-            +soc('icon-vk')
+				.col-auto.d-none.d-md-block
+					+b.soc
+						+soc('icon-fb')
+						+soc('icon-instagram')
+						+soc('icon-vk')
 
-        .col-6.col-md-auto.order-3.order-md-0
-          +b.tel-block
-            +e.item
-              +e.A.tel(href='#') 8 (800) 775-46-36
-              +e.description Звонок бесплатный
-            +e.item
-              +e.A.tel(href='#') 8 (499) 645-53-65
-              +e.description Для Москвы и МО
+				.col-6.col-md-auto.order-3.order-md-0
+					+b.tel-block
+						+e.item
+							+e.A.tel(href='#') 8 (800) 775-46-36
+							+e.description Звонок бесплатный
+						+e.item
+							+e.A.tel(href='#') 8 (499) 645-53-65
+							+e.description Для Москвы и МО
 
 
 
