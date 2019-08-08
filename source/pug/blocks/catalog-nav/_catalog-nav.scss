@@ -285,10 +285,11 @@
   padding-top: 17px;
   padding-bottom: 17px;
   max-width: 226px;
-  padding-right: 30px;
+  padding-right: 15px;
   width: 226px;
   border-radius: 5px;
   z-index: 5;
+  max-height: 350px;
 
   &:before {
     position: absolute;
@@ -308,6 +309,7 @@
 .dropdown-brand__link {
   color: #4D4D4D;
   margin-bottom: 15px;
+  width: 100%;
 
   & span {
     color: #9FA3A7;
