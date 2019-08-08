@@ -47,13 +47,20 @@ mixin wholesale()
 								.col-12
 									.row
 										.col-12.col-md-4
-											button.btn.w-100.mb-3 Отправить
+											//button.btn.w-100.mb-3 Отправить
+											.row
+												.col-4.pr-1
+													+icon('icon-success')
+												.col-8.pl-1.pr-1
+													+e.H2.send-title Спасибо
+													+e.P.send-subtitle Ваша заявка отправленна
+
 										.col-12.col-md-4
 											+b.LABEL.custom-checkbox(for='1')
 												+e.INPUT.input(type='checkbox' checked id='1')
 												+e.SPAN.name Я даю свое согласие на обработку персональных данных согласно
 													|
-													a.modal-wrap__link(href='#') Политике конфиденциальности
+													a.modal-wrap__link(href='#')  Политике конфиденциальности
 										.col-12.col-md-4
 											+b.LABEL.custom-checkbox(for='1')
 												+e.INPUT.input(type='checkbox' checked id='1')

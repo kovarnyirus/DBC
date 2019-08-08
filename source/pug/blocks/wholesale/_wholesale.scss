@@ -16,7 +16,8 @@
     & textarea {
       height: 60px;
     }
-    @include media-breakpoint-down(md){
+
+    @include media-breakpoint-down(md) {
       padding-bottom: 36px;
       margin-bottom: 22px;
     }
@@ -25,14 +26,14 @@
   &__form-img {
     position: absolute;
     top: 0;
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       display: none;
     }
   }
 
-  &__format-title{
+  &__format-title {
     margin-top: 81px;
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       margin-top: 40px;
       margin-bottom: 40px;
     }
@@ -45,7 +46,7 @@
     line-height: 100%;
     margin-bottom: 50px;
     margin-top: 88px;
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       margin-top: 20px;
       margin-bottom: 0;
       padding-right: 30px;
@@ -69,16 +70,31 @@
       font-weight: bold;
       font-size: 16px;
       line-height: 130%;
-      & br{
+      & br {
         display: none;
       }
     }
   }
-  @include media-breakpoint-down(md){
-    & h2{
+
+  @include media-breakpoint-down(md) {
+    & h2 {
       font-size: 16px;
     }
     padding-bottom: 40px;
+  }
+
+
+  &__send-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #5CBF1A;
+    text-transform: none;
+  }
+
+  &__send-subtitle {
+    color: #4D4D4D;
+    font-size: 12px;
+    margin-bottom: 5px;
   }
 
 }
