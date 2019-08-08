@@ -8,6 +8,7 @@
   }
 
   &--checkbox {
+    text-transform: uppercase;
     @include media-breakpoint-up(md) {
       margin-bottom: 49px;
     }
