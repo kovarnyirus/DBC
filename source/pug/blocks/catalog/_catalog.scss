@@ -148,21 +148,24 @@
 
 .aside-filter__min-cost,
 .aside-filter__max-cost {
-  max-width: 137px;
+  max-width: 150px;
   outline: none;
   border: 1px solid #E8E8E8;
   border-radius: 5px;
   min-height: 40px;
-  padding-left: 5px;
+  padding-left: 10px;
   padding-right: 23px;
   padding-top: 10px;
   @include media-breakpoint-down(xxl) {
-    max-width: 100px;
+    max-width: 140px;
   }
   @include media-breakpoint-down(xl) {
-    max-width: 87px;
+    max-width: 100px;
   }
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
+    max-width: 80px;
+  }
+  @include media-breakpoint-down(sm) {
     max-width: 120px;
   }
 }
