@@ -161,22 +161,53 @@ mixin product-item(img, title, description, size)
 			+e.A.basket(href='')
 				+icon('icon-basket')
 
+mixin product-item-markdown(img, title, description, size)
+	+b.product-item
+		+e.markdown Уценка
+		+e.img-wrap(href="#")
+			+e.IMG.img(src=`img/product/product${img}.jpg`, alt="img")
+		+e.A.description(href='#')= description
+		+e.A.title(href='#')= title
+		+e.TABLE.price
+			tr
+				+e.TD.price-name price
+				+e.TD.price-val 1251 p
+			tr
+				+e.TD.price-name mini sale
+				+e.TD.price-val 531 p
+			tr
+				+e.TD.price-name maxi sale
+				+e.TD.price-val 490 p
+			tr
+				+e.TD.price-name sale
+				+e.TD.price-val 490 p
+			tr
+				+e.TD.price-name VIP
+				+e.TD.price-val узнать цену
+		+e.icons
+			+e.A.favourites
+				+icon('icon-favourites')
+			+e.A.like
+				+icon('icon-like')
+			+e.A.basket(href='')
+				+icon('icon-basket')
+
 mixin catalogItems(rows)
 	.product-list
 		- for (var x = 0; x < rows; x++)
-		+product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
-		+product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
-		+product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
-		+product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
+			+product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
+			+product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
+			+product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
+			+product-item-markdown('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
 
 mixin catalogItems-5(rows)
 	.product-list
 		- for (var x = 0; x < rows; x++)
-		+product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
-		+product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
-		+product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
-		+product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
-		+product-item('1', 'American Crew Classic 3-in-1', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру,', '19 мл')
+			+product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
+			+product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
+			+product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
+			+product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
+			+product-item-markdown('1', 'American Crew Classic 3-in-1', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру,', '19 мл')
 
 mixin stars(active, num)
 	+b.stars
