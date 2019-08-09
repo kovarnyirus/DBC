@@ -91,7 +91,7 @@
 
       & .modal-wrap__label {
         position: absolute;
-        top: 0;
+        top: 2px;
         left: 50%;
         transform: translateX(-50%);
         color: #9FA3A7;
@@ -140,9 +140,15 @@
     &--error {
       border-color: $attention-color;
       color: $attention-color;
+      & + label{
+        color: $attention-color!important;
+      }
     }
 
     &:focus {
+      border: 1px solid #5CBF1A;
+    }
+    &:active {
       border: 1px solid #5CBF1A;
     }
   }
@@ -271,7 +277,6 @@
   &__input {
     &:focus {
       outline: none;
-      border: none;
 
       & + .modal-wrap__sms-placeholder {
         display: none;

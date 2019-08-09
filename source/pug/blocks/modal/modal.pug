@@ -26,7 +26,7 @@ mixin inputLabel(t , pl)
 mixin footerForm(text , link)
 	+e.footer
 		div.text= text
-		+e.A.link--footer(href='#')= link
+		+e.A.link--footer(href='#')=    link
 
 mixin socInfo(name , vlue)
 	+e.soc-info
@@ -83,7 +83,7 @@ mixin modals()
 				.col-12
 					+inputLabel("password","Пароль")(required)
 					+input("password","Повторить пароль")(required)
-			+e.btn.btn(type="submit")  Сбросить пароль
+			+e.btn.btn(type="submit")  Сменить пароль
 	//new парот
 
 
@@ -110,7 +110,7 @@ mixin modals()
 			+b.LABEL.custom-checkbox(for='2')
 				+e.INPUT.input(type='checkbox' checked id='2')
 				+e.SPAN.name Получать лучшие предложения (редко)
-		+footerForm('Есть аккаунт? ', ' Войти')
+		+footerForm('Есть аккаунт? ', '  Войти')
 	//рег через соцсети
 
 
@@ -165,7 +165,7 @@ mixin modals()
 		script(src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
 		script(src="https://yastatic.net/share2/share.js")
 		.ya-share2(data-services="collections,vkontakte,facebook,odnoklassniki,moimir")
-		+footerForm('Есть аккаунт? ', ' Войти')
+		+footerForm('Есть аккаунт? ', '  Войти')
 	//рег
 
 	+form-wrap()(id="modal-login" class="zoom-anim-dialog mfp-hide modal-win modal-form ")
@@ -180,13 +180,33 @@ mixin modals()
 					+inputLabel("password","Пароль")(required)
 				.col-auto.ml-auto.mb-2
 					+e.A.link--footer(href='#') Забыли пароль?
-			+e.btn.btn(type="submit") Войти
+			+e.btn.btn.mb-3(type="submit") Войти
 		+e.alt-reg Войти с помощью
 		script(src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
 			script(src="https://yastatic.net/share2/share.js")
 			.ya-share2(data-services="collections,vkontakte,facebook,odnoklassniki,moimir")
 		+footerForm('Нет аккаунта?  ', ' Зарегистрироваться')
 	//рег
+
+	+form-wrap()(id="modal-state" class="zoom-anim-dialog mfp-hide modal-win modal-form ")
+		+e.head
+			+icon('icon-user')
+			+e.title Вход
+		+e.body
+			+e.text.text-center Введите Ваши данные для входа
+			.row.justify-content-center
+				.col-12
+					+e.input-wrap--label
+						+e.INPUT.input--error(type= 'E-mail')
+						+e.LABEL.label(for= 'E-mail') не верный пароль
+				.col-auto.ml-auto.mb-2
+					+e.A.link--footer(href='#') Забыли пароль?
+			+e.btn.btn.mb-3(type="submit") Войти
+		+e.alt-reg Войти с помощью
+		script(src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+			script(src="https://yastatic.net/share2/share.js")
+			.ya-share2(data-services="collections,vkontakte,facebook,odnoklassniki,moimir")
+		+footerForm('Нет аккаунта?  ', ' Зарегистрироваться')
 
 	//введите код из смс
 

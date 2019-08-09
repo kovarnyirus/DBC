@@ -2124,7 +2124,7 @@
               <!-- +e.input-wrap-->
             </div>
           </div>
-          <button class="modal-wrap__btn btn" type="submit"> Сбросить пароль
+          <button class="modal-wrap__btn btn" type="submit"> Сменить пароль
           </button>
         </div>
       </form>
@@ -2174,7 +2174,7 @@
           </label>
         </div>
         <div class="modal-wrap__footer">
-          <div class="text">Есть аккаунт? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#"> Войти</a>
+          <div class="text">Есть аккаунт? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#">  Войти</a>
         </div>
       </form>
     </div>
@@ -2252,7 +2252,7 @@
         <script src="https://yastatic.net/share2/share.js"></script>
         <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir"></div>
         <div class="modal-wrap__footer">
-          <div class="text">Есть аккаунт? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#"> Войти</a>
+          <div class="text">Есть аккаунт? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#">  Войти</a>
         </div>
       </form>
     </div>
@@ -2285,7 +2285,7 @@
             <div class="col-auto ml-auto mb-2"><a class="modal-wrap__link modal-wrap__link--footer" href="#">Забыли пароль?</a>
             </div>
           </div>
-          <button class="modal-wrap__btn btn" type="submit">Войти
+          <button class="modal-wrap__btn btn mb-3" type="submit">Войти
           </button>
         </div>
         <div class="modal-wrap__alt-reg">Войти с помощью
@@ -2300,6 +2300,42 @@
       </form>
     </div>
     <!--рег-->
+    <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-state">
+      <form>
+        <div class="modal-wrap__head">
+          <svg class="icon icon-user ">
+            <use xlink:href="img/svg/sprite.svg#icon-user"></use>
+          </svg>
+          <div class="modal-wrap__title">Вход
+          </div>
+        </div>
+        <div class="modal-wrap__body">
+          <div class="modal-wrap__text text-center">Введите Ваши данные для входа
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="modal-wrap__input-wrap modal-wrap__input-wrap--label"><input class="modal-wrap__input modal-wrap__input--error" type="E-mail"/>
+                <label class="modal-wrap__label" for="E-mail">не верный пароль
+                </label>
+              </div>
+            </div>
+            <div class="col-auto ml-auto mb-2"><a class="modal-wrap__link modal-wrap__link--footer" href="#">Забыли пароль?</a>
+            </div>
+          </div>
+          <button class="modal-wrap__btn btn mb-3" type="submit">Войти
+          </button>
+        </div>
+        <div class="modal-wrap__alt-reg">Войти с помощью
+        </div>
+        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js">
+          <script src="https://yastatic.net/share2/share.js"></script>
+          <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir"></div>
+        </script>
+        <div class="modal-wrap__footer">
+          <div class="text">Нет аккаунта?  </div><a class="modal-wrap__link modal-wrap__link--footer" href="#"> Зарегистрироваться</a>
+        </div>
+      </form>
+    </div>
     <!--введите код из смс-->
     <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-sms">
       <form>

@@ -327,6 +327,17 @@
     background-color: #ffffff;
     transform: rotate(45deg);
   }
+  &:after{
+    position: absolute;
+    content: '';
+    top: -20px;
+    display: block;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-color: transparent;
+
+  }
 
 
 }
