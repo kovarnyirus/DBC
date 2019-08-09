@@ -71,13 +71,19 @@ jQuery(document).ready(function ($) {
         dots: false,
         prevArrow: advertisingSliderPrev,
         nextArrow: advertisingSliderNext,
-        responsive: [{
-
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 4
+        rows: 0,
+        responsive: [
+            {
+                breakpoint: 99999,
+                slidesToShow: 4,
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
             }
-        }]
+        ]
     });
 
     $('.catalog-nav__brand').slick({
@@ -117,11 +123,12 @@ jQuery(document).ready(function ($) {
         prevArrow: bidSliderArrowLeft,
         nextArrow: bidSliderArrowRight,
         dots: true,
+        arrows: false,
         responsive: [
             {
                 breakpoint: 99999,
                 settings: {
-                    arrows: true,
+                    // arrows: true,
                 }
             },
             {
