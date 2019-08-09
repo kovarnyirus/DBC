@@ -71,17 +71,16 @@ mixin top-nav()
 							+e.A.link(href="#") Опт
 				.col-6.col-lg-4
 					.row.justify-content-end
-						.col-auto
+						.col-auto.pr-1
 							+e.A.user
 								.row
 									.col-auto
 										+icon('icon-user')
 									.col.d-none.d-md-block Ольга В.
-						.col-auto
-
+						.col-auto.pl-1.pr-1
 							+e.A.favourites
 								+icon('icon-heart')
-						.col-auto
+						.col-auto.pl-1
 							+e.A.basket
 								+icon('icon-basket')
 								+e.basket-price.d-none.d-md-block 18 560 р.

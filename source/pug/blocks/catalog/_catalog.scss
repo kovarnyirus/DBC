@@ -424,6 +424,12 @@
     padding-left: 7px;
     padding-right: 7px;
     margin-bottom: 13px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 3px;
+      & img{
+        width: 100%;
+      }
+    }
   }
 
   & .row {
