@@ -124,6 +124,9 @@
       right: 0;
       top: -10px;
       bottom: -10px;
+      @include media-breakpoint-up(md){
+        display: none;
+      }
     }
   }
 
