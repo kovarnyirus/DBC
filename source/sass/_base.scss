@@ -1,5 +1,9 @@
 @import "vars";
 
+html{
+  overflow-x: hidden;
+}
+
 body {
   font-family: Proxima Nova, sans-serif;
   font-size: 14px;

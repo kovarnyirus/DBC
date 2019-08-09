@@ -316,6 +316,43 @@ jQuery(document).ready(function ($) {
     $(".toggle-menu").click(function () {
         $(".mobile-menu").toggleClass('mobile-menu--open');
     });
+
+    // function throttle(func, ms) {
+    //
+    //     var isThrottled = false,
+    //         savedArgs,
+    //         savedThis;
+    //
+    //     function wrapper() {
+    //
+    //         if (isThrottled) {
+    //             savedArgs = arguments;
+    //             savedThis = this;
+    //             return;
+    //         }
+    //
+    //         func.apply(this, arguments);
+    //
+    //         isThrottled = true;
+    //
+    //         setTimeout(function() {
+    //             isThrottled = false;
+    //             if (savedArgs) {
+    //                 wrapper.apply(savedThis, savedArgs);
+    //                 savedArgs = savedThis = null;
+    //             }
+    //         }, ms);
+    //     }
+    //
+    //     return wrapper;
+    // }
+    //
+    // var reintSlick = function(){
+    //     $('.catalog-nav__brand').slick('unslick').slick('reinit');
+    // };
+    //
+    // $(window).resize(reintSlick());
+
 });
 
 

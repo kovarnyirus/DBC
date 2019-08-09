@@ -7,32 +7,32 @@ include ../blocks/mixin-popup/mixin-popup
 
 
 block title
-  title Гланая
+	title Гланая
 
 block pagecontent
-  .main-page
-    +cookies()
-    .container
-      +bigSlider()
-      +bannerHead()
-    .container
-      +banner4()
-    +saleSlider()
-    .container
-      +banner2()
-    +advertisingNoBg('Популярные товары')
-    .container
-      +banner3()
-      +bigSlider()
-    +advertisingNoBg('Товары со скидкой')
+	.main-page
+		+cookies()
+		.container
+			+bigSlider()
+			+bannerHead()
+		.container
+			+banner4()
+		+saleSlider()
+		.container
+			+banner2()
+		+advertisingNoBg('Популярные товары')
+		.container
+			+banner3()
+			+bigSlider()
+		+advertisingNoBg('Товары со скидкой')
 
-    +brendsSliderTitle('Популярные бренды сегодня')
-    .container
-      +banner3()
-      .row
-        +advertisingNoBg('Новинки')
-        +comp-info()
-    +instagram-block()
+		+brendsSliderTitle('Популярные бренды сегодня')
+		.container
+			+banner3()
+		+advertisingNoBg('Новинки')
+			.row
+				+comp-info()
+		+instagram-block()
 
 
 
