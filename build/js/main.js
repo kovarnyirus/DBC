@@ -357,6 +357,14 @@ jQuery(document).ready(function ($) {
         $(".mobile-menu").toggleClass('mobile-menu--open');
     });
 
+    $(".top-nav__catalog-btn").click(function () {
+        $(".mobile-catalog").toggleClass('mobile-catalog--open');
+    });
+
+    $(".mobile-catalog__btn-close").click(function () {
+        $(".mobile-catalog").toggleClass('mobile-catalog--open');
+    });
+
     // function throttle(func, ms) {
     //
     //     var isThrottled = false,

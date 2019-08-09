@@ -90,61 +90,143 @@ mixin delivery()
 								+e.sale MINI
 									span SALE
 							td
-								+e.sale Maxi
+								+e.sale MAXI
 									span SALE
 							td
 							td
 						tr
 							td
+
 								+e.city Москва
 								+e.area в пределах МКАД
-							td 99 р
-							td.success-text-color  БЕСПЛАТНО
-							td пн-сб
+							td
+								+e.mini-sale
+									+e.sale MINI
+										span  SALE
+								| 99 р
+							td.success-text-color
+								+e.maxi-sale
+									+e.sale MAXI
+										span  SALE
+								| БЕСПЛАТНО
+							td
+								+e.time Время доставки
+								| пн-сб
 								br
-								| с 9.00 до 21.00
-							td 2 рабочих дня*
+								|  с 9.00 до 21.00
+							td
+								+e.processing Обработка заказа
+								| 2 рабочих дня*
 						tr
 							td
+
 								+e.city М.О.
 								+e.area до 30 км от МКАД
-							td 199 р
-							td.success-text-color БЕСПЛАТНО
-							td пн-сб
+							td
+								+e.mini-sale
+									+e.sale MINI
+										span  SALE
+								|	199 р
+							td.success-text-color
+								+e.maxi-sale
+									+e.sale MAXI
+										span  SALE
+								| БЕСПЛАТНО
+							td
+								+e.time Время доставки
+								| пн-сб
 								br
-								| с 10.00 до 18.00
-							td 2 рабочих дня*
+								|  с 10.00 до 18.00
+							td
+								+e.processing Обработка заказа
+								| 2 рабочих дня*
 						tr
 							td
 								+e.city Санкт-Петербург*
-							td 199 р
-							td.success-text-color  БЕСПЛАТНО
 							td
-							td 2 рабочих дня*
+								+e.mini-sale
+									+e.sale MINI
+										span SALE
+								|	199 р
+							td.success-text-color
+								+e.maxi-sale
+									+e.sale MAXI
+										span  SALE
+								| БЕСПЛАТНО
+							td
+								+e.time Время доставки
+								+e.empty -
+							td
+								+e.processing Обработка заказа
+								| 2 рабочих дня*
 						tr
 							td
+
 								+e.city Вся Россия
 								+e.area в т.ч. Крым
-							td 290 р
-							td.success-text-color  БЕСПЛАТНО
 							td
-							td 2 рабочих дня*
+								+e.mini-sale
+									+e.sale MINI
+										span SALE
+								|	290 р
+							td.success-text-color
+								+e.maxi-sale
+									+e.sale MAXI
+										span  SALE
+								| БЕСПЛАТНО
+							td
+								+e.time Время доставки
+								+e.empty -
+							td
+								+e.processing Обработка заказа
+								| 2 рабочих дня*
 						tr
 							td
+
 								+e.city Беларусь
 								+e.area (г. Минск) - 100% предоплата
-							td 400 р
-							td.success-text-color  БЕСПЛАТНО
 							td
-							td 2 рабочих дня*
+								+e.mini-sale
+									+e.sale MINI
+										span SALE
+								|	400 р
+							td.success-text-color
+								+e.maxi-sale
+									+e.sale MAXI
+										span  SALE
+								| БЕСПЛАТНО
+							td
+								+e.time Время доставки
+								+e.empty -
+							td
+								+e.processing Обработка заказа
+								| 2 рабочих дня*
 						tr
 							td
+
 								+e.city Казахстан
 								+e.area 100% предоплата
-							td 400 р
-							td.success-text-color  БЕСПЛАТНО
 							td
-							td 2 рабочих дня*
+								+e.mini-sale
+									+e.sale MINI
+										span SALE
+								|	400 р
+							td.success-text-color
+								+e.maxi-sale
+									+e.sale MAXI
+										span  SALE
+								| БЕСПЛАТНО
+							td
+								+e.time Время доставки
+								+e.empty -
+							td
+								+e.processing Обработка заказа
+								| 2 рабочих дня*
+
+					//+e.table2
+					//	.row
+
+
 
 					p.footnote * БЕЗ ПРЕДОПЛАТЫ! (заказ отправляется наложенным платежом с оплатой при получении)
 					p.footnote ВНИМАНИЕ! В 95% случаев мы укладываемся в фиксированный тариф 290 рублей. Однако, для крупногабаритных, тяжеловесных заказов, а также для заказов из удаленных субъектов РФ, стоимость доставки может быть скорректирована. В этом случае изменения будут с Вами обязательно согласованы.
@@ -269,7 +351,8 @@ mixin delivery()
 					p Все претензии наших клиентов рассматриваются в индивидуальном порядке, мы стараемся найти решение/ответ по каждому вопросу
 					p Обращаем ваше внимание, что вы в праве отказаться от заказа надлежащего качества, только при условии возмещения расходов, понесенных в связи с совершением действий по доставке заказа (Ст. 497 п.3. ГК РФ).
 					p Если оплата произведена онлайн предварительно на сайте, то, в случае отказа от заказа надлежащего качества, возврат д/c осуществляется за минусом стоимости расходов по его доставке.
-					+e.IMG.img(src='img/delivery-img.jpg')
+					+e.img-wrapper
+						+e.IMG.img(src='img/delivery-img.jpg')
 
 
 
