@@ -5,6 +5,9 @@
   @include media-breakpoint-up(md) {
     padding-top: 71px;
     padding-bottom: 71px;
+    &:last-child{
+      padding-top: 0;
+    }
   }
 }
 
