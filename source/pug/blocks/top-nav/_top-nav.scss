@@ -78,6 +78,12 @@
 
 }
 
+.tel-block__item {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
 .tel-block__tel {
   color: #4D4D4D;
   font-size: 14px;
@@ -186,7 +192,12 @@
     font-size: 1rem;
     margin-bottom: 3px;
   }
-  &--open{
+
+  &--open {
     transform: translateX(0);
+  }
+
+  & .tel-block__tel {
+    text-align: left;
   }
 }
