@@ -80,7 +80,10 @@ jQuery(document).ready(function ($) {
     });
 
     $('.catalog-nav__brand').slick({
-        slidesToShow: 5,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 6,
+        slidesToScroll: 2,
         variableWidth: true,
         dots: false,
         arrows: false,
