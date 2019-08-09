@@ -92,8 +92,8 @@ jQuery(document).ready(function ($) {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToShow: 5,
+                    slidesToScroll: 3
                 }
             }
         ]
@@ -348,11 +348,16 @@ jQuery(document).ready(function ($) {
     // }
     //
     // var reintSlick = function(){
-    //     $('.catalog-nav__brand').slick('unslick').slick('reinit');
+    //     $('.catalog-nav__brand').slick('reinit');
     // };
     //
     // $(window).resize(reintSlick());
 
+    // var swiper  = new Swiper ('.catalog-nav__brand', {
+    //     freeMode: true,
+    //     slidesPerView: 'auto',
+    //     grabCursor: true,
+    // });
 });
 
 

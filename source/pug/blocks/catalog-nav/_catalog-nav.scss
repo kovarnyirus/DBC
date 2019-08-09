@@ -226,7 +226,7 @@
   background-color: #F1F1F1;
   padding-right: 12px;
   padding-left: 12px;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
 }
 
 .catalog-nav__brand-title {
@@ -256,9 +256,12 @@
   padding-bottom: 3px;
 
   &:hover {
-    & .dropdown-brand {
-      display: flex;
-      z-index: 2000;
+    @include media-breakpoint-up(md) {
+      & .dropdown-brand {
+        display: flex;
+        z-index: 2000;
+      }
+      margin-left: 0;
     }
   }
 
