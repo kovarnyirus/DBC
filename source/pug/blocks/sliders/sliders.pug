@@ -2,7 +2,16 @@ mixin bigSlider()
 	+b.big-slider
 		+e.slide
 			img(src='img/big-slider.jpg')
-		+e.A.btn(href='#') Смотреть товары
+			+e.A.btn.d-md-none(href='#') Смотреть
+			+e.A.btn.d-none.d-md-block(href='#') Смотреть товары
+		+e.slide
+			img(src='img/big-slider.jpg')
+			+e.A.btn.d-md-none(href='#') Смотреть
+			+e.A.btn.d-none.d-md-block(href='#') Смотреть товары
+		+e.slide
+			img(src='img/big-slider.jpg')
+			+e.A.btn.d-md-none(href='#') Смотреть
+			+e.A.btn.d-none.d-md-block(href='#') Смотреть товары
 
 
 mixin brendsSlider()

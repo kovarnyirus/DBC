@@ -2711,7 +2711,7 @@
       <p>Французская косметика Bioderma была создана в 1978 году на базе фармацевтической лаборатории, однако впоследствии компания сменила вектор своего развития, обратив свои научные разработки на решение более узкого спектра проблем. Сейчас Биодерма создает эффективные препараты для лечения и профилактики различных проблем связанных с кожей. В ассортименте марки вы найдете 8 основных линеек для различных типов кожи (в том числе атопичной и страдающей розацеа или дерматитом), а также линейку для волос и кожи головы.</p>
     </div>
     <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-dialog">
-      <form novalidate="novalidate">
+      <form>
         <div class="modal-wrap__head">
           <svg class="icon icon-user ">
             <use xlink:href="img/svg/sprite.svg#icon-user"></use>
@@ -2729,7 +2729,7 @@
       </form>
     </div>
     <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-recover-email">
-      <form novalidate="novalidate">
+      <form>
         <div class="modal-wrap__head">
           <svg class="icon icon-user ">
             <use xlink:href="img/svg/sprite.svg#icon-user"></use>
@@ -2759,7 +2759,7 @@
       </form>
     </div>
     <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-recover-sms">
-      <form novalidate="novalidate">
+      <form>
         <div class="modal-wrap__head">
           <svg class="icon icon-user ">
             <use xlink:href="img/svg/sprite.svg#icon-user"></use>
@@ -2789,7 +2789,7 @@
       </form>
     </div>
     <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-recover-new-pass">
-      <form novalidate="novalidate">
+      <form>
         <div class="modal-wrap__head">
           <svg class="icon icon-user ">
             <use xlink:href="img/svg/sprite.svg#icon-user"></use>
@@ -2819,7 +2819,7 @@
     </div>
     <!--new парот-->
     <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-reg-soc">
-      <form novalidate="novalidate">
+      <form>
         <div class="modal-wrap__head">
           <svg class="icon icon-user ">
             <use xlink:href="img/svg/sprite.svg#icon-user"></use>
@@ -2868,7 +2868,7 @@
     </div>
     <!--рег через соцсети-->
     <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-reg">
-      <form novalidate="novalidate">
+      <form>
         <div class="modal-wrap__head">
           <svg class="icon icon-user ">
             <use xlink:href="img/svg/sprite.svg#icon-user"></use>
@@ -2946,7 +2946,7 @@
     </div>
     <!--рег-->
     <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-login">
-      <form novalidate="novalidate">
+      <form>
         <div class="modal-wrap__head">
           <svg class="icon icon-user ">
             <use xlink:href="img/svg/sprite.svg#icon-user"></use>
@@ -2990,7 +2990,7 @@
     <!--рег-->
     <!--введите код из смс-->
     <div class="modal-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-sms">
-      <form novalidate="novalidate">
+      <form>
         <div class="modal-wrap__head">
           <svg class="icon icon-user ">
             <use xlink:href="img/svg/sprite.svg#icon-user"></use>
@@ -3014,6 +3014,35 @@
         </div>
         <div class="modal-wrap__footer">
           <div class="text">Вспомнили пароль? </div><a class="modal-wrap__link modal-wrap__link--footer" href="#"> Войти</a>
+        </div>
+        <div class="modal-wrap modal-wrap--vip zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-vip">
+          <form>
+            <div class="modal-wrap__head">
+              <div class="modal-wrap__title">Вступить в VIP-клуб
+              </div>
+            </div>
+            <div class="modal-wrap__body">
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <div class="modal-wrap__input-wrap"><input class="modal-wrap__input" type="text" placeholder="Ваше имя" required="required"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="modal-wrap__input-wrap"><input class="modal-wrap__input" type="password" placeholder="Пароль" required="required"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="modal-wrap__input-wrap"><input class="modal-wrap__input" type="E-mail" placeholder="E-mail" required="required"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+              </div>
+              <button class="modal-wrap__btn btn" type="submit">Отправить заявку
+              </button>
+            </div>
+            <label class="custom-checkbox" for="2"><input class="custom-checkbox__input" type="checkbox" checked="checked" id="2"/><span class="custom-checkbox__name">Я даю свое согласие на обработку персональных данных согласно<a class="custom-checkbox__link" href="#"> Политике конфиденциальности</a></span>
+            </label>
+            <label class="custom-checkbox" for="3"><input class="custom-checkbox__input" type="checkbox" checked="checked" id="3"/><span class="custom-checkbox__name">Получать лучшие предложения (редко)</span>
+            </label>
+          </form>
         </div>
       </form>
     </div>

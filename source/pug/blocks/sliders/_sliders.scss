@@ -1,25 +1,38 @@
 .big-slider {
   position: relative;
   margin-bottom: 35px;
+
+  &__slide {
+    position: relative;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 11%;
+    left: 3.5%;
+    color: $text-color;
+    background: #FFFFFF;
+    border-radius: 2px;
+    padding: 8px 17px;
+    font-weight: bold;
+  }
+  & .slick-dots{
+
+  }
+  @include media-breakpoint-down(md){
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
 }
 
-.big-slider__btn {
-  position: absolute;
-  bottom: 50px;
-  left: 50px;
-  color: $text-color;
-  background: #FFFFFF;
-  border-radius: 2px;
-  padding: 8px 17px;
-  font-weight: bold;
-}
 
 .brand-slider {
   margin-bottom: 20px;
   position: relative;
   //padding-left: 50px;
   //padding-right: 50px;
-  @include media-breakpoint-down(md){
+  @include media-breakpoint-down(md) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -28,11 +41,13 @@
     display: flex;
     align-items: center;
   }
-  & .btn-prev{
+
+  & .btn-prev {
     position: absolute;
     left: -40px;
   }
-  & .btn-next{
+
+  & .btn-next {
     right: -40px;
   }
 }
@@ -73,7 +88,7 @@
   font-weight: bold;
 }
 
-.sale-slider{
+.sale-slider {
   margin-bottom: 20px;
   position: relative;
 }
@@ -103,14 +118,19 @@
 
 .sale-slider__img {
   margin-right: 35px;
+  @include media-breakpoint-down(md){
+    max-width: 150px;
+    height: auto;
+  }
 }
 
 .sale-slider__list {
   & .slick-list {
-  overflow: visible;
+    overflow: visible;
     margin-top: 40px;
   }
 }
-.sale-slider__list{
+
+.sale-slider__list {
   overflow: hidden;
 }

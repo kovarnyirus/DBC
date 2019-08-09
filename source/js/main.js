@@ -56,6 +56,7 @@ jQuery(document).ready(function ($) {
             settings: {
                 slidesToShow: 4,
                 arrows: false
+
             }
 
 
@@ -97,6 +98,36 @@ jQuery(document).ready(function ($) {
                 settings: {
                     slidesToShow: 5,
                     slidesToScroll: 3
+                }
+            }
+        ]
+    });
+
+    var bidSliderArrowLeft = '<svg width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<path d="M10.5 1L1 10.5L10.5 20" stroke="black"/>\n' +
+        '</svg>';
+    var bidSliderArrowRight = '<svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<path d="M1 20L10.5 10.5L1 0.999999" stroke="black"/>\n' +
+        '</svg>\n';
+
+    $('.big-slider').slick({
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: bidSliderArrowLeft,
+        nextArrow: bidSliderArrowRight,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 99999,
+                settings: {
+                    arrows: true,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
                 }
             }
         ]

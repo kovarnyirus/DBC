@@ -71,20 +71,21 @@ mixin banner(src)
 			+e.IMG.img(src='img/' + src)
 
 mixin bannerHead()
-	.row.mb-4
-		.col-12.col-md-4.mb-2
-			a(href='#')
-				img(src='img/image9.jpg', alt='img')
-		.col-12.col-md-4.mb-2
-			a(href='#')
-				img(src='img/image10.jpg', alt='img')
-		.col-12.col-md-4.mb-2
-			a(href='#')
-				img(src='img/image11.jpg', alt='img')
+	.banners-sale
+		.row.mb-4
+			.col-12.col-md-4.mb-2
+				a(href='#')
+					img(src='img/image9.jpg', alt='img')
+			.col-12.col-md-4.mb-2
+				a(href='#')
+					img(src='img/image10.jpg', alt='img')
+			.col-12.col-md-4.mb-2
+				a(href='#')
+					img(src='img/image11.jpg', alt='img')
 
 mixin banner4()
 	+b.banner-wrapper
-		.row.mb-5
+		.row
 			.col-12.col-md-6
 				a(href="#")
 					img(src="img/image1.jpg")
@@ -100,7 +101,7 @@ mixin banner4()
 
 mixin banner2()
 	+b.banner-wrapper
-		.row.mb-5
+		.row
 			.col-12.col-md-6
 				a(href="#")
 					img(src="img/image1.jpg")
@@ -110,7 +111,7 @@ mixin banner2()
 
 mixin banner3()
 	+b.banner-wrapper
-		.row.mb-5
+		.row
 			.col-12.col-md-4
 				a(href="#")
 					img(src="img/image6.jpg")
