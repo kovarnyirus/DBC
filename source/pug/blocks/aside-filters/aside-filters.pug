@@ -70,3 +70,17 @@ mixin aside-filters()
 				+e.BUTTON.btn-reset.btn.btn-outline(type="submit") Сбросить все
 			.col-6
 				+e.BUTTON.btn-show.btn(type="submit") Показать товары
+
+
+mixin mobileFilter()
+	+b.mobile-filter.d-lg-none
+		+e.wrapper
+			.container.pl-0.pr-0
+				+e.top
+					+e.title Фильтры
+					button.aside-filter__group-clear Сбросить все
+					+e.BUTTON.btn-close.mobile-filer-toggle
+						span
+				.container
+					+aside-filters()
+

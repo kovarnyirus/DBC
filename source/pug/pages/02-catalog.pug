@@ -7,25 +7,27 @@ include ../blocks/aside-filters/aside-filters
 
 
 block title
-  title Гланая
+	title Гланая
 
 block pagecontent
-  +breadcrumb("Каталог", "Главная")
-  +b.page-name
-    .container
-      +e.H2 КАТАЛОГ КОСМЕТИКИ
-  +b.catalog
-    .container
-      .row
-        .col-12.col-md-3
-          aside.aside
-            form.smartfilter
-              +aside-filters()
-        .col-12.col-md-9
-          +bigSlider()
-          +brendsSlider()
-          +catalogHederNav()
-          +catalogItems('4')
-          +catalogFooterNav()
-  +advertising('реклама')
+	+breadcrumb("Каталог", "Главная")
+	+b.page-name
+		.container
+			+e.H2 КАТАЛОГ КОСМЕТИКИ
+			button.filter-btn.mobile-filer-toggle.d-lg-none
+	+mobileFilter
+	+b.catalog
+		.container
+			.row
+				.col-12.col-lg-4.col-xl-3.d-none.d-lg-block
+					aside.aside
+						form.smartfilter
+							+aside-filters()
+				.col-12.col-lg-8.col-xl-9
+					+bigSlider()
+					+brendsSlider()
+					+catalogHederNav()
+					+catalogItems('4')
+					+catalogFooterNav()
+	+advertising('реклама')
 

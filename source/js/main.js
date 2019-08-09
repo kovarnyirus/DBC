@@ -364,6 +364,9 @@ jQuery(document).ready(function ($) {
     $(".mobile-catalog__btn-close").click(function () {
         $(".mobile-catalog").toggleClass('mobile-catalog--open');
     });
+    $(".mobile-filer-toggle").click(function () {
+        $(".mobile-filter").toggleClass('mobile-filter--open');
+    });
 
     // function throttle(func, ms) {
     //
