@@ -179,23 +179,23 @@ mixin catalog-nav()
 mixin catalogHederNav()
 	.catalog__head
 		.row
-			.col-12.col-md-7.col-lg-7.col-xl-6
+			.col-12.col-md-7.col-lg-7.col-xl-7.col-xxl-6
 				.row.align-items-end.align-items-xxl-center
-					.col-12.col-md-6.col-xl-5
+					.col-12.col-md-7.col-xl-6.col-xxl-5
 						.catalog__sort
 							select.catalog__sort-select.mb-2.mb-lg-0
 								option(value='down' selected) Сначала дешевые
 								option(value='up') Сначала дорогие
-					.col-7.d-none.d-md-block.col-md-6.col-xl-7
+					.col-7.d-none.d-md-block.col-md-5.col-xl-6.col-xxl-7.pr-0.pr-xl-2.pl-0.pl-xl-2
 						.row.align-items-center
-							.col-auto.mb-2.mb-xl-0 Отображать по:
+							.col-auto.mb-2.mb-xxl-0 Отображать по:
 							.col-auto
 								a.quantity.active(href="#") 16
 								a.quantity(href="#") 24
 								a.quantity(href="#") 32
-			.col-6.col-md-5.col-lg-5.col-xl-6.d-none.d-md-block
+			.col-6.col-md-5.col-lg-5.col-xl-5.col-xxl-6.d-none.d-md-block
 				.row.align-items-center.justify-content-end
-					.col-auto.mb-2.mb-xl-0 Всего:
+					.col-auto.mb-2.mb-xxl-0 Всего:
 						strong   12 580 товаров
 					.col-auto
 						+b.UL.pagination
