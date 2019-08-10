@@ -339,29 +339,11 @@ jQuery(document).ready(function ($) {
         ]
     });
 
-    $(".custom-scroll-js-aside").mCustomScrollbar({
-        autoHideScrollbar: true,
+
+    jQuery('.aside-filter__toggle').on('click', function (e) {
+        e.preventDefault();
+        jQuery(this).closest('.aside-filter__group').toggleClass('aside-filter__group--active');
     });
-
-
-    // jQuery('.aside-filter__toggle').on('click', function (e) {
-    //     e.preventDefault();
-    //     jQuery(this).closest('.aside-filter__group').toggleClass('aside-filter__group--active');
-    // });
-
-
-    // jQuery('.aside-filter__toggle').on('click', function (e) {
-    //     e.preventDefault();
-    //     var wrapper = jQuery(this).closest('.aside-filter__group');
-    //     var classOnWrapper = jQuery(this).closest('.aside-filter__group').hasClass('aside-filter__group--active');
-    //     if (classOnWrapper) {
-    //         // jQuery(this).closest('.custom-scroll-js-aside').mCustomScrollbar("disable");
-    //     } else {
-    //         // jQuery(this).closest('.custom-scroll-js-aside').mCustomScrollbar("update");
-    //     }
-    //     wrapper.toggleClass('aside-filter__group--active');
-    //
-    // });
 
     $('.custom-checkbox__name--dropdown').on('click', function (e) {
         jQuery(this).toggleClass('custom-checkbox__name--dropdown-open');

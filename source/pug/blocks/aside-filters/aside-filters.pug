@@ -6,7 +6,7 @@ mixin aside-filters()
 				+e.group-checked 3
 				+e.BUTTON.group-clear Сбросить
 				+e.BUTTON.toggle
-			+e.UL.list.custom-scroll-js-aside
+			+e.UL.list.custom-scroll-js
 				-var filterlist = ['Волосы', 'Все для бритья', 'Гигиена', 'Дезодоранты', 'Дети', 'Дом', 'Здоровье', 'Израильская косметика', 'Корейская бытовая химия', 'Корейская и японская косметика', 'Корейская косметика', 'Косметические наборы', 'Кремы']
 				each filter, index in filterlist
 					+e.LI.item.aside-filter__dropdown-item
@@ -32,7 +32,7 @@ mixin aside-filters()
 				+e.SPAN.group-checked 2
 				+e.BUTTON.group-clear Сбросить
 				+e.BUTTON.toggle
-			+e.UL.list
+			+e.UL.list.custom-scroll-js
 				-var brands = ['A-Derma ',  'Aasha Herbals ',  'Academie ',  'Ahava ',  'Alerana ',  'Algotherm ',  'A-Derma ',  'Aasha ', 'Herbals ',  'Academie ',  'Ahava ',  'Alerana ', 'Algotherm ',  'Ahava' ]
 				-var brandCity = [' Франция', ' Франция', ' Франция', 'Израиль', 'Россия', 'Франция', 'Франция', 'Франция', 'Франция', 'Израиль', 'Россия', 'Франция', 'Израиль', 'Израиль']
 				each brand, index in brands
@@ -46,7 +46,7 @@ mixin aside-filters()
 				+e.SPAN.group-checked
 				+e.BUTTON.group-clear Сбросить
 				+e.BUTTON.toggle
-			+e.UL.list
+			+e.UL.list.custom-scroll-js
 				-var filterlist = ['Волосы', 'Все для бритья', 'Гигиена', 'Дезодоранты', 'Дети', 'Дом', 'Здоровье', 'Израильская косметика', 'Корейская бытовая химия', 'Корейская и японская косметика', 'Корейская косметика', 'Косметические наборы', 'Кремы']
 				each filter, index in filterlist
 					+e.LI.item

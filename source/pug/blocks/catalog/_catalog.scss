@@ -14,7 +14,7 @@
 
   &--active {
     & .aside-filter__list {
-      max-height: 345px;
+      display: block;
       transition: .2s;
     }
 
@@ -66,8 +66,9 @@
 }
 
 .aside-filter__list {
-  max-height: 0px;
+  max-height: 345px;
   overflow: hidden;
+  display: none;
   transition: .2s;
 }
 
