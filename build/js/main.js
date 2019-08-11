@@ -111,6 +111,7 @@ jQuery(document).ready(function ($) {
         variableWidth: true,
         dots: false,
         arrows: false,
+        rows: 0,
         responsive: [
             {
                 breakpoint: 99999,
@@ -367,47 +368,45 @@ jQuery(document).ready(function ($) {
         $(".mobile-filter").toggleClass('mobile-filter--open');
     });
 
-    // function throttle(func, ms) {
-    //
-    //     var isThrottled = false,
-    //         savedArgs,
-    //         savedThis;
-    //
-    //     function wrapper() {
-    //
-    //         if (isThrottled) {
-    //             savedArgs = arguments;
-    //             savedThis = this;
-    //             return;
-    //         }
-    //
-    //         func.apply(this, arguments);
-    //
-    //         isThrottled = true;
-    //
-    //         setTimeout(function() {
-    //             isThrottled = false;
-    //             if (savedArgs) {
-    //                 wrapper.apply(savedThis, savedArgs);
-    //                 savedArgs = savedThis = null;
-    //             }
-    //         }, ms);
-    //     }
-    //
-    //     return wrapper;
-    // }
-    //
-    // var reintSlick = function(){
-    //     $('.catalog-nav__brand').slick('reinit');
-    // };
-    //
-    // $(window).resize(reintSlick());
+    function throttle(func, ms) {
 
-    // var swiper  = new Swiper ('.catalog-nav__brand', {
-    //     freeMode: true,
-    //     slidesPerView: 'auto',
-    //     grabCursor: true,
-    // });
+        var isThrottled = false,
+            savedArgs,
+            savedThis;
+
+        function wrapper() {
+
+            if (isThrottled) {
+                savedArgs = arguments;
+                savedThis = this;
+                return;
+            }
+
+            func.apply(this, arguments);
+
+            isThrottled = true;
+
+            setTimeout(function() {
+                isThrottled = false;
+                if (savedArgs) {
+                    wrapper.apply(savedThis, savedArgs);
+                    savedArgs = savedThis = null;
+                }
+            }, ms);
+        }
+
+        return wrapper;
+    }
+
+    function resizeSlick(){
+        $('.catalog-nav__brand').slick('unslick').slick('reinit');
+    }
+
+    $(window).resize(function(){
+        resizeSlick()
+    });
+
+
 });
 
 
