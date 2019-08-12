@@ -125,8 +125,6 @@ jQuery(document).ready(function ($) {
     $('.catalog-nav__brand').slick({
         infinite: true,
         speed: 300,
-        slidesToShow: 6,
-        slidesToScroll: 2,
         variableWidth: true,
         dots: false,
         arrows: false,
@@ -139,12 +137,26 @@ jQuery(document).ready(function ($) {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 3
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
                 }
             }
         ]
     });
+
+
+    // $('.catalog-nav__brand').slick({
+    //     // infinite: true,
+    //     // speed: 300,
+    //     // dots: true,
+    //     variableWidth: true,
+    //     arrows: false,
+    //     infinite: false,
+    //     speed: 300,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 4,
+    // });
+
 
     var bidSliderArrowLeft = '<svg width="11" height="21" class="arrow-prev" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
         '<path d="M10.5 1L1 10.5L10.5 20" stroke="black"/>\n' +

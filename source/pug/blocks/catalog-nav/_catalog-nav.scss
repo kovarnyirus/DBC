@@ -15,16 +15,27 @@
 }
 
 .catalog-nav__category-item {
-  padding: 13px;
+  padding-top: 13px;
   padding-bottom: 8px;
+  padding-right: 5px;
+  padding-left: 5px;
   transition: .2s;
+  @include media-breakpoint-up(xl){
+    padding-right: 13px;
+    padding-left: 13px;
+  }
 
   &:first-child {
     text-align: left;
     padding-left: 0;
 
     &:hover {
-      padding-left: 13px;
+      padding-left: 5px;
+      padding-right: 5px;
+      @include media-breakpoint-up(xl){
+        padding-left: 13px;
+        padding-right: 13px;
+      }
     }
   }
 
@@ -51,6 +62,9 @@
       color: white;
       text-decoration: none;
     }
+  }
+  &-link{
+    font-size: 14px;
   }
 }
 
@@ -225,8 +239,6 @@
 
 .catalog-nav__brand-wrapper {
   display: flex;
-  overflow-x: hidden;
-
   & .slick-list {
     overflow-x: hidden;
   }
@@ -241,13 +253,18 @@
 }
 
 .catalog-nav__brand {
+  background-color: #F1F1F1;
+  @extend .container;
+  padding-right: 12px;
+  padding-left: 12px;
+  width: calc(100% - 75px);
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
-  background-color: #F1F1F1;
-  padding-right: 12px;
-  padding-left: 12px;
-  //flex-wrap: wrap;
+  @include media-breakpoint-up(md){
+
+    //flex-wrap: wrap;
+  }
 }
 
 .catalog-nav__brand-title {
@@ -293,6 +310,7 @@
   &:last-child {
     & .catalog-nav__brand-item-link {
       letter-spacing: 0.3em;
+      white-space: nowrap;
     }
   }
 }
