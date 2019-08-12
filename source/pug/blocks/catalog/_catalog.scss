@@ -318,11 +318,16 @@
 }
 
 .product-item__description {
-  min-height: 60px;
+  //min-height: 60px;
   margin-bottom: 4px;
   line-height: 114%;
-  display: block;
   color: $text-color;
+  height: 68px;
+  overflow: hidden;
+  display: block;
+  @include media-breakpoint-up(md){
+    height: 37px;
+  }
 }
 
 .product-item__title {
@@ -330,20 +335,33 @@
   font-size: 16px;
   display: block;
   color: $text-color;
+  @include media-breakpoint-down(sm) {
+    min-height: 48px;
+  }
 }
 
 .product-item__price {
   margin-top: 25px;
-  width: 80%;
 
-  & td {
-    min-width: 80px;
+  width: 100%;
+  @include media-breakpoint-up(md){
+    width: 80%;
+  }
+
+  & tr{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & td{
+    //min-width: 80px;
     @include media-breakpoint-down(sm) {
-      min-width: 55px;
+      //min-width: 55px;
     }
   }
 
   & tr:first-child {
+
     & .product-item__price-val {
       color: #4D4D4D;
     }
@@ -354,9 +372,11 @@
     & .product-item__price-val {
       color: #BE0B58;
       font-size: 14px;
-      @include media-breakpoint-down(md) {
-        font-size: 12px;
-        white-space: nowrap;
+      white-space: nowrap;
+      font-weight: normal;
+      @include media-breakpoint-up(md) {
+        //font-size: 12px;
+
       }
     }
 
@@ -367,6 +387,10 @@
 .product-item__price-name {
   text-align: left;
   font-weight: bold;
+  margin-top: 2px;
+  @include media-breakpoint-down(md) {
+    font-size: 12px;
+  }
 }
 
 .product-item__price-val {
@@ -415,7 +439,7 @@
 
 .product-item__basket {
   position: absolute;
-  right: 10px;
+  right: 18px;
   bottom: 35px;
   cursor: pointer;
   border-radius: 50%;
@@ -433,6 +457,11 @@
 
   @include media-breakpoint-down(sm) {
     position: static;
+    margin-top: 5px;
+    & .icon-basket{
+      width: 21px;
+      height: 21px;
+    }
   }
 }
 

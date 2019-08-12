@@ -21,7 +21,26 @@ jQuery(document).ready(function ($) {
         '              </svg>\n' +
         '            </button>'
 
-    $('.brand-slider__list').slick({
+    $('.brand-slider__list--no-arrows').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 6,
+        slidesToScroll: 2,
+        centerMode: true,
+        variableWidth: true,
+        dots: false,
+        arrows: false,
+        responsive: [{
+
+            breakpoint: 990,
+            settings: {
+                slidesToShow: 4,
+                arrows: false,
+            }
+        }]
+    });
+
+    $('.brand-slider__list--arrows').slick({
         infinite: true,
         speed: 300,
         slidesToShow: 6,
@@ -31,13 +50,13 @@ jQuery(document).ready(function ($) {
         dots: false,
         prevArrow: brandSliderBtrPrew,
         nextArrow: brandSliderBtrnext,
-        arrows: false,
+        arrows: true,
         responsive: [{
 
             breakpoint: 990,
             settings: {
                 slidesToShow: 4,
-                arrows: false,
+                arrows: true,
             }
         }]
     });

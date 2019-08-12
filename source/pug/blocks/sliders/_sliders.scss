@@ -105,6 +105,14 @@
 }
 
 
+.container{
+  & .brand-slider{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+
 .brand-slider {
   margin-bottom: 20px;
   position: relative;
@@ -127,6 +135,10 @@
 
   & .btn-next {
     right: -40px;
+  }
+  &__list--arrows{
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
