@@ -7,13 +7,10 @@ mixin mob-mnu()
 			+e.wrapper
 				.row.align-items-center.justify-content-between
 					.col-auto
-
+						+e.H2.title меню
 					.col-auto
 						button.toggle-menu.toggle-menu--menu-open
 							span
-					.col-auto
-						+e.A.logo(href="#")
-							img(src="img/header-logo.png", alt="logo" width='50')
 					.col-12
 						nav
 							+e.UL.list
@@ -33,14 +30,36 @@ mixin mob-mnu()
 									+e.A.link(href="#") Распродажа
 								+e.LI.item
 									+e.A.link(href="#") Опт
-					.col-12
+				.row.mb-4
+					.col-6
+							+e.A.logo(href="#")
+								img(src="img/header-logo.png", alt="logo" width='96')
+					.col-6
 						+b.tel-block
 							+e.item
 								+e.A.tel(href='#') 8 (800) 775-46-36
-								+e.description.text-left.mb-1 Звонок бесплатный
+								+e.description.mb-0 Звонок бесплатный
 							+e.item
 								+e.A.tel(href='#') 8 (499) 645-53-65
-								+e.description.text-left.mb-1 Для Москвы и МО
+				.row
+					.col-6
+						+b.soc
+							+soc('icon-fb')
+							+soc('icon-instagram')
+							+soc('icon-vk')
+					.col-6.mt-1
+						.row.justify-content-end
+							.col-auto.pr-1.pr-md-3
+								+e.A.user
+									.row
+										.col-auto.pr-md-1
+											+icon('icon-user')
+							.col-auto.pl-1.pr-1.pl-md-3.pr-md-2
+								+e.A.favourites
+									+icon('icon-heart')
+							.col-auto.pl-1.pl-md-3
+								+e.A.basket
+									+icon('icon-basket')
 
 	//  мобильное меню
 
