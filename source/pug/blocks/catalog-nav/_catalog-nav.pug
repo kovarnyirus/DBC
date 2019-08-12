@@ -241,6 +241,55 @@ mixin catalogFooterNav()
 							+e.LI.item
 								+e.A.link(href='#') 156
 
+mixin mobileLevel()
+	+e.level
+		+e.back
+			+e.BUTTON.btn-back.mobile-catalog__level-toggle
+		+e.category-wrapper.custom-scroll-js
+			+e.category
+				+e.A.category-title--list(href='#') Шампуни
+				+e.UL.category-list
+					+e.LI.category-item
+						+e.A.category-link.success-text-color(href='#') Все товары
+					+e.LI.category-item
+						+e.A.category-link(href='#') Сухие шампуни
+					+e.LI.category-item
+						+e.A.category-link(href='#') Для сухих волос
+					+e.LI.category-item
+						+e.A.category-link(href='#') Для крашенных волос
+					+e.LI.category-item
+						+e.A.category-link(href='#') Оттеночный шампунь
+					+e.LI.category-item
+						+e.A.category-link(href='#') Для роста волос
+					+e.LI.category-item
+						+e.A.category-link(href='#') Против выпадения волос
+					+e.LI.category-item
+						+e.A.category-link(href='#') Для жирных волос
+					+e.LI.category-item
+						+e.A.category-link(href='#') От перхоти
+					+e.LI.category-item
+						+e.A.category-link(href='#') Для вьющихся волос
+			+e.category
+				+e.A.category-title(href='#') Кондиционеры для волос
+			+e.category
+				+e.A.category-title(href='#') Маски для волос
+			+e.category
+				+e.A.category-title(href='#') Масла для волос
+			+e.category
+				+e.A.category-title(href='#') Сыворотки для волос
+			+e.category
+				+e.A.category-title(href='#') Ампулы для волос
+			+e.category
+				+e.A.category-title(href='#') Пилинги и скрабы для волос
+			+e.category
+				+e.A.category-title(href='#') Для укладки волос
+			+e.category
+				+e.A.category-title(href='#') Окрашивание волос
+			+e.category
+				+e.A.category-title(href='#') Кератиновое выпрямление волос
+
+
+
 mixin catalogMobileNav()
 	+b.mobile-catalog
 		+e.wrapper
@@ -251,27 +300,48 @@ mixin catalogMobileNav()
 			+e.levl-one
 				+e.UL.list
 					+e.LI.item
-						+e.A.link(href='#') НОВИНКИ
+						+e.A.link.mobile-catalog__level-toggle(href='#') НОВИНКИ
+						+mobileLevel()
+
 					+e.LI.item
-						+e.A.link(href='#') РАСПРОДАЖА
+						+e.A.link.mobile-catalog__level-toggle.attention(href='#') РАСПРОДАЖА
+						+mobileLevel()
+
 					+e.LI.item
-						+e.A.link(href='#') ВОЛОСЫ
+						+e.A.link.mobile-catalog__level-toggle(href='#') ВОЛОСЫ
+						+mobileLevel()
+
 					+e.LI.item
-						+e.A.link(href='#') ЛИЦО
+						+e.A.link.mobile-catalog__level-toggle(href='#') ЛИЦО
+						+mobileLevel()
+
 					+e.LI.item
-						+e.A.link(href='#') МАКИЯЖ
+						+e.A.link.mobile-catalog__level-toggle(href='#') МАКИЯЖ
+						+mobileLevel()
+
 					+e.LI.item
-						+e.A.link(href='#') ТЕЛО
+						+e.A.link.mobile-catalog__level-toggle(href='#') ТЕЛО
+						+mobileLevel()
+
 					+e.LI.item
-						+e.A.link(href='#') НОГТИ
+						+e.A.link.mobile-catalog__level-toggle(href='#') НОГТИ
+						+mobileLevel()
+
 					+e.LI.item
-						+e.A.link(href='#') ДЕТИ
+						+e.A.link.mobile-catalog__level-toggle(href='#') ДЕТИ
+						+mobileLevel()
+
 					+e.LI.item
-						+e.A.link(href='#') ДОМ
+						+e.A.link.mobile-catalog__level-toggle(href='#') ДОМ
+						+mobileLevel()
+
 					+e.LI.item
-						+e.A.link(href='#') МУЖЧИНАМ
+						+e.A.link.mobile-catalog__level-toggle(href='#') МУЖЧИНАМ
+						+mobileLevel()
 					+e.LI.item
-						+e.A.link(href='#') ПАРФЮМЕРИЯ
+						+e.A.link.mobile-catalog__level-toggle(href='#') ПАРФЮМЕРИЯ
+						+mobileLevel()
+
 					+e.LI.item
 						+e.A.link(href='#') ГИГИЕНА
 					+e.LI.item

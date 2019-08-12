@@ -327,7 +327,8 @@
     background-color: #ffffff;
     transform: rotate(45deg);
   }
-  &:after{
+
+  &:after {
     position: absolute;
     content: '';
     top: -20px;
@@ -397,7 +398,9 @@
   z-index: 5;
   transform: translateY(-100%);
   transition: .3s;
-  &--open{
+  overflow: hidden;
+
+  &--open {
     transform: translateY(0);
   }
 
@@ -410,24 +413,39 @@
     position: relative;
   }
 
-  &__title{
+  &__title {
     font-weight: bold;
   }
-  &__levl-one{
+
+  &__levl-one {
     padding-top: 22px;
     padding-left: 22px;
     padding-right: 22px;
   }
 
-  &__item{
+  &__item {
     margin-bottom: 22px;
     text-transform: uppercase;
+
+    & .mobile-catalog__level {
+      transition: .2s;
+      transform: translateX(-100%);
+    }
+
+    &--open {
+      & .mobile-catalog__level {
+        transform: translateX(0);
+      }
+    }
   }
 
-  &__link{
+  &__link {
     font-weight: bold;
+    &:hover{
+      text-decoration: none;
+      color: $success-color;
+    }
   }
-
 
 
   &__btn-close {
@@ -459,6 +477,79 @@
         top: 0;
       }
     }
+  }
+
+  &__level {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 40px;
+    display: flex;
+
+  }
+
+  &__back {
+    width: 50px;
+    background-color: #333333;
+  }
+
+  &__btn-back{
+    padding-top: 20px;
+    width: 9px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='20' viewBox='0 0 11 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 1L1 10L10 19' stroke='white'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: block;
+  }
+
+  &__category-wrapper {
+    background-color: #ffffff;
+    flex-grow: 1;
+    padding-top: 20px;
+    max-height: 625px;
+  }
+
+  &__category {
+    padding-left: 34px;
+  }
+
+  &__category-title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 130%;
+    color: #4D4D4D;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 18px;
+    text-transform: none;
+    display: inline-block;
+
+    &--list {
+      color: #5CBF1A;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__category-item {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+    color: #4D4D4D;
+    margin-bottom: 18px;
+    padding-left: 18px;
+  }
+
+  &__category-link {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+    text-transform: none;
   }
 
 }

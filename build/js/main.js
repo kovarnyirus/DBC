@@ -407,6 +407,10 @@ jQuery(document).ready(function ($) {
     });
 
 
+
+    $('.mobile-catalog__level-toggle').on('click', function (e) {
+        $(this).closest('.mobile-catalog__item').toggleClass('mobile-catalog__item--open');
+    });
 });
 
 
