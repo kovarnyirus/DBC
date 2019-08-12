@@ -323,20 +323,20 @@
   line-height: 114%;
   color: $text-color;
   display: -webkit-box;
-
-  max-height: 3.2rem;
-
-  -webkit-box-orient: vertical;
-
   overflow: hidden;
-
   text-overflow: ellipsis;
-
   white-space: normal;
-
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  @include media-breakpoint-up(sm){
+    height: 49px;
+    -webkit-line-clamp: 3;
+  }
   @include media-breakpoint-up(md){
     height: 37px;
+    -webkit-line-clamp: 2;
   }
 }
 
@@ -512,6 +512,9 @@
     margin-bottom: 13px;
     @include media-breakpoint-down(md) {
       margin-bottom: 3px;
+      &:last-child{
+        margin-bottom: 0;
+      }
       & img {
         width: 100%;
       }

@@ -379,15 +379,17 @@
     display: block;
     content: '';
     right: 0;
-    top: 0;
+    top: 50%;
     width: 40px;
-    height: 100%;
-    padding: 15px;
+    height: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
     cursor: pointer;
     background-image: url("data:image/svg+xml,%3Csvg width='9' height='5' viewBox='0 0 9 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1L4.5 4L1 1' stroke='%236CB13E' stroke-width='2' stroke-miterlimit='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: center;
     pointer-events: none;
+    transform: translateY(-50%);
   }
 }
 
