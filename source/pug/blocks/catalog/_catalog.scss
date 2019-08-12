@@ -322,9 +322,19 @@
   margin-bottom: 4px;
   line-height: 114%;
   color: $text-color;
-  height: 68px;
+  display: -webkit-box;
+
+  max-height: 3.2rem;
+
+  -webkit-box-orient: vertical;
+
   overflow: hidden;
-  display: block;
+
+  text-overflow: ellipsis;
+
+  white-space: normal;
+
+  -webkit-line-clamp: 3;
   @include media-breakpoint-up(md){
     height: 37px;
   }

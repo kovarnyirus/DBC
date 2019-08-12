@@ -48,9 +48,14 @@
     & .product-item__description {
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
       height: 68px;
+      max-height: 4.2rem;
+      text-overflow: ellipsis;
+      white-space: normal;
+      -webkit-line-clamp: 4;
+      /* autoprefixer: off */
+      -webkit-box-orient: vertical;
+      /* autoprefixer: on */
     }
   }
 }

@@ -166,11 +166,13 @@
 }
 
 .brand-slider__btn-prev {
-  left: -10px;
+  left: 0;
+  z-index: 2;
 }
 
 .brand-slider__btn-next {
   right: 0;
+  z-index: 2;
 }
 
 .brand-slider__title {
@@ -181,6 +183,39 @@
 .sale-slider {
   margin-bottom: 20px;
   position: relative;
+  &:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25px;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1;
+    content: '';
+    display: block;
+  }
+  &:after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 25px;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1;
+    content: '';
+    display: block;
+  }
+  & .brand-slider__btn-prev,
+  .brand-slider__btn-next{
+    width: 22px;
+    height: 22px;
+    & .icon{
+      width: 4px;
+      height: 8px;
+    }
+  }
 }
 
 .sale-slider__item {
@@ -209,8 +244,6 @@
 .sale-slider__img {
   margin-right: 35px;
   @include media-breakpoint-down(md) {
-    max-width: 150px;
-    height: auto;
   }
 }
 
@@ -218,9 +251,27 @@
   & .slick-list {
     overflow: visible;
     margin-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    @include media-breakpoint-up(md){
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
+
 }
 
 .sale-slider__list {
   overflow: hidden;
+}
+
+.brand-slider__list--no-arrows{
+  padding-left: 35px;
+  padding-right: 35px;
+  & .brand-slider__btn-prev{
+    left: 0;
+  }
+  & .brand-slider__btn-next{
+    right: 0;
+  }
 }

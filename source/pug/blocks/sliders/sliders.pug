@@ -34,6 +34,28 @@ mixin brendsSlider()
 			+e.IMG.slide(src='img/brand-slider/slide3.jpg')
 			+e.IMG.slide(src='img/brand-slider/slide4.jpg')
 
+mixin brendsSliderArrowsTitle(title)
+	+b.brand-slider
+		.container
+			+e.H2.title= title
+		+e.list--no-arrows
+			+e.IMG.slide(src='img/brand-slider/slide1.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide2.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide3.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide4.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide1.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide2.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide3.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide4.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide1.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide2.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide3.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide4.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide1.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide2.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide3.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide4.jpg')
+
 
 mixin brendsSliderTitle(title)
 	+b.brand-slider
@@ -52,6 +74,8 @@ mixin brendsSliderTitle(title)
 			+e.IMG.slide(src='img/brand-slider/slide4.jpg')
 
 mixin saleSlider()
+	.container
+		+e.H2.title.mt-4 Бренды со скидками
 	+b.sale-slider
 		+e.list
 			- for (var x = 0; x < 3; x++)

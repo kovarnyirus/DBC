@@ -7,6 +7,8 @@ mixin mob-mnu()
 			+e.wrapper
 				.row.align-items-center.justify-content-between
 					.col-auto
+						
+					.col-auto
 						button.toggle-menu.toggle-menu--menu-open
 							span
 					.col-auto
@@ -71,16 +73,17 @@ mixin top-nav()
 							+e.A.link(href="#") Опт
 				.col-6.col-lg-4
 					.row.justify-content-end
-						.col-auto.pr-1
+						.col-auto.pr-1.pr-md-3
 							+e.A.user
 								.row
-									.col-auto
+									.col-auto.pr-md-1
 										+icon('icon-user')
-									.col.d-none.d-md-block Ольга В.
-						.col-auto.pl-1.pr-1
+									.col.d-none.d-md-block.pl-1 Ольга В.
+						.col-auto.pl-1.pr-1.pl-md-3.pr-md-2
 							+e.A.favourites
 								+icon('icon-heart')
-						.col-auto.pl-1
+								+e.SPAN.favourites-number 10
+						.col-auto.pl-1.pl-md-3
 							+e.A.basket
 								+icon('icon-basket')
 								+e.basket-price.d-none.d-md-block 18 560 р.

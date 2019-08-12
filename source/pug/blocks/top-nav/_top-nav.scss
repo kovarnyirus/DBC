@@ -119,6 +119,15 @@
   }
 }
 
+.top-nav__favourites-number{
+  color: $success-color;
+  padding-left: 3px;
+  display: none;
+  @include media-breakpoint-up(md){
+    display: inline-block;
+  }
+}
+
 .toggle-menu {
   background-color: #ffffff;
   width: 20px;

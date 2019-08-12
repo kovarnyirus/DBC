@@ -1,10 +1,10 @@
 jQuery(document).ready(function ($) {
-    let brandSliderBtrPrew = '<button class="btn-prev brand-slider__btn-prev">\n' +
+    let brandSliderBtnPrev = '<button class="btn-prev brand-slider__btn-prev">\n' +
         '          <svg class="icon icon-arrow-left ">\n' +
         '            <use xlink:href="img/svg/sprite.svg#icon-arrow-left"></use>\n' +
         '          </svg>\n' +
         '        </button>';
-    let brandSliderBtrnext = '<button class="btn-next brand-slider__btn-next">\n' +
+    let brandSliderBtnNext = '<button class="btn-next brand-slider__btn-next">\n' +
         '          <svg class="icon icon-arrow-right ">\n' +
         '            <use xlink:href="img/svg/sprite.svg#icon-arrow-right"></use>\n' +
         '          </svg>\n' +
@@ -29,14 +29,24 @@ jQuery(document).ready(function ($) {
         centerMode: true,
         variableWidth: true,
         dots: false,
-        arrows: false,
+        prevArrow: brandSliderBtnPrev,
+        nextArrow: brandSliderBtnNext,
+        arrows: true,
         responsive: [{
 
             breakpoint: 990,
             settings: {
-                slidesToShow: 4,
+                slidesToShow: 3,
                 arrows: false,
             }
+        },
+            {
+
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: true,
+                }
         }]
     });
 
@@ -48,8 +58,8 @@ jQuery(document).ready(function ($) {
         centerMode: true,
         variableWidth: true,
         dots: false,
-        prevArrow: brandSliderBtrPrew,
-        nextArrow: brandSliderBtrnext,
+        prevArrow: brandSliderBtnPrev,
+        nextArrow: brandSliderBtnNext,
         arrows: true,
         responsive: [{
 
@@ -67,19 +77,31 @@ jQuery(document).ready(function ($) {
         slidesToShow: 6,
         centerMode: true,
         variableWidth: true,
-        // prevArrow: $('.sale-slider__btn-prev'),
-        // nextArrow: $('.sale-slider__btn-next'),
-        responsive: [{
-
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 4,
-                arrows: false
-
-            }
-
-
-        }]
+        prevArrow: brandSliderBtnPrev,
+        nextArrow: brandSliderBtnNext,
+        responsive: [
+            {
+                breakpoint: 99999,
+                settings: {
+                    slidesToShow: 4,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                    arrows: true
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: true
+                }
+            },
+        ]
     });
 
     $('.advertising__slider').slick({
