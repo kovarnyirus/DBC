@@ -28,6 +28,41 @@ mixin advertisingNoBg(title)
 					+product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
 					+product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
 
+mixin advertisingNoBgFirstNone(first, title)
+	+b.advertising--bg
+		.container
+			+e.H2.title
+				sapn.d-none.d-lg-inline= first
+				span= title
+			+e.slider-wrapper
+				+e.slider
+					+product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
+					+product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
+					+product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
+					+product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
+					+product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
+					+product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
+					+product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
+					+product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
+
+
+mixin advertisingNoBgLastNone(first, title)
+	+b.advertising--bg
+		.container
+			+e.H2.title
+				sapn= first
+				span.d-none.d-lg-inline= title
+			+e.slider-wrapper
+				+e.slider
+					+product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
+					+product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
+					+product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
+					+product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
+					+product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
+					+product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
+					+product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
+					+product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
+
 
 mixin buttons()
 	BUTTON.btn-prev.advertising__btn-prev
