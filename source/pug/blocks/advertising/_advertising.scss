@@ -73,6 +73,8 @@
     margin-left: 0;
     margin-right: 0;
     width: 160px;
+    padding-left: 20px;
+    padding-right: 20px;
     @include media-breakpoint-up(sm) {
       width: 273px;
       margin-left: 3px;
