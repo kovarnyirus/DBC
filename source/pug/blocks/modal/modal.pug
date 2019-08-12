@@ -176,8 +176,8 @@ mixin modals()
 			+e.text.text-center Введите Ваши данные для входа
 			.row.justify-content-center
 				.col-12
-					+inputLabel("E-mail","E-mail")(required)
-					+inputLabel("password","Пароль")(required)
+					+input("E-mail","Введите e-mail")(required)
+					+input("password","Пароль")(required)
 				.col-auto.ml-auto.mb-2
 					+e.A.link--footer(href='#') Забыли пароль?
 			+e.btn.btn.mb-3(type="submit") Войти
