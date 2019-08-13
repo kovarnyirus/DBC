@@ -162,7 +162,8 @@ mixin product-item(img, title, description, size)
 				+e.TD.price-val 490 p
 			tr
 				+e.TD.price-name VIP
-				+e.TD.price-val узнать цену
+				+e.TD.price-val
+					+e.A.price-val-link.popup-with-move-anim(href='#modal-vip') узнать цену
 		+e.icons
 			+e.A.favourites
 				+icon('icon-favourites')
@@ -193,7 +194,8 @@ mixin product-item-markdown(img, title, description, size)
 				+e.TD.price-val 490 p
 			tr
 				+e.TD.price-name VIP
-				+e.TD.price-val узнать цену
+				+e.TD.price-val
+					+e.A.price-val-link.popup-with-move-anim(href='#modal-vip') узнать цену
 		+e.icons
 			+e.A.favourites
 				+icon('icon-favourites')

@@ -34,9 +34,9 @@ jQuery(document).ready(function ($) {
         arrows: true,
         responsive: [{
 
-            breakpoint: 990,
+            breakpoint: 99999,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: 4,
                 arrows: false,
             }
         },
@@ -61,14 +61,17 @@ jQuery(document).ready(function ($) {
         prevArrow: brandSliderBtnPrev,
         nextArrow: brandSliderBtnNext,
         arrows: true,
-        responsive: [{
+        responsive: [
+            {
 
-            breakpoint: 990,
-            settings: {
-                slidesToShow: 4,
-                arrows: true,
-            }
-        }]
+                breakpoint: 990,
+                settings: {
+                    slidesToShow: 4,
+                    arrows: true,
+                }
+            },
+
+        ]
     });
 
     $('.sale-slider__list').slick({
@@ -105,23 +108,25 @@ jQuery(document).ready(function ($) {
     });
 
     $('.advertising__slider').slick({
-        infinite: true,
-        speed: 300,
         slidesToShow: 2,
+        slidesToScroll: 1,
         variableWidth: true,
         dots: false,
-        loop: true,
         prevArrow: advertisingSliderPrev,
         nextArrow: advertisingSliderNext,
-        mobileFirst: true,
         rows: 0,
+        infinite: true,
+        speed: 450,
+        loop: true,
+        // arrows: true,
+        // mobileFirst: true,
         responsive: [
             {
                 breakpoint: 1200,
                 settings: {
 
                     slidesToShow: 4,
-                    slidesToScroll: 4,
+                    slidesToScroll: 1,
                 }
             },
             {
@@ -129,7 +134,7 @@ jQuery(document).ready(function ($) {
                 settings: {
 
                     slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
                 }
             },
 
@@ -141,6 +146,14 @@ jQuery(document).ready(function ($) {
                     slidesToScroll: 2,
                 }
             },
+            {
+                breakpoint: 320,
+                settings: {
+
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            }
         ]
     });
 
@@ -165,19 +178,6 @@ jQuery(document).ready(function ($) {
             }
         ]
     });
-
-
-    // $('.catalog-nav__brand').slick({
-    //     // infinite: true,
-    //     // speed: 300,
-    //     // dots: true,
-    //     variableWidth: true,
-    //     arrows: false,
-    //     infinite: false,
-    //     speed: 300,
-    //     slidesToShow: 4,
-    //     slidesToScroll: 4,
-    // });
 
 
     var bidSliderArrowLeft = '<svg width="11" height="21" class="arrow-prev" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
@@ -408,15 +408,20 @@ jQuery(document).ready(function ($) {
 
     $(".toggle-menu").click(function () {
         $(".mobile-menu").toggleClass('mobile-menu--open');
+        $('html').toggleClass('overflowHidden');
     });
+
 
     $(".top-nav__catalog-btn").click(function () {
         $(".mobile-catalog").toggleClass('mobile-catalog--open');
+        $('html').toggleClass('overflowHidden');
     });
 
     $(".mobile-catalog__btn-close").click(function () {
         $(".mobile-catalog").toggleClass('mobile-catalog--open');
+        $('html').toggleClass('overflowHidden');
     });
+
     $(".mobile-filer-toggle").click(function () {
         $(".mobile-filter").toggleClass('mobile-filter--open');
     });
@@ -463,6 +468,7 @@ jQuery(document).ready(function ($) {
 
     $('.mobile-catalog__level-toggle').on('click', function (e) {
         $(this).closest('.mobile-catalog__item').toggleClass('mobile-catalog__item--open');
+
     });
 });
 

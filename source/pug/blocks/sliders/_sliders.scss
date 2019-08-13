@@ -188,7 +188,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 25px;
+    width: 35px;
     height: 100%;
     background-color: #ffffff;
     z-index: 1;
@@ -200,7 +200,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 25px;
+    width: 35px;
     height: 100%;
     background-color: #ffffff;
     z-index: 1;
@@ -212,9 +212,15 @@
     width: 22px;
     height: 22px;
     & .icon{
-      width: 4px;
-      height: 8px;
+      width: 6px;
+      height: 10px;
     }
+  }
+  & .brand-slider__btn-next{
+    right: 10px;
+  }
+  & .brand-slider__btn-prev{
+    left: 10px;
   }
 }
 
@@ -273,5 +279,9 @@
   }
   & .brand-slider__btn-next{
     right: 0;
+  }
+  @include media-breakpoint-up(md){
+    padding-left: 0;
+    padding-right: 0;
   }
 }

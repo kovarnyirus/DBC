@@ -1,8 +1,11 @@
 .instagram-block {
+  margin-bottom: 30px;
   & .container {
     overflow: hidden;
   }
-
+  @include media-breakpoint-up(md){
+    margin-bottom: 70px;
+  }
 }
 
 .instagram-block__title {

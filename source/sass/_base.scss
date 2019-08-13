@@ -163,6 +163,7 @@ button::-moz-focus-inner {
 a {
   color: inherit;
   cursor: pointer;
+  outline: none;
 }
 
 .btn-close {
@@ -804,4 +805,8 @@ textarea {
       background-position: center;
     }
   }
+}
+
+.overflowHidden{
+  overflow: hidden;
 }
