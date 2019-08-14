@@ -781,3 +781,10 @@
   top: 15px;
   z-index: 2;
 }
+
+
+.search{
+  & .catalog__head{
+    padding-top: 0;
+  }
+}

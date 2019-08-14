@@ -19,7 +19,38 @@ jQuery(document).ready(function ($) {
         '              <svg class="icon icon-arrow-left ">\n' +
         '                <use xlink:href="img/svg/sprite.svg#icon-arrow-left"></use>\n' +
         '              </svg>\n' +
-        '            </button>'
+        '            </button>';
+
+    let bidSliderArrowLeft = '<svg width="11" height="21" class="arrow-prev" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<path d="M10.5 1L1 10.5L10.5 20" stroke="black"/>\n' +
+        '</svg>';
+
+    let bidSliderArrowRight = '<svg width="12" height="21" class="arrow-next" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<path d="M1 20L10.5 10.5L1 0.999999" stroke="black"/>\n' +
+        '</svg>\n';
+
+    $('.big-slider').slick({
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: bidSliderArrowLeft,
+        nextArrow: bidSliderArrowRight,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 99999,
+                settings: {
+                    // arrows: true,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                }
+            }
+        ]
+    });
 
     $('.brand-slider__list--no-arrows').slick({
         infinite: true,
@@ -79,12 +110,19 @@ jQuery(document).ready(function ($) {
         speed: 300,
         slidesToShow: 6,
         centerMode: true,
-        variableWidth: true,
+        // variableWidth: true,
         prevArrow: brandSliderBtnPrev,
         nextArrow: brandSliderBtnNext,
         responsive: [
             {
                 breakpoint: 99999,
+                settings: {
+                    slidesToShow: 7,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 4,
                     arrows: false
@@ -93,7 +131,7 @@ jQuery(document).ready(function ($) {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 3,
                     arrows: true
                 }
             },
@@ -104,28 +142,33 @@ jQuery(document).ready(function ($) {
                     arrows: true
                 }
             },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: true
+                }
+            },
         ]
     });
 
     $('.advertising__slider').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
-        variableWidth: true,
         dots: false,
-        prevArrow: advertisingSliderPrev,
-        nextArrow: advertisingSliderNext,
-        rows: 0,
         infinite: true,
         speed: 450,
         loop: true,
-        // arrows: true,
-        // mobileFirst: true,
+        mobileFirst: true,
+        rows:0,
+        prevArrow: advertisingSliderPrev,
+        nextArrow: advertisingSliderNext,
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 320,
                 settings: {
 
-                    slidesToShow: 4,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             },
@@ -137,25 +180,18 @@ jQuery(document).ready(function ($) {
                     slidesToScroll: 1,
                 }
             },
-
             {
-                breakpoint: 576,
+                breakpoint: 1200,
                 settings: {
 
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                }
-            },
-            {
-                breakpoint: 320,
-                settings: {
-
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
                 }
             }
         ]
     });
+
+
 
     $('.catalog-nav__brand').slick({
         infinite: true,
@@ -174,37 +210,6 @@ jQuery(document).ready(function ($) {
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 4,
-                }
-            }
-        ]
-    });
-
-
-    var bidSliderArrowLeft = '<svg width="11" height="21" class="arrow-prev" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-        '<path d="M10.5 1L1 10.5L10.5 20" stroke="black"/>\n' +
-        '</svg>';
-    var bidSliderArrowRight = '<svg width="12" height="21" class="arrow-next" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-        '<path d="M1 20L10.5 10.5L1 0.999999" stroke="black"/>\n' +
-        '</svg>\n';
-
-    $('.big-slider').slick({
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: bidSliderArrowLeft,
-        nextArrow: bidSliderArrowRight,
-        dots: true,
-        responsive: [
-            {
-                breakpoint: 99999,
-                settings: {
-                    // arrows: true,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
                 }
             }
         ]

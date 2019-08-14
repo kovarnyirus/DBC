@@ -5,7 +5,7 @@
   @include media-breakpoint-up(md) {
     padding-top: 71px;
     padding-bottom: 71px;
-    &:last-child{
+    &:last-child {
       padding-top: 0;
     }
   }
@@ -77,23 +77,36 @@
   & .slick-slide {
     margin-left: 0;
     margin-right: 0;
-    width: 160px;
+    //width: 160px;
     padding-left: 20px;
     padding-right: 20px;
-    @include media-breakpoint-up(sm) {
-      width: 273px;
+    max-width: 100%;
+    width: 100%;
+    //@include media-breakpoint-up(sm) {
+    //  width: 266px;
+    //  margin-left: 3px;
+    //  margin-right: 3px;
+    //}
+    @include media-breakpoint-up(md) {
+      //width: 235px;
       margin-left: 3px;
       margin-right: 3px;
     }
-    @include media-breakpoint-up(lg) {
-      width: 100%;
-      max-width: 305px;
-    }
-    @include media-breakpoint-up(xl) {
-      max-width: 272px;
-    }
-    @media (min-width: 1465px) {
-      width: 277px;
+    //@include media-breakpoint-up(lg) {
+    //  width: 305px;
+    //  max-width: 100%;
+    //}
+    //@include media-breakpoint-up(xl) {
+    //  width: 272px;
+    //}
+    //@include media-breakpoint-up(xxl) {
+    //  width: 277px;
+    //}
+  }
+  & .product-item__price{
+    margin-top: 5px;
+    @include media-breakpoint-up(md) {
+      margin-top: 25px;
     }
   }
 }

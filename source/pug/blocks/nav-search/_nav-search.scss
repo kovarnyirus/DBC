@@ -10,7 +10,7 @@
   &__form {
     position: relative;
     max-width: 628px;
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(xl){
       margin-left: 47px;
     }
   }

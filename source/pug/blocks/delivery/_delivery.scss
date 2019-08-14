@@ -28,7 +28,7 @@
 
   &__map-table {
     margin-bottom: 25px;
-
+    width: 100%;
     & tr {
       border-bottom: 2px solid #000000;
 
@@ -64,7 +64,7 @@
       }
     }
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       & tbody {
         display: flex;
         justify-content: space-between;
@@ -236,7 +236,7 @@
 
     @include media-breakpoint-down(sm) {
       & .delivery__sale{
-        padding-left: 0;
+
         margin-bottom: 5px;
         font-size: 14px;
       }
