@@ -107,8 +107,8 @@
 
 .container{
   & .brand-slider{
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -130,11 +130,11 @@
 
   & .btn-prev {
     position: absolute;
-    left: -40px;
+    left: -30px;
   }
 
   & .btn-next {
-    right: -40px;
+    right: -30px;
   }
   &__list--arrows{
     padding-left: 15px;
@@ -178,6 +178,11 @@
 .brand-slider__title {
   color: $text-color;
   font-weight: bold;
+}
+
+.brand-slider__slide{
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .sale-slider {
