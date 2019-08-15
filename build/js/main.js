@@ -475,6 +475,11 @@ jQuery(document).ready(function ($) {
         $(this).closest('.mobile-catalog__item').toggleClass('mobile-catalog__item--open');
 
     });
+
+    $('.cut-price__btn').on('click', function (e) {
+        $(this).closest('.cut-price').toggleClass('cut-price--open');
+
+    });
 });
 
 

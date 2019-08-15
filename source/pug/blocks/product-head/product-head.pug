@@ -1,516 +1,582 @@
 mixin product-head()
-  +b.product-head
-    .container
-      .row
-        .col-12.col-xl-6
-          +e.H1.title.d-md-none Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
-            +e.subtitle.d-md-none Набор: шампунь и кондиционер для сухих волос
-          +e.sliders
-            .row
-              .col-12.col-md-10
-                +e.slider-big-container
-                  +e.slider-big-like
-                    +icon('icon-heart')
-                    | wishlist
-                  +e.slider-big
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-              .col-12.col-md-2
-                +e.slider-small
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                    +e.A.video-link(href='http://www.youtube.com/watch?v=0O2aH4XLbto')
-                      +icon('icon-play')
-            +e.P.footer.text-secondary Фактический вид товара может отличаться от изображения на сайте
+	+b.product-head
+		.container
+			.row
+				.col-12.col-xl-6
+					+e.H1.title.d-md-none Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
+						+e.subtitle.d-md-none Набор: шампунь и кондиционер для сухих волос
+					+e.sliders
+						.row
+							.col-12.col-md-10
+								+e.slider-big-container
+									+e.slider-big-like
+										+icon('icon-heart')
+										| wishlist
+									+e.slider-big
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+							.col-12.col-md-2
+								+e.slider-small
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										+e.A.video-link(href='http://www.youtube.com/watch?v=0O2aH4XLbto')
+											+icon('icon-play')
+						+e.P.footer.text-secondary Фактический вид товара может отличаться от изображения на сайте
 
-        .col-12.col-xl-6
-          +e.H1.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
-          +e.subtitle Набор: шампунь и кондиционер для сухих волос
-          .row.mb-4.pb-2
-            .col-12.col-md-6.d-flex.align-items-center.mb-3
-              +icon('icon-heart')
-              +icon('icon-share')
-              +e.cost 650 Р
-                +e.old-cost 1 251 Р
-              +discountType('-10', 'SALE')
+				.col-12.col-xl-6
+					+e.H1.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
+					+e.subtitle Набор: шампунь и кондиционер для сухих волос
+					.row.mb-4.pb-2
+						.col-12.col-md-6.d-flex.align-items-center.mb-3
+							+icon('icon-heart')
+							+icon('icon-share')
+							+e.cost 650 Р
+								+e.old-cost 1 251 Р
+							+discountType('-10', 'SALE')
 
-            .col-12.col-md-6
-              .d-flex
-                +b.block-add
-                  .d-flex.flex-grow-1.align-items-center
-                    +e.btn--minus
-                    +e.INPUT.form-control(type="text" value="10")
-                    +e.btn--plus
+						.col-12.col-md-6
+							.d-flex
+								+b.block-add
+									.d-flex.flex-grow-1.align-items-center
+										+e.btn--minus
+										+e.INPUT.form-control(type="text" value="10")
+										+e.btn--plus
 
-                  a.btn.btn-buy(href='#') В корзину
-                    +icon('icon-basket')
-          .row
-            .col-6
-              +e.sale
-                +e.sale-title mini sale
-                  +discount(5)
-                +e.sale-subtutle от 3000 р
-                +e.cost 634 Р
-            .col-6
-              +e.sale
-                +e.sale-title maxi sale
-                  +discount(7)
-                +e.sale-subtutle от 3000 р
-                +e.cost 620 Р
-          .row
-            .col-12.col-md-6
-              +e.A.btn.success-text-color(href='#') Узнать VIP цену
-            .col-12.col-md-6
-              +e.A.btn(href='#') Посмотреть уцененный товар
+									a.btn.btn-buy(href='#') В корзину
+										+icon('icon-basket')
+					.row
+						.col-6
+							+e.sale
+								+e.sale-title mini sale
+									+discount(5)
+								+e.sale-subtutle от 3000 р
+								+e.cost 634 Р
+						.col-6
+							+e.sale
+								+e.sale-title maxi sale
+									+discount(7)
+								+e.sale-subtutle от 3000 р
+								+e.cost 620 Р
+					.row
+						.col-12.col-md-6
+							+e.A.btn.success-text-color(href='#') Узнать VIP цену
+						.col-12.col-md-6
+							+b.cut-price--open
+								+e.BUTTON.btn.product-head__btn Посмотреть уцененный товар
+								+e.wrapper
+									+e.list.custom-scroll-js
+										+e.item
+											.row
+												.col-3
+													+e.IMG.img(src='img/product/prod-item.jpg')
+												.col-9
+													+e.H3.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
+											.row.mb-2
+												.col-6
+													+e.SPAN.old-cost 10 066
+													+e.SPAN.percent   -35%
+												.col-6
+													+e.cost 5 634 Р
+											.row
+												.col-12
+													+e.reason-title Причина уценки
+												.col-12
+													+e.reason Дефекты на внешеней упаковке
+												.col-12
+													+e.A.btn-basket.btn.btn-buy(href='#') В корзину
+														+icon('icon-basket')
+										+e.item
+											.row
+												.col-3
+													+e.IMG.img(src='img/product/prod-item.jpg')
+												.col-9
+													+e.H3.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
+											.row.mb-2
+												.col-6
+													+e.SPAN.old-cost 10 066
+													+e.SPAN.percent   -35%
+												.col-6
+													+e.cost 5 634 Р
+											.row
+												.col-12
+													+e.reason-title Причина уценки
+												.col-12
+													+e.reason Дефекты на внешеней упаковке
+												.col-12
+													+e.A.btn-basket.btn.btn-buy(href='#') В корзину
+														+icon('icon-basket')
+										+e.item
+											.row
+												.col-3
+													+e.IMG.img(src='img/product/prod-item.jpg')
+												.col-9
+													+e.H3.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
+											.row.mb-2
+												.col-6
+													+e.SPAN.old-cost 10 066
+													+e.SPAN.percent   -35%
+												.col-6
+													+e.cost 5 634 Р
+											.row
+												.col-12
+													+e.reason-title Причина уценки
+												.col-12
+													+e.reason Дефекты на внешеней упаковке
+												.col-12
+													+e.A.btn-basket.btn.btn-buy(href='#') В корзину
+														+icon('icon-basket')
 
-          .row
-            .col-6
-              +productHeadInfo('Артикул' , 'URU09764')
-              +productHeadInfo('Штрих код' , '1120421133410')
 
-            .col-6
-              +productHeadInfoSelectedText('Бренд', 'Matrix')
-              +productHeadInfo('Фасовка' , 'Да')
-          .row
-            .col-12.col-md-6.order-md-2
-              +productHeadInfo('Категория' , 'Лицо')
-              +productHeadInfo('Назначение' , 'Питание,  Лечение')
-            .col-12.col-md-6.order-md-1
-              .row.align-items-center.pt-3.mb-2
-                .col-auto.mb-1
-                  +e.SPAN.rating
-                    +stars(4, 55)
-                .col-auto.mb-1
-                  +e.bought
-                    span.marker.marker--green 25
-                    | купили
+
+
+					.row
+						.col-6
+							+productHeadInfo('Артикул' , 'URU09764')
+							+productHeadInfo('Штрих код' , '1120421133410')
+
+						.col-6
+							+productHeadInfoSelectedText('Бренд', 'Matrix')
+							+productHeadInfo('Фасовка' , 'Да')
+					.row
+						.col-12.col-md-6.order-md-2
+							+productHeadInfo('Категория' , 'Лицо')
+							+productHeadInfo('Назначение' , 'Питание,  Лечение')
+						.col-12.col-md-6.order-md-1
+							.row.align-items-center.pt-3.mb-2
+								.col-auto.mb-1
+									+e.SPAN.rating
+										+stars(4, 55)
+								.col-auto.mb-1
+									+e.bought
+										span.marker.marker--green 25
+										| купили
 mixin product-head-mini()
-  +b.product-head
-    .container
-      .row
-        .col-12.col-xl-6
-          +e.H1.title.d-md-none Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
-            +e.subtitle.d-md-none Набор: шампунь и кондиционер для сухих волос
-          +e.sliders
-            .row
-              .col-12.col-md-10
-                +e.slider-big-container
-                  +e.slider-big-like
-                    +icon('icon-heart')
-                    | wishlist
-                  +e.slider-big
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-              .col-12.col-md-2
-                +e.slider-small
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                    +e.A.video-link(href='http://www.youtube.com/watch?v=0O2aH4XLbto')
-                      +icon('icon-play')
-            +e.P.footer.text-secondary Фактический вид товара может отличаться от изображения на сайте
+	+b.product-head
+		.container
+			.row
+				.col-12.col-xl-6
+					+e.H1.title.d-md-none Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
+						+e.subtitle.d-md-none Набор: шампунь и кондиционер для сухих волос
+					+e.sliders
+						.row
+							.col-12.col-md-10
+								+e.slider-big-container
+									+e.slider-big-like
+										+icon('icon-heart')
+										| wishlist
+									+e.slider-big
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+							.col-12.col-md-2
+								+e.slider-small
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										+e.A.video-link(href='http://www.youtube.com/watch?v=0O2aH4XLbto')
+											+icon('icon-play')
+						+e.P.footer.text-secondary Фактический вид товара может отличаться от изображения на сайте
 
-        .col-12.col-xl-6
-          +e.H1.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
-          +e.subtitle Набор: шампунь и кондиционер для сухих волос
-          .row.mb-4.pb-2
-            .col-12.col-md-6.d-flex.align-items-center.mb-3
-              +icon('icon-heart')
-              +icon('icon-share')
-              +e.cost 650 Р
-                +e.old-cost 1 251 Р
-              +discountType('-10', 'mini')
+				.col-12.col-xl-6
+					+e.H1.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
+					+e.subtitle Набор: шампунь и кондиционер для сухих волос
+					.row.mb-4.pb-2
+						.col-12.col-md-6.d-flex.align-items-center.mb-3
+							+icon('icon-heart')
+							+icon('icon-share')
+							+e.cost 650 Р
+								+e.old-cost 1 251 Р
+							+discountType('-10', 'mini')
 
-            .col-12.col-md-6
-              .d-flex
-                +b.block-add
-                  .d-flex.flex-grow-1.align-items-center
-                    +e.btn--minus
-                    +e.INPUT.form-control(type="text" value="10")
-                    +e.btn--plus
+						.col-12.col-md-6
+							.d-flex
+								+b.block-add
+									.d-flex.flex-grow-1.align-items-center
+										+e.btn--minus
+										+e.INPUT.form-control(type="text" value="10")
+										+e.btn--plus
 
-                  a.btn.btn-buy(href='#') В корзину
-                    +icon('icon-basket')
-          .row
-            .col-6
-              +e.sale
-                +e.sale-title mini sale
-                  +discount(5)
-                +e.sale-subtutle от 3000 р
-                +e.cost 634 Р
-            .col-6
-              +e.sale
-                +e.sale-title maxi sale
-                  +discount(7)
-                +e.sale-subtutle от 3000 р
-                +e.cost 620 Р
-          .row
-            .col-12.col-md-6
-              +e.A.btn.success-text-color(href='#') Узнать VIP цену
-            .col-12.col-md-6
-              +e.A.btn(href='#') Посмотреть уцененный товар
+									a.btn.btn-buy(href='#') В корзину
+										+icon('icon-basket')
+					.row
+						.col-6
+							+e.sale
+								+e.sale-title mini sale
+									+discount(5)
+								+e.sale-subtutle от 3000 р
+								+e.cost 634 Р
+						.col-6
+							+e.sale
+								+e.sale-title maxi sale
+									+discount(7)
+								+e.sale-subtutle от 3000 р
+								+e.cost 620 Р
+					.row
+						.col-12.col-md-6
+							+e.A.btn.success-text-color(href='#') Узнать VIP цену
+						.col-12.col-md-6
+							+e.A.btn(href='#') Посмотреть уцененный товар
 
-          .row
-            .col-6
-              +productHeadInfo('Артикул' , 'URU09764')
-              +productHeadInfo('Штрих код' , '1120421133410')
+					.row
+						.col-6
+							+productHeadInfo('Артикул' , 'URU09764')
+							+productHeadInfo('Штрих код' , '1120421133410')
 
-            .col-6
-              +productHeadInfoSelectedText('Бренд', 'Matrix')
-              +productHeadInfo('Фасовка' , 'Да')
-          .row
-            .col-12.col-md-6.order-md-2
-              +productHeadInfo('Категория' , 'Лицо')
-              +productHeadInfo('Назначение' , 'Питание,  Лечение')
-            .col-12.col-md-6.order-md-1
-              .row.align-items-center.pt-3
-                .col-auto
-                  +e.SPAN.rating
-                    +stars(4, 55)
-                .col-auto
-                  +e.bought
-                    span.marker.marker--green 25
-                    | купили
+						.col-6
+							+productHeadInfoSelectedText('Бренд', 'Matrix')
+							+productHeadInfo('Фасовка' , 'Да')
+					.row
+						.col-12.col-md-6.order-md-2
+							+productHeadInfo('Категория' , 'Лицо')
+							+productHeadInfo('Назначение' , 'Питание,  Лечение')
+						.col-12.col-md-6.order-md-1
+							.row.align-items-center.pt-3
+								.col-auto
+									+e.SPAN.rating
+										+stars(4, 55)
+								.col-auto
+									+e.bought
+										span.marker.marker--green 25
+										| купили
 mixin product-head-maxi()
-  +b.product-head
-    .container
-      .row
-        .col-12.col-xl-6
-          +e.H1.title.d-md-none Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
-            +e.subtitle.d-md-none Набор: шампунь и кондиционер для сухих волос
-          +e.sliders
-            .row
-              .col-12.col-md-10
-                +e.slider-big-container
-                  +e.slider-big-like
-                    +icon('icon-heart')
-                    | wishlist
-                  +e.slider-big
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-              .col-12.col-md-2
-                +e.slider-small
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                    +e.A.video-link(href='http://www.youtube.com/watch?v=0O2aH4XLbto')
-                      +icon('icon-play')
-            +e.P.footer.text-secondary Фактический вид товара может отличаться от изображения на сайте
+	+b.product-head
+		.container
+			.row
+				.col-12.col-xl-6
+					+e.H1.title.d-md-none Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
+						+e.subtitle.d-md-none Набор: шампунь и кондиционер для сухих волос
+					+e.sliders
+						.row
+							.col-12.col-md-10
+								+e.slider-big-container
+									+e.slider-big-like
+										+icon('icon-heart')
+										| wishlist
+									+e.slider-big
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+							.col-12.col-md-2
+								+e.slider-small
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										+e.A.video-link(href='http://www.youtube.com/watch?v=0O2aH4XLbto')
+											+icon('icon-play')
+						+e.P.footer.text-secondary Фактический вид товара может отличаться от изображения на сайте
 
-        .col-12.col-xl-6
-          +e.H1.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
-          +e.subtitle Набор: шампунь и кондиционер для сухих волос
-          .row.mb-4.pb-2
-            .col-12.col-md-6.d-flex.align-items-center.mb-3
-              +icon('icon-heart')
-              +icon('icon-share')
-              +e.cost 650 Р
-                +e.old-cost 1 251 Р
-              +discountType('-10', 'MAXI')
+				.col-12.col-xl-6
+					+e.H1.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
+					+e.subtitle Набор: шампунь и кондиционер для сухих волос
+					.row.mb-4.pb-2
+						.col-12.col-md-6.d-flex.align-items-center.mb-3
+							+icon('icon-heart')
+							+icon('icon-share')
+							+e.cost 650 Р
+								+e.old-cost 1 251 Р
+							+discountType('-10', 'MAXI')
 
-            .col-12.col-md-6
-              .d-flex
-                +b.block-add
-                  .d-flex.flex-grow-1.align-items-center
-                    +e.btn--minus
-                    +e.INPUT.form-control(type="text" value="10")
-                    +e.btn--plus
+						.col-12.col-md-6
+							.d-flex
+								+b.block-add
+									.d-flex.flex-grow-1.align-items-center
+										+e.btn--minus
+										+e.INPUT.form-control(type="text" value="10")
+										+e.btn--plus
 
-                  a.btn.btn-buy(href='#') В корзину
-                    +icon('icon-basket')
-          .row
-            .col-6
-              +e.sale
-                +e.sale-title mini sale
-                  +discount(5)
-                +e.sale-subtutle от 3000 р
-                +e.cost 634 Р
-            .col-6
-              +e.sale
-                +e.sale-title maxi sale
-                  +discount(7)
-                +e.sale-subtutle от 3000 р
-                +e.cost 620 Р
-          .row
-            .col-12.col-md-6
-              +e.A.btn.success-text-color(href='#') Узнать VIP цену
-            .col-12.col-md-6
-              +e.A.btn(href='#') Посмотреть уцененный товар
+									a.btn.btn-buy(href='#') В корзину
+										+icon('icon-basket')
+					.row
+						.col-6
+							+e.sale
+								+e.sale-title mini sale
+									+discount(5)
+								+e.sale-subtutle от 3000 р
+								+e.cost 634 Р
+						.col-6
+							+e.sale
+								+e.sale-title maxi sale
+									+discount(7)
+								+e.sale-subtutle от 3000 р
+								+e.cost 620 Р
+					.row
+						.col-12.col-md-6
+							+e.A.btn.success-text-color(href='#') Узнать VIP цену
+						.col-12.col-md-6
+							+e.A.btn(href='#') Посмотреть уцененный товар
 
-          .row
-            .col-6
-              +productHeadInfo('Артикул' , 'URU09764')
-              +productHeadInfo('Штрих код' , '1120421133410')
+					.row
+						.col-6
+							+productHeadInfo('Артикул' , 'URU09764')
+							+productHeadInfo('Штрих код' , '1120421133410')
 
-            .col-6
-              +productHeadInfoSelectedText('Бренд', 'Matrix')
-              +productHeadInfo('Фасовка' , 'Да')
-          .row
-            .col-12.col-md-6.order-md-2
-              +productHeadInfo('Категория' , 'Лицо')
-              +productHeadInfo('Назначение' , 'Питание,  Лечение')
-            .col-12.col-md-6.order-md-1
-              .row.align-items-center.pt-3
-                .col-auto
-                  +e.SPAN.rating
-                    +stars(4, 55)
-                .col-auto
-                  +e.bought
-                    span.marker.marker--green 25
-                    | купили
+						.col-6
+							+productHeadInfoSelectedText('Бренд', 'Matrix')
+							+productHeadInfo('Фасовка' , 'Да')
+					.row
+						.col-12.col-md-6.order-md-2
+							+productHeadInfo('Категория' , 'Лицо')
+							+productHeadInfo('Назначение' , 'Питание,  Лечение')
+						.col-12.col-md-6.order-md-1
+							.row.align-items-center.pt-3
+								.col-auto
+									+e.SPAN.rating
+										+stars(4, 55)
+								.col-auto
+									+e.bought
+										span.marker.marker--green 25
+										| купили
 mixin product-head-none()
-  +b.product-head
-    .container
-      .row
-        .col-12.col-xl-6
-          +e.H1.title.d-md-none Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
-            +e.subtitle.d-md-none Набор: шампунь и кондиционер для сухих волос
-          +e.sliders
-            .row
-              .col-12.col-md-10
-                +e.slider-big-container
-                  +e.slider-big-like
-                    +icon('icon-heart')
-                    | wishlist
-                  +e.slider-big
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-              .col-12.col-md-2
-                +e.slider-small
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                    +e.A.video-link(href='http://www.youtube.com/watch?v=0O2aH4XLbto')
-                      +icon('icon-play')
-            +e.P.footer.text-secondary Фактический вид товара может отличаться от изображения на сайте
+	+b.product-head
+		.container
+			.row
+				.col-12.col-xl-6
+					+e.H1.title.d-md-none Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
+						+e.subtitle.d-md-none Набор: шампунь и кондиционер для сухих волос
+					+e.sliders
+						.row
+							.col-12.col-md-10
+								+e.slider-big-container
+									+e.slider-big-like
+										+icon('icon-heart')
+										| wishlist
+									+e.slider-big
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+							.col-12.col-md-2
+								+e.slider-small
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										+e.A.video-link(href='http://www.youtube.com/watch?v=0O2aH4XLbto')
+											+icon('icon-play')
+						+e.P.footer.text-secondary Фактический вид товара может отличаться от изображения на сайте
 
-        .col-12.col-xl-6
-          +e.H1.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
-          +e.subtitle Набор: шампунь и кондиционер для сухих волос
-          .row.mb-4.pb-2
-            .col-12.col-md-6.d-flex.align-items-center.mb-3
-              +icon('icon-heart')
-              +icon('icon-share')
-              +e.cost 650 Р
-                +e.old-cost 1 251 Р
-              +discountType('-10', '')
+				.col-12.col-xl-6
+					+e.H1.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
+					+e.subtitle Набор: шампунь и кондиционер для сухих волос
+					.row.mb-4.pb-2
+						.col-12.col-md-6.d-flex.align-items-center.mb-3
+							+icon('icon-heart')
+							+icon('icon-share')
+							+e.cost 650 Р
+								+e.old-cost 1 251 Р
+							+discountType('-10', '')
 
-            .col-12.col-md-6
-              .d-flex
-                +b.block-add
-                  .d-flex.flex-grow-1.align-items-center
-                    +e.btn--minus
-                    +e.INPUT.form-control(type="text" value="10")
-                    +e.btn--plus
+						.col-12.col-md-6
+							.d-flex
+								+b.block-add
+									.d-flex.flex-grow-1.align-items-center
+										+e.btn--minus
+										+e.INPUT.form-control(type="text" value="10")
+										+e.btn--plus
 
-                  a.btn.btn-buy(href='#') В корзину
-                    +icon('icon-basket')
-          .row
-            .col-6
-              +e.sale
-                +e.sale-title mini sale
-                  +discount(5)
-                +e.sale-subtutle от 3000 р
-                +e.cost 634 Р
-            .col-6
-              +e.sale
-                +e.sale-title maxi sale
-                  +discount(7)
-                +e.sale-subtutle от 3000 р
-                +e.cost 620 Р
-          .row
-            .col-12.col-md-6
-              +e.A.btn.success-text-color(href='#') Узнать VIP цену
-            .col-12.col-md-6
-              +e.A.btn(href='#') Посмотреть уцененный товар
+									a.btn.btn-buy(href='#') В корзину
+										+icon('icon-basket')
+					.row
+						.col-6
+							+e.sale
+								+e.sale-title mini sale
+									+discount(5)
+								+e.sale-subtutle от 3000 р
+								+e.cost 634 Р
+						.col-6
+							+e.sale
+								+e.sale-title maxi sale
+									+discount(7)
+								+e.sale-subtutle от 3000 р
+								+e.cost 620 Р
+					.row
+						.col-12.col-md-6
+							+e.A.btn.success-text-color(href='#') Узнать VIP цену
+						.col-12.col-md-6
+							+e.A.btn(href='#') Посмотреть уцененный товар
 
-          .row
-            .col-6
-              +productHeadInfo('Артикул' , 'URU09764')
-              +productHeadInfo('Штрих код' , '1120421133410')
+					.row
+						.col-6
+							+productHeadInfo('Артикул' , 'URU09764')
+							+productHeadInfo('Штрих код' , '1120421133410')
 
-            .col-6
-              +productHeadInfoSelectedText('Бренд', 'Matrix')
-              +productHeadInfo('Фасовка' , 'Да')
-          .row
-            .col-12.col-md-6.order-md-2
-              +productHeadInfo('Категория' , 'Лицо')
-              +productHeadInfo('Назначение' , 'Питание,  Лечение')
-            .col-12.col-md-6.order-md-1
-              .row.align-items-center.pt-3
-                .col-auto
-                  +e.SPAN.rating
-                    +stars(4, 55)
-                .col-auto
-                  +e.bought
-                    span.marker.marker--green 25
-                    | купили
+						.col-6
+							+productHeadInfoSelectedText('Бренд', 'Matrix')
+							+productHeadInfo('Фасовка' , 'Да')
+					.row
+						.col-12.col-md-6.order-md-2
+							+productHeadInfo('Категория' , 'Лицо')
+							+productHeadInfo('Назначение' , 'Питание,  Лечение')
+						.col-12.col-md-6.order-md-1
+							.row.align-items-center.pt-3
+								.col-auto
+									+e.SPAN.rating
+										+stars(4, 55)
+								.col-auto
+									+e.bought
+										span.marker.marker--green 25
+										| купили
 mixin product-head-cost()
-  +b.product-head
-    .container
-      .row
-        .col-12.col-xl-6
-          +e.H1.title.d-md-none Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
-            +e.subtitle.d-md-none Набор: шампунь и кондиционер для сухих волос
-          +e.sliders
-            .row
-              .col-12.col-md-10
-                +e.slider-big-container
-                  +e.slider-big-like
-                    +icon('icon-heart')
-                    | wishlist
-                  +e.slider-big
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-                    +e.slide--big
-                      a(href='img/product/prod-item.jpg')
-                        img(src='img/product/prod-item.jpg' alt='img')
-              .col-12.col-md-2
-                +e.slider-small
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                      img(src='img/product/prod-item.jpg')
-                  +e.slide
-                    +e.A.video-link(href='http://www.youtube.com/watch?v=0O2aH4XLbto')
-                      +icon('icon-play')
-            +e.P.footer.text-secondary Фактический вид товара может отличаться от изображения на сайте
+	+b.product-head
+		.container
+			.row
+				.col-12.col-xl-6
+					+e.H1.title.d-md-none Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
+						+e.subtitle.d-md-none Набор: шампунь и кондиционер для сухих волос
+					+e.sliders
+						.row
+							.col-12.col-md-10
+								+e.slider-big-container
+									+e.slider-big-like
+										+icon('icon-heart')
+										| wishlist
+									+e.slider-big
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+										+e.slide--big
+											a(href='img/product/prod-item.jpg')
+												img(src='img/product/prod-item.jpg' alt='img')
+							.col-12.col-md-2
+								+e.slider-small
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										img(src='img/product/prod-item.jpg')
+									+e.slide
+										+e.A.video-link(href='http://www.youtube.com/watch?v=0O2aH4XLbto')
+											+icon('icon-play')
+						+e.P.footer.text-secondary Фактический вид товара может отличаться от изображения на сайте
 
-        .col-12.col-xl-6
-          +e.H1.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
-          +e.subtitle Набор: шампунь и кондиционер для сухих волос
-          .row.mb-4.pb-2
-            .col-12.col-md-6.d-flex.align-items-center.mb-3
-              +icon('icon-heart')
-              +icon('icon-share')
-              +e.cost 650 Р
+				.col-12.col-xl-6
+					+e.H1.title Matrix Biolage Hydrasource Kit - Набор: шампунь и кондиционер, 2х250 мл
+					+e.subtitle Набор: шампунь и кондиционер для сухих волос
+					.row.mb-4.pb-2
+						.col-12.col-md-6.d-flex.align-items-center.mb-3
+							+icon('icon-heart')
+							+icon('icon-share')
+							+e.cost 650 Р
 
-            .col-12.col-md-6
-              .d-flex
-                +b.block-add
-                  .d-flex.flex-grow-1.align-items-center
-                    +e.btn--minus
-                    +e.INPUT.form-control(type="text" value="10")
-                    +e.btn--plus
+						.col-12.col-md-6
+							.d-flex
+								+b.block-add
+									.d-flex.flex-grow-1.align-items-center
+										+e.btn--minus
+										+e.INPUT.form-control(type="text" value="10")
+										+e.btn--plus
 
-                  a.btn.btn-buy(href='#') В корзину
-                    +icon('icon-basket')
-          .row
-            .col-6
-              +e.sale
-                +e.sale-title mini sale
-                  +discount(5)
-                +e.sale-subtutle от 3000 р
-                +e.cost 634 Р
-            .col-6
-              +e.sale
-                +e.sale-title maxi sale
-                  +discount(7)
-                +e.sale-subtutle от 3000 р
-                +e.cost 620 Р
-          .row
-            .col-12.col-md-6
-              +e.A.btn.success-text-color(href='#') Узнать VIP цену
-            .col-12.col-md-6
-              +e.A.btn(href='#') Посмотреть уцененный товар
+									a.btn.btn-buy(href='#') В корзину
+										+icon('icon-basket')
+					.row
+						.col-6
+							+e.sale
+								+e.sale-title mini sale
+									+discount(5)
+								+e.sale-subtutle от 3000 р
+								+e.cost 634 Р
+						.col-6
+							+e.sale
+								+e.sale-title maxi sale
+									+discount(7)
+								+e.sale-subtutle от 3000 р
+								+e.cost 620 Р
+					.row
+						.col-12.col-md-6
+							+e.A.btn.success-text-color(href='#') Узнать VIP цену
+						.col-12.col-md-6
+							+e.A.btn(href='#') Посмотреть уцененный товар
 
-          .row
-            .col-6
-              +productHeadInfo('Артикул' , 'URU09764')
-              +productHeadInfo('Штрих код' , '1120421133410')
+					.row
+						.col-6
+							+productHeadInfo('Артикул' , 'URU09764')
+							+productHeadInfo('Штрих код' , '1120421133410')
 
-            .col-6
-              +productHeadInfoSelectedText('Бренд', 'Matrix')
-              +productHeadInfo('Фасовка' , 'Да')
-          .row
-            .col-12.col-md-6.order-md-2
-              +productHeadInfo('Категория' , 'Лицо')
-              +productHeadInfo('Назначение' , 'Питание,  Лечение')
-            .col-12.col-md-6.order-md-1
-              .row.align-items-center.pt-3
-                .col-auto
-                  +e.SPAN.rating
-                    +stars(4, 55)
-                .col-auto
-                  +e.bought
-                    span.marker.marker--green 25
-                    | купили
+						.col-6
+							+productHeadInfoSelectedText('Бренд', 'Matrix')
+							+productHeadInfo('Фасовка' , 'Да')
+					.row
+						.col-12.col-md-6.order-md-2
+							+productHeadInfo('Категория' , 'Лицо')
+							+productHeadInfo('Назначение' , 'Питание,  Лечение')
+						.col-12.col-md-6.order-md-1
+							.row.align-items-center.pt-3
+								.col-auto
+									+e.SPAN.rating
+										+stars(4, 55)
+								.col-auto
+									+e.bought
+										span.marker.marker--green 25
+										| купили
 
 
 

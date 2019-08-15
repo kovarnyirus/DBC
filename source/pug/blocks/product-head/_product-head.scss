@@ -44,16 +44,19 @@
     color: #9FA3A7;
     margin-bottom: 20px;
     line-height: 1;
-    @include media-breakpoint-up(md){
+    width: 100%;
+    @include media-breakpoint-up(md) {
       margin-bottom: 32px;
       font-size: 16px;
     }
-    @include media-breakpoint-up(xxl){
+    @include media-breakpoint-up(xxl) {
       font-size: 20px;
     }
-    &.success-text-color{
+
+    &.success-text-color {
       color: #5cbf1a;;
     }
+
   }
 
   .product-head__sale-title {
@@ -70,10 +73,12 @@
     height: 14px;
     padding: 0;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
       fill: #E9458B;
     }
-    &:active{
+
+    &:active {
       fill: #BE0B58;
     }
   }
@@ -214,6 +219,7 @@
   padding-top: 8px;
   padding-bottom: 8px;
   text-transform: uppercase;
+  transition: .2s;
 }
 
 .block-add {
@@ -224,7 +230,8 @@
   margin-left: 15px;
   margin-right: 15px;
   width: 100%;
-  & .icon-basket{
+
+  & .icon-basket {
     width: 30px;
     height: 30px;
     border: 1px solid #ffffff;
@@ -285,7 +292,7 @@
   text-align: center;
   padding: 0;
   margin-bottom: 0;
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-up(md) {
     font-size: 20px;
   }
 }
@@ -295,7 +302,7 @@
   font-size: 20px;
   line-height: 114%;
   margin-left: 30px;
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     font-size: 30px;
   }
 }
@@ -308,7 +315,7 @@
   display: flex;
   align-items: center;
   font-size: 14px;
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-up(md) {
     font-size: 16px;
   }
 
@@ -386,7 +393,7 @@
 
 .product-head__footer {
   text-align: center;
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-up(md) {
     margin-right: 80px;
   }
 }
@@ -400,6 +407,7 @@
   position: relative;
 
 }
+
 .product-head__slider-big-like {
   display: flex;
   position: absolute;
@@ -412,20 +420,144 @@
   font-size: 10px;
   cursor: pointer;
   z-index: 4;
-  & .icon-heart{
+
+  & .icon-heart {
     width: 29px;
     height: 29px;
     fill: #6CB13E;
     border-radius: 0;
     margin-bottom: 5px;
     transition: .2s;
-    &:hover{
+
+    &:hover {
       fill: #82C456;
     }
-    &:active{
+
+    &:active {
       fill: #459014;
     }
   }
 }
 
+.cut-price {
+  position: relative;
+  &__wrapper {
+    position: absolute;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    padding-top: 21px;
+    padding-left: 25px;
+    padding-bottom: 23px;
+    margin-top: 5px;
+    top: 100%;
+    right: -9999px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s;
+    width: 100%;
+    z-index: 5;
+  }
+  &__btn{
+    &:hover{
+      background-color: rgba(149, 242, 40, 0.27);
+    }
+    &:active{
+      background-color: rgba(84, 153, 29, 0.27);
+    }
+  }
 
+  &__list{
+    max-height: 420px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    color: #4D4D4D;
+    font-weight: 500;
+    @include rfs(14);
+    line-height: 140%;
+    text-transform: none;
+    margin-bottom: 18px;
+  }
+
+  &__old-cost {
+    color: #E53131;
+    @include rfs(14);
+    line-height: 140%;
+    text-decoration-line: line-through;
+  }
+
+  &__percent {
+    color: #5CBF1A;
+    @include rfs(14);
+    line-height: 140%;
+  }
+
+  &__cost {
+    color: #333333;
+    font-weight: bold;
+    @include rfs(20);
+    text-align: right;
+    line-height: 1.2;
+  }
+
+  &__reason-title {
+    color: #2B2B2B;
+    font-weight: bold;
+    @include rfs(13);
+    line-height: 130%;
+    margin-bottom: 5px;
+  }
+
+  &__reason {
+    color: #2B2B2B;
+    @include rfs(13);
+    line-height: 130%;
+    margin-bottom: 15px;
+  }
+
+  &__btn-basket {
+    width: 137px;
+    margin-left: auto;
+    margin-right: auto;
+    @include rfs(14);
+    border: none;
+    outline: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+
+    & .icon-basket {
+      margin-left: 10px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+    }
+  }
+  &.cut-price--open {
+    & .cut-price__wrapper {
+      right: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+    & .cut-price__btn{
+      background-color: rgba(102, 195, 40, 0.268);
+      border: 1px solid #5CBF1A;
+    }
+  }
+}
