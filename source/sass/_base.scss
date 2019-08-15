@@ -207,6 +207,12 @@ a {
   border-color: #5CBF1A;
   fill: #6CB13E;
   padding: 4px;
+  &:hover{
+    fill: #E9458B;
+  }
+  &:active{
+    fill: #BE0B58;
+  }
 }
 
 .icon-basket {
@@ -444,6 +450,12 @@ input {
   border-radius: 0;
   margin-left: 20px;
   fill: #9FA3A7;
+  &:hover{
+    fill: #D1D1D1;
+  }
+  &:active{
+    fill: #777F88;
+  }
 }
 
 .success-text-color {

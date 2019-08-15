@@ -51,6 +51,9 @@
     @include media-breakpoint-up(xxl){
       font-size: 20px;
     }
+    &.success-text-color{
+      color: #5cbf1a;;
+    }
   }
 
   .product-head__sale-title {
@@ -67,6 +70,12 @@
     height: 14px;
     padding: 0;
     cursor: pointer;
+    &:hover{
+      fill: #E9458B;
+    }
+    &:active{
+      fill: #BE0B58;
+    }
   }
 }
 
@@ -215,6 +224,12 @@
   margin-left: 15px;
   margin-right: 15px;
   width: 100%;
+  & .icon-basket{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+  }
 }
 
 .block-add__btn {
@@ -277,9 +292,12 @@
 
 .product-head__cost {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 114%;
   margin-left: 30px;
+  @include media-breakpoint-up(lg){
+    font-size: 30px;
+  }
 }
 
 .btn-buy {
@@ -400,6 +418,13 @@
     fill: #6CB13E;
     border-radius: 0;
     margin-bottom: 5px;
+    transition: .2s;
+    &:hover{
+      fill: #82C456;
+    }
+    &:active{
+      fill: #459014;
+    }
   }
 }
 

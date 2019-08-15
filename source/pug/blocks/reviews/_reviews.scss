@@ -20,6 +20,10 @@
   display: flex;
   flex-wrap: wrap;
   @include media-breakpoint-up(lg) {
+    width: 30%;
+    display: block;
+  }
+  @include media-breakpoint-up(xl) {
     width: 20%;
     display: block;
   }
@@ -44,6 +48,9 @@
 .review__right-col {
   width: 100%;
   @include media-breakpoint-up(lg) {
+    width: 70%;
+  }
+  @include media-breakpoint-up(xl) {
     width: 80%;
   }
   & img{
@@ -52,11 +59,14 @@
 }
 
 .review__name {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 19px;
   font-weight: bold;
   color: #333333;
   margin-bottom: 8px;
+  @include media-breakpoint-up(xl){
+    font-size: 16px;
+  }
 }
 
 .review__stars {
