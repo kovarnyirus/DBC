@@ -55,15 +55,17 @@ mixin aside-filters()
 		+e.group
 			+e.group-top
 				+e.SPAN.group-name цена
-			+e.rang-wrap
-				+e.range-input
-					+e.LABEL
-					+e.INPUT.min-cost(type='text' placeholder='От')
-				+e.range-input
-					+e.LABEL
-					+e.INPUT.max-cost(type='text' placeholder='До')
-			+e.range
-				input.js-range-slider(type="text" name="my_range" data-type="double")
+				+e.BUTTON.toggle
+			+e.list
+				+e.rang-wrap
+					+e.range-input
+						+e.LABEL
+						+e.INPUT.min-cost(type='text' placeholder='От')
+					+e.range-input
+						+e.LABEL
+						+e.INPUT.max-cost(type='text' placeholder='До')
+				+e.range
+					input.js-range-slider(type="text" name="my_range" data-type="double")
 		.row
 			.col-6
 				+e.BUTTON.btn-reset.btn.btn-outline(type="submit") Сбросить все
