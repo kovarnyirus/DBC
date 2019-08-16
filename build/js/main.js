@@ -369,6 +369,11 @@ jQuery(document).ready(function ($) {
             '<div class="tooltip-inner tooltip-catalog__wrapper-inner"></div></div>'
     });
 
+    $('[data-toggle="tooltip]').tooltip({
+        html: true,
+        placement: 'left'
+    });
+
     // range в каталоге
     $(".js-range-slider").ionRangeSlider();
 

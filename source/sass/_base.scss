@@ -451,10 +451,10 @@ input {
   margin-left: 20px;
   fill: #9FA3A7;
   &:hover{
-    fill: #D1D1D1;
+    fill: #82C456;
   }
   &:active{
-    fill: #777F88;
+    fill: #469014;
   }
 }
 
@@ -821,4 +821,14 @@ textarea {
 
 .overflowHidden{
   overflow: hidden;
+}
+
+.icon-favourites{
+  &:hover{
+    stroke: #E9458B;
+  }
+  &:active{
+    stroke: #BE0B58;
+    fill: #BE0B58;
+  }
 }

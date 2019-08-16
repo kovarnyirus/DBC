@@ -40,7 +40,6 @@ mixin soc(name)
 		svg(class="icon " + name)
 			use(xlink:href="img/svg/sprite.svg#" + name)
 
-
 mixin icon(name,mod)
 	- mod = mod || ''
 	svg(class="icon " + name + ' ' + mod)
@@ -172,6 +171,74 @@ mixin product-item(img, title, description, size)
 			+e.A.basket(href='')
 				+icon('icon-basket')
 
+mixin product-item-percent(img, title, description, size)
+	+b.product-item
+		+e.img-wrap(href="#")
+			+e.IMG.img(src=`img/product/product${img}.jpg`, alt="img")
+		+e.A.description(href='#')= description
+		+e.A.title(href='#')= title
+		+e.TABLE.price
+			tr
+				+e.TD.price-name price
+				+e.TD.price-val 1251 p
+			tr
+				+e.TD.price-name mini sale
+				+e.TD.price-val 531 p
+			tr
+				+e.TD.price-name maxi sale
+				+e.TD.price-val 490 p
+			tr
+				+e.TD.price-name sale
+				+e.TD.price-val 490 p
+			tr
+				+e.TD.price-name VIP
+				+e.TD.price-val
+					+e.A.price-val-link.popup-with-move-anim(href='#modal-vip') узнать цену
+		+e.icons--small
+			+e.A.favourites(href='#')
+				+icon('icon-favourites')
+			+e.A.like(href='#')
+				+icon('icon-like')
+			+e.A.percent(href='#') %
+				+e.percent-msg Есть уцененный товар
+					| &nbsp;
+					span.font-weight-bold   675 р.
+			+e.A.basket(href='#')
+				+icon('icon-basket')
+
+mixin product-item-line-through(img, title, description, size)
+	+b.product-item
+		+e.img-wrap(href="#")
+			+e.IMG.img(src=`img/product/product${img}.jpg`, alt="img")
+		+e.A.description(href='#')= description
+		+e.A.title(href='#')= title
+		+e.TABLE.price
+			tr
+				+e.TD.price-name
+					del price
+				+e.TD.price-val
+					del.font-weight-normal 1251 p
+			tr
+				+e.TD.price-name mini sale
+				+e.TD.price-val 531 p
+			tr
+				+e.TD.price-name maxi sale
+				+e.TD.price-val 490 p
+			tr
+				+e.TD.price-name sale
+				+e.TD.price-val 490 p
+			tr
+				+e.TD.price-name VIP
+				+e.TD.price-val
+					+e.A.price-val-link.popup-with-move-anim(href='#modal-vip') узнать цену
+		+e.icons
+			+e.A.favourites
+				+icon('icon-favourites')
+			+e.A.like
+				+icon('icon-like')
+			+e.A.basket(href='')
+				+icon('icon-basket')
+
 mixin product-item-markdown(img, title, description, size)
 	+b.product-item
 		+e.markdown Уценка
@@ -204,32 +271,47 @@ mixin product-item-markdown(img, title, description, size)
 			+e.A.basket(href='')
 				+icon('icon-basket')
 
+mixin product-item-cosmetician(img, title, description, size)
+	+b.product-item
+		+e.img-wrap(href="#")
+			+e.IMG.img(src=`img/product/product${img}.jpg`, alt="img")
+		+e.A.description(href='#')= description
+		+e.A.title(href='#')= title
+		+e.icons
+			+e.A.favourites
+				+icon('icon-favourites')
+			+e.A.like
+				+icon('icon-like')
+		+e.cosmetician
+			span Для косметолога
+			+icon('icon-basket')
+
 mixin catalogItems(rows)
 	.product-list
 		- for (var x = 0; x < rows; x++)
-			+product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
-			+product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
-			+product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
-			+product-item-markdown('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
+		+product-item-percent('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
+		+product-item-line-through('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
+		+product-item-cosmetician('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
+		+product-item-markdown('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
 
 mixin catalogItems-5(rows)
 	.product-list
 		- for (var x = 0; x < rows; x++)
-			+product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
-			+product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
-			+product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
-			+product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
-			+product-item-markdown('1', 'American Crew Classic 3-in-1', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру,', '19 мл')
+		+product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
+		+product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
+		+product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
+		+product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
+		+product-item-markdown('1', 'American Crew Classic 3-in-1', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру,', '19 мл')
 
 mixin stars(active, num)
 	+b.stars
 		+e.wrapper.row.align-items-center
 			.col-auto
 				- for (var x = 0; x < 5; x++)
-					if x < active
-						+e.SPAN.item--active: +icon("icon-star")
-					else
-						+e.SPAN.item: +icon("icon-star")
+				if x < active
+					+e.SPAN.item--active: +icon("icon-star")
+				else
+					+e.SPAN.item: +icon("icon-star")
 			.col-auto.pl-0
 				span.num= num
 
@@ -239,10 +321,10 @@ mixin starsLine(active, num, line )
 			.col-6.col-xl-5.col-xxl-4
 				+e.wrapper.d-flex.align-items-center
 					- for (var x = 0; x < 5; x++)
-						if x < active
-							+e.SPAN.item--active: +icon("icon-star")
-						else
-							+e.SPAN.item: +icon("icon-star")
+					if x < active
+						+e.SPAN.item--active: +icon("icon-star")
+					else
+						+e.SPAN.item: +icon("icon-star")
 					.col-auto.pl-2.pr-0
 						span.num= num
 			.col-6.col-xl-7.col-xxl-8.pl-0.pr-0
@@ -255,10 +337,10 @@ mixin star(namber)
 		+e.wrapper.row.align-items-center
 			.col-auto
 				- for (var x = 0; x < 5; x++)
-					if x < namber
-						+e.SPAN.item--active: +icon("icon-star")
-					else
-						+e.SPAN.item: +icon("icon-star")
+				if x < namber
+					+e.SPAN.item--active: +icon("icon-star")
+				else
+					+e.SPAN.item: +icon("icon-star")
 
 mixin category()
 	+b.product-category
@@ -298,11 +380,11 @@ mixin advantages()
 
 mixin productHeadInfo(name, text)
 	.product-feature= name + ': '
-		span= text
+	span= text
 
 mixin productHeadInfoSelectedText(name, text)
 	.product-feature= name + ': '
-		span.success-text-color= text
+	span.success-text-color= text
 
 mixin noProduct(text)
 	.row.align-items-center
@@ -313,32 +395,3 @@ mixin noProduct(text)
 		.col-12.col-md-4
 			a(href='#')
 				+banner('new-prod.jpg')
-
-mixin mnu()
-	- var nav= {"ВОЛОСЫ":"#","ЛИЦО":"#","МАКИЯЖ ":"#","МАКИЯЖ ":"#","ТЕЛО ":"#","НОГТИ ":"#","ДЕТИ ":"#","ДОМ ":"#","МУЖЧИНАМ ":"#","ПАРФЮМЕРИЯ ":"#","ГИГИЕНА ":"#","ЗДОРОВЬЕ ":"#","ПРОЧЕЕ ":"#"}
-	+e.nav
-		+e.item
-			+b.dropdown-cat
-				+e.link--toggle-js(href="#") КАТАЛОГ
-				+e.menu
-					.d-none.d-lg-block
-						- var nav2= {"Электронные шлемы MCScap":"#","Электроды, гель и аксессуары":"#","Электроды":"#","Текстильные шлемы":"#","Адаптеры":"#","Гель и аксессуары":"#","Мобильная система NeoRecCap":"#"}
-						+b.dropdown-cat-has-children.custom-scroll-js
-							each linkPatch, linkName in nav2
-								+e.item--js
-									+e.item-inner
-										+e.A.link(href= linkPatch)= linkName
-									+b.dropdown-cat-sub-wrap.custom-scroll-js
-										.row
-											.col-7
-												+e.text-block
-													+e.title= linkName
-													+e.text Краткое описание текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М
-													+e.A.btn(href="#") В раздел
-
-											.col
-												img.res-i(src="img/nav-img.png", alt="")
-							+e.A.btn(href="#") Создать свой MCScap
-
-		each linkPatch, linkName in nav
-			+e.item: +e.A.link(href= linkPatch)= linkName

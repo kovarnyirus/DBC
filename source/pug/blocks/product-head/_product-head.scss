@@ -45,6 +45,7 @@
     margin-bottom: 20px;
     line-height: 1;
     width: 100%;
+    transition: .2s;
     @include media-breakpoint-up(md) {
       margin-bottom: 32px;
       font-size: 16px;
@@ -55,6 +56,18 @@
 
     &.success-text-color {
       color: #5cbf1a;;
+    }
+    &:hover{
+      text-decoration: none;
+      background-color: #82C456;
+      border-color: #82C456;
+      color:white;
+    }
+    &:active{
+      text-decoration: none;
+      background-color: #459014;
+      border-color: #459014;
+      color:white;
     }
 
   }
