@@ -33,6 +33,30 @@
     }
   }
 
+  & .product-item__title {
+    height: 50px;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+  }
+
+  & .product-item__description {
+    overflow: hidden;
+    display: -webkit-box;
+    height: 50px;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 3;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+  }
+
   @include media-breakpoint-down(md) {
     margin-left: -15px;
     margin-right: -15px;
@@ -42,21 +66,28 @@
     & .product-item__img {
       max-height: 200px;
     }
+
+    //& .product-item__description {
+    //  overflow: hidden;
+    //  display: -webkit-box;
+    //  height: 50px;
+    //  text-overflow: ellipsis;
+    //  white-space: normal;
+    //  -webkit-line-clamp: 3;
+    //  /* autoprefixer: off */
+    //  -webkit-box-orient: vertical;
+    //  /* autoprefixer: on */
+    //}
+  }
+  @include media-breakpoint-up(sm){
     & .product-item__title {
       min-height: 50px;
     }
     & .product-item__description {
-      overflow: hidden;
-      display: -webkit-box;
-      height: 68px;
-      max-height: 4.2rem;
-      text-overflow: ellipsis;
-      white-space: normal;
-      -webkit-line-clamp: 4;
-      /* autoprefixer: off */
-      -webkit-box-orient: vertical;
-      /* autoprefixer: on */
+      -webkit-line-clamp: 2;
+      height: 30px;
     }
+
   }
 }
 
@@ -80,31 +111,14 @@
   & .slick-slide {
     margin-left: 0;
     margin-right: 0;
-    //width: 160px;
     padding-left: 20px;
     padding-right: 20px;
     max-width: 100%;
     width: 100%;
-    //@include media-breakpoint-up(sm) {
-    //  width: 266px;
-    //  margin-left: 3px;
-    //  margin-right: 3px;
-    //}
     @include media-breakpoint-up(md) {
-      //width: 235px;
       margin-left: 3px;
       margin-right: 3px;
     }
-    //@include media-breakpoint-up(lg) {
-    //  width: 305px;
-    //  max-width: 100%;
-    //}
-    //@include media-breakpoint-up(xl) {
-    //  width: 272px;
-    //}
-    //@include media-breakpoint-up(xxl) {
-    //  width: 277px;
-    //}
   }
   & .product-item__price{
     margin-top: 5px;
