@@ -308,10 +308,10 @@ mixin stars(active, num)
 		+e.wrapper.row.align-items-center
 			.col-auto
 				- for (var x = 0; x < 5; x++)
-				if x < active
-					+e.SPAN.item--active: +icon("icon-star")
-				else
-					+e.SPAN.item: +icon("icon-star")
+					if x < active
+						+e.SPAN.item--active: +icon("icon-star")
+					else
+						+e.SPAN.item: +icon("icon-star")
 			.col-auto.pl-0
 				span.num= num
 
@@ -321,10 +321,10 @@ mixin starsLine(active, num, line )
 			.col-6.col-xl-5.col-xxl-4
 				+e.wrapper.d-flex.align-items-center
 					- for (var x = 0; x < 5; x++)
-					if x < active
-						+e.SPAN.item--active: +icon("icon-star")
-					else
-						+e.SPAN.item: +icon("icon-star")
+						if x < active
+							+e.SPAN.item--active: +icon("icon-star")
+						else
+							+e.SPAN.item: +icon("icon-star")
 					.col-auto.pl-2.pr-0
 						span.num= num
 			.col-6.col-xl-7.col-xxl-8.pl-0.pr-0
@@ -337,10 +337,10 @@ mixin star(namber)
 		+e.wrapper.row.align-items-center
 			.col-auto
 				- for (var x = 0; x < 5; x++)
-				if x < namber
-					+e.SPAN.item--active: +icon("icon-star")
-				else
-					+e.SPAN.item: +icon("icon-star")
+					if x < namber
+						+e.SPAN.item--active: +icon("icon-star")
+					else
+						+e.SPAN.item: +icon("icon-star")
 
 mixin category()
 	+b.product-category
@@ -380,11 +380,11 @@ mixin advantages()
 
 mixin productHeadInfo(name, text)
 	.product-feature= name + ': '
-	span= text
+		span= text
 
 mixin productHeadInfoSelectedText(name, text)
 	.product-feature= name + ': '
-	span.success-text-color= text
+		span.success-text-color= text
 
 mixin noProduct(text)
 	.row.align-items-center

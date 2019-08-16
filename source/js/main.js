@@ -292,7 +292,7 @@ jQuery(document).ready(function ($) {
         loop: false,
         speed: 450,
         slidesToShow: 1,
-        variableWidth: true,
+        // variableWidth: true,
         rows: 0,
         responsive: [
             {
@@ -300,7 +300,7 @@ jQuery(document).ready(function ($) {
                 settings: 'unslick'
             },
             {
-                breakpoint: 1024,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
