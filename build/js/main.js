@@ -292,7 +292,7 @@ jQuery(document).ready(function ($) {
         loop: false,
         speed: 450,
         slidesToShow: 1,
-        // variableWidth: true,
+        variableWidth: true,
         rows: 0,
         responsive: [
             {
