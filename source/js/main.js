@@ -468,6 +468,7 @@ jQuery(document).ready(function ($) {
 
     function resizeSlick(){
         $('.catalog-nav__brand').slick('unslick').slick('reinit');
+        $('.tabs__caption').slick('unslick').slick('reinit');
     }
 
     $(window).resize(function(){
