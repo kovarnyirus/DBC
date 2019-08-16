@@ -6,10 +6,27 @@
 }
 .news__item {
   border-bottom: 1px solid #4D4D4D;
+  //margin-bottom: 30px;
+
+  @include media-breakpoint-up(md) {
+    //margin-bottom: 63px;
+    min-height: 500px;
+  }
+}
+
+.news__item-wrapper{
   margin-bottom: 30px;
+  &:last-child{
+    margin-bottom: 0;
+  }
   @include media-breakpoint-up(md) {
     margin-bottom: 63px;
-    min-height: 500px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &:nth-last-child(2){
+      margin-bottom: 0;
+    }
   }
 }
 

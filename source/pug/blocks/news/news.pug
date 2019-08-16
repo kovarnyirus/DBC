@@ -21,7 +21,7 @@ mixin newsList(num)
     .news__list
       .row
         - for (var x = 0; x < num; x++)
-          .col-12.col-md-6
+          .news__item-wrapper.col-12.col-md-6
             +newsItem(img[x], title[x], text[x], likes[x])
 
 
