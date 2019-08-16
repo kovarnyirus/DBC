@@ -273,6 +273,13 @@
       padding-right: 0;
     }
   }
+  & .btn-prev,
+  & .btn-next{
+    top: 55%;
+    @include media-breakpoint-up(md){
+      top: 50%;
+    }
+  }
 
 }
 
