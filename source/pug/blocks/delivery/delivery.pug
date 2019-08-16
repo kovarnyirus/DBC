@@ -88,9 +88,11 @@ mixin delivery()
 							td
 							td
 								+e.sale MINI
+									| &nbsp;
 									span SALE
 							td
 								+e.sale MAXI
+									| &nbsp;
 									span SALE
 							td
 							td
@@ -102,11 +104,13 @@ mixin delivery()
 							td
 								+e.mini-sale
 									+e.sale MINI
+										| &nbsp;
 										span  SALE
 								| 99 р
 							td.success-text-color
 								+e.maxi-sale
 									+e.sale MAXI
+										| &nbsp;
 										span  SALE
 								| БЕСПЛАТНО
 							td
